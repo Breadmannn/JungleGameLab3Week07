@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: c2f799e6ccd5f7f419179bea48448a27
+guid: 988153e847b08d449a8d0c141fc48140
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7058167215661931960
-    second: Chara2GameOver_0
+      213: 2396002625659177681
+    second: MultiGrassBtm_0
   - first:
-      213: 1174232437620966361
-    second: Chara2GameOver_1
+      213: 2870783744656487512
+    second: MultiGrassBtm_1
   - first:
-      213: 869332917832392044
-    second: Chara2GameOver_2
+      213: 6302897291173805038
+    second: MultiGrassBtm_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -132,67 +132,177 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Chara2GameOver_0
+      name: MultiGrassBtm_0
       rect:
         serializedVersion: 2
         x: 6
-        y: 90
-        width: 12
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 0
+        width: 63
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 842a929205a5c0e90800000000000000
-      internalID: -7058167215661931960
+      spriteID: 1da815781bf404120800000000000000
+      internalID: 2396002625659177681
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chara2GameOver_1
+      name: MultiGrassBtm_1
       rect:
         serializedVersion: 2
-        x: 12
-        y: 85
-        width: 7
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 149
+        y: 0
+        width: 63
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9d383204e26bb4010800000000000000
-      internalID: 1174232437620966361
+      spriteID: 854373f0b9217d720800000000000000
+      internalID: 2870783744656487512
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chara2GameOver_2
+      name: MultiGrassBtm_2
       rect:
         serializedVersion: 2
-        x: 16
-        y: 1
-        width: 99
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 290
+        y: 0
+        width: 68
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c6d14fecead701c00800000000000000
-      internalID: 869332917832392044
+      spriteID: eebbf2031b3687750800000000000000
+      internalID: 6302897291173805038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MultiGrassBtm_3
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 0
+        width: 64
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 968683cfc2e7d1f42ad35eefc4aabb00
+      internalID: -2091255273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MultiGrassBtm_4
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 0
+        width: 63
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00b34659048b1df45ae2cb03cc3603d4
+      internalID: 1749127405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MultiGrassBtm_5
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 0
+        width: 63
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9510c93c9ec40c2488d2773e601b16de
+      internalID: -74395166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MultiGrassBtm_6
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 0
+        width: 68
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 581d3ca1d51a2254e9f859adba90525e
+      internalID: 2118547681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MultiGrassBtm_7
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 0
+        width: 69
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d6ce9fd75c3d9f429394b82badd8e20
+      internalID: 1203283722
       vertices: []
       indices: 
       edges: []
@@ -201,7 +311,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8ca09b4eb61618a42aabe6b68d261c47
     internalID: 0
     vertices: []
     indices: 
@@ -211,9 +321,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Chara2GameOver_0: -7058167215661931960
-      Chara2GameOver_1: 1174232437620966361
-      Chara2GameOver_2: 869332917832392044
+      MultiGrassBtm_3: -2091255273
+      MultiGrassBtm_4: 1749127405
+      MultiGrassBtm_5: -74395166
+      MultiGrassBtm_6: 2118547681
+      MultiGrassBtm_7: 1203283722
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 6c83cacca0a395c489fdcd99d981b107
+guid: 1b607e448d6c48241a7d8e791ad87475
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4696743338933546991
-    second: 1000013804_0
+      213: 3664983861114067704
+    second: Leaves_0
+  - first:
+      213: -5999245757173483519
+    second: Leaves_1
+  - first:
+      213: -8532703326110650893
+    second: Leaves_2
+  - first:
+      213: 83947755850914152
+    second: Leaves_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +135,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 1000013804_0
+      name: Leaves_0
       rect:
         serializedVersion: 2
-        x: 25
-        y: 15
-        width: 334
-        height: 513
+        x: 56
+        y: 117
+        width: 11
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +150,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1101fa151d0d1deb0800000000000000
-      internalID: -4696743338933546991
+      spriteID: 8fa5e3d5763acd230800000000000000
+      internalID: 3664983861114067704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaves_1
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 113
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 108b76be4c56ebca0800000000000000
+      internalID: -5999245757173483519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaves_2
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 53
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fd6169788fb59980800000000000000
+      internalID: -8532703326110650893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaves_3
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 28
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8695f270a0e3a2100800000000000000
+      internalID: 83947755850914152
       vertices: []
       indices: 
       edges: []
@@ -160,8 +235,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      1000013804_0: -4696743338933546991
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

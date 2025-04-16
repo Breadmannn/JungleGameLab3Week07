@@ -1,10 +1,25 @@
 fileFormatVersion: 2
-guid: 20acc964d0e301b4cbb37f3da521f6a2
+guid: e5efa1fb879dbe349aec552ab05d27f4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -740672183275674872
-    second: MainCharacter_Attack_0
+      213: 5321308683172479569
+    second: GrassWeak_0
+  - first:
+      213: 4793438564532627732
+    second: GrassWeak_1
+  - first:
+      213: -4061291464830438894
+    second: GrassWeak_2
+  - first:
+      213: 1542320685446543005
+    second: GrassWeak_3
+  - first:
+      213: -8553100718539724797
+    second: GrassWeak_4
+  - first:
+      213: -6545404292395266287
+    second: GrassWeak_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +141,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MainCharacter_Attack_0
+      name: GrassWeak_0
       rect:
         serializedVersion: 2
-        x: 79
-        y: 15
-        width: 794
-        height: 906
+        x: 9
+        y: 27
+        width: 161
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +156,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 80327d4d29a98b5f0800000000000000
-      internalID: -740672183275674872
+      spriteID: 15282b8cd0619d940800000000000000
+      internalID: 5321308683172479569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassWeak_1
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 28
+        width: 37
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41920ab4af6b58240800000000000000
+      internalID: 4793438564532627732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassWeak_2
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 31
+        width: 38
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 212b47d2ee463a7c0800000000000000
+      internalID: -4061291464830438894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassWeak_3
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 26
+        width: 36
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9637c9ed7c676510800000000000000
+      internalID: 1542320685446543005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassWeak_4
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 22
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3082d4776384d4980800000000000000
+      internalID: -8553100718539724797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassWeak_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 21
+        width: 86
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11f8670a97d0a25a0800000000000000
+      internalID: -6545404292395266287
       vertices: []
       indices: 
       edges: []
@@ -160,8 +285,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      MainCharacter_Attack_0: -740672183275674872
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
