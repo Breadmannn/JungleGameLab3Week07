@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour, IStatus
     }
 
     // 플레이어 데미지 피해 
-    public void TakeDamage(int amount)
+    public void TakeDamage(int amount, Elemental skillElement)
     {
         _hp = Mathf.Clamp(_hp - amount, 0, _maxHp);
         //Debug.Log($"플레이어 HP: {_hp}");

@@ -27,6 +27,8 @@ public class Enemy : MonoBehaviour, IStatus
     public int SteelHealth => _steelHp;
     [SerializeField] int _steelHp = 0; // 강철 HP
     float _moveSpeed = 2f;                      // 비트당 이동 거리
+    [SerializeField] Elemental resistance;
+
     [SerializeField] int _sturnCoolCount = 0;   // 기절 쿨 카운트
     Animator _animator;                         // 적 애니메이터
 
@@ -48,7 +50,7 @@ public class Enemy : MonoBehaviour, IStatus
         {
             _isMoving = false; // 이동 중지
             _sturnCoolCount--;
-            if(_sturnCoolCount == 0) // 스턴 상태 해제
+            if (_sturnCoolCount == 0) // 스턴 상태 해제
             {
                 _enemyState = EnemyState.None;
                 _isMoving = true;
@@ -65,16 +67,17 @@ public class Enemy : MonoBehaviour, IStatus
             return;
         }
 
-        // 벽 체크: Wall 스크립트가 포함된 오브젝트가 x-2에 있으면 공격
-        foreach (Wall obj in FindObjectsByType<Wall>(FindObjectsSortMode.None))
-        {
-            if (Mathf.Approximately(obj.transform.position.x, transform.position.x - 2))
-            {
-                Attack(obj.gameObject);
-                _isMoving = false; // 이동 중지
-                return;
-            }
-        }
+        //// 벽 체크: Wall 스크립트가 포함된 오브젝트가 x-2에 있으면 공격
+        //foreach (Wall obj in FindObjectsByType<Wall>(FindObjectsSortMode.None))
+        //{
+        //    if (Mathf.Approximately(obj.transform.position.x, transform.position.x - 2))
+        //    {
+        //        Attack(obj.gameObject);
+        //        _isMoving = false; // 이동 중지
+        //        return;
+        //    }
+        //}
+
         // 플레이어 체크
         if (Mathf.Approximately(PlayerController.Instance.transform.position.x, transform.position.x - 2))
         {
@@ -108,9 +111,10 @@ public class Enemy : MonoBehaviour, IStatus
             //빠른몹
             case 1:
                 transform.position += (Vector3)(Vector2.left * _moveSpeed); // 왼쪽으로 이동
-                if(!_halfMove)
+                if (!_halfMove)
                 {
-                    StartCoroutine(MoveHalfBeat()); // 반 박자 이동
+                    StartCoroutine(   
+                        MoveHalfBeat()); // 반 박자 이동
                 }
                 _halfMove = false; // 반 박자 이동
                 break;
@@ -131,7 +135,7 @@ public class Enemy : MonoBehaviour, IStatus
                 break;
         }
     }
-    
+
     // 적 상태 변경
     public void ApplyState(EnemyState newState)
     {
@@ -141,11 +145,15 @@ public class Enemy : MonoBehaviour, IStatus
     }
 
     // 피해 입기
-    public void TakeDamage(int amount)
+    public void TakeDamage(int amount, Elemental skillElement)
     {
+        if (resistance != Elemental.None && resistance == skillElement)
+        {
+            return;
+        }
         _animator.SetTrigger("HitTrigger");
         int steelDamage = amount - _hp; // 강철 HP에 입힐 데미지;
-        
+
         if (_hp > 0 || _steelHp > 0)
         {
             if (_hp > 0)
@@ -175,10 +183,10 @@ public class Enemy : MonoBehaviour, IStatus
         }
         if (target.TryGetComponent<PlayerController>(out PlayerController player))
         {
-            player.TakeDamage(100); // 플레이어에게 데미지 입히기
+            player.TakeDamage(100, Elemental.None); // 플레이어에게 데미지 입히기
         }
 
-        if(_hearts != null)
+        if (_hearts != null)
             _hearts.UpdateHearts(_hp + _steelHp); // 체력 UI 업데이트
 
         if (_hp <= 0 && _steelHp <= 0)
@@ -209,7 +217,7 @@ public class Enemy : MonoBehaviour, IStatus
             if (Mathf.Approximately(e.transform.position.x, transform.position.x - 2) && (!e.IsMoving || _halfMove))
             {
                 count++;
-                if(count == 1)
+                if (count == 1)
                     posY = e.transform.position.y == _positionY1 ? 2 : 1; // 적의 y좌표에 따라 이동할 y좌표 결정
                 else if (count == 2)
                     return 0; // 적이 2명 이상이면 이동하지 않음
