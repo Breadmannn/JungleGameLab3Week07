@@ -21,28 +21,32 @@ public class Define
     // 원소 효과
     public enum ElementalEffect
     {
-        Flame =     (1 << Elemental.Flame) | (1 << Elemental.Flame),          // 화염 = 화염 + 화염
+        
+        Fire =     (1 << Elemental.Fire) | (1 << Elemental.Fire),          // 불 = 불 + 불
         Water =     (1 << Elemental.Water) | (1 << Elemental.Water),          // 물 = 물 + 물
-        Wall =      (1 << Elemental.Ground) | (1 << Elemental.Ground),        // 벽 = 땅 + 땅
-        Lightning = (1 << Elemental.Lightning) | (1 << Elemental.Lightning),  // 번개 = 번개 + 번개
-        Fog =       (1 << Elemental.Flame) | (1 << Elemental.Water),          // 안개 = 화염 물
-        Ignition =  (1 << Elemental.Flame) | (1 << Elemental.Ground),         // 점화 = 화염 + 땅
-        Diffusion =     (1 << Elemental.Flame) | (1 << Elemental.Lightning),  // 확산 = 화염 + 번개
-        Grease =        (1 << Elemental.Water) | (1 << Elemental.Ground),     // 기름 = 물 + 땅
-        ElectricShock = (1 << Elemental.Water) | (1 << Elemental.Lightning),  // 감전 = 물 + 번개
-        None =          (1 << Elemental.Ground) | (1 << Elemental.Lightning), // 조합실패 = 땅 + 번개
-        StrongFire,
-        StrongLightning,
-        EnemyShock
+        Grass =      (1 << Elemental.Grass) | (1 << Elemental.Grass),        // 풀 = 풀 + 풀
+        //------------------------------------------------------------------------------------
+        MultiField =       (1 << Elemental.Fire) | (1 << Elemental.Water),          //멀티  = 불 + 물
+        SingleField =  (1 << Elemental.Fire) | (1 << Elemental.Grass),         // 단일 = 불 + 풀
+        Stun =        (1 << Elemental.Water) | (1 << Elemental.Grass),     // 속박 = 물 + 풀
+        MultiFire,
+        MultiGrass,
+        MultiWater,
+        SingleFire,
+        SingleGrass,
+        SingleWater,
+        SuperFire,
+        SuperWater,
+        SuperGrass,
+        None
     }
 
     // 플레이어 마법 속성
     public enum Elemental
     {
-        Flame = 0,      // 화염
+        Fire = 0,      // 화염
         Water = 1,      // 물
-        Ground = 2,     // 땅
-        Lightning = 3,  // 번개
+        Grass = 2,     // 풀
         None
     }
 
@@ -55,16 +59,14 @@ public class Define
     }
     public enum Translation
     {
-        화염 = (1 << Elemental.Flame) | (1 << Elemental.Flame),          // 화염 = 화염 + 화염
-        물 = (1 << Elemental.Water) | (1 << Elemental.Water),          // 물 = 물 + 물
-        벽 = (1 << Elemental.Ground) | (1 << Elemental.Ground),        // 벽 = 땅 + 땅
-        번개 = (1 << Elemental.Lightning) | (1 << Elemental.Lightning),  // 번개 = 번개 + 번개
-        안개 = (1 << Elemental.Flame) | (1 << Elemental.Water),          // 안개 = 화염 물
-        점화 = (1 << Elemental.Flame) | (1 << Elemental.Ground),         // 점화 = 화염 + 땅
-        확산 = (1 << Elemental.Flame) | (1 << Elemental.Lightning),  // 확산 = 화염 + 번개
-        기름 = (1 << Elemental.Water) | (1 << Elemental.Ground),     // 기름 = 물 + 땅
-        감전 = (1 << Elemental.Water) | (1 << Elemental.Lightning),  // 감전 = 물 + 번개
-        조합실패 = (1 << Elemental.Ground) | (1 << Elemental.Lightning), // 없음 = 땅 + 번개
+        불 =     (1 << Elemental.Fire) | (1 << Elemental.Fire),          // 불 = 불 + 불
+        물 =     (1 << Elemental.Water) | (1 << Elemental.Water),          // 물 = 물 + 물
+        풀 =      (1 << Elemental.Grass) | (1 << Elemental.Grass),        // 풀 = 풀 + 풀
+        //------------------------------------------------------------------------------------
+        범위 =       (1 << Elemental.Fire) | (1 << Elemental.Water),          //멀티  = 불 + 물
+        단일 =  (1 << Elemental.Fire) | (1 << Elemental.Grass),         // 단일 = 불 + 풀
+        기절 =        (1 << Elemental.Water) | (1 << Elemental.Grass),     // 속박 = 물 + 풀
+        
     }
 
     #region Sound

@@ -6,10 +6,10 @@ using static Define;
 
 public class PlayerSkill : MonoBehaviour
 {
-    public bool IsFireStrong { get { return _isFireStrong; } set { _isFireStrong = value; } }
-    public bool IsLightningStrong { get { return _isLightningStrong; } set { _isLightningStrong = value; } }
-    [SerializeField] bool _isFireStrong = false;          // 불 속성 강화
-    [SerializeField] bool _isLightningStrong = false;     // 전기 속성 강화
+    public bool IsMultiField { get { return _isMultiField; } set { _isMultiField = value; } }
+    public bool IsSingleField { get { return _isSingleField; } set { _isSingleField = value; } }
+    [SerializeField] bool _isMultiField = false;          // 불 속성 강화
+    [SerializeField] bool _isSingleField = false;     // 전기 속성 강화
     GameObject[] _skillEffects;
     Dictionary<ElementalEffect, Skill> _skillDict;
 
@@ -91,8 +91,8 @@ public class PlayerSkill : MonoBehaviour
 
     public void DestroyFog()
     {
-        Fog[] fogs = GameObject.FindObjectsOfType<Fog>();
-        foreach (Fog fog in fogs)
+        SingleField[] fogs = GameObject.FindObjectsOfType<SingleField>();
+        foreach (SingleField fog in fogs)
         {
             if (fog != null)
             {
@@ -103,8 +103,8 @@ public class PlayerSkill : MonoBehaviour
 
     public void DestroyGrease()
     {
-        Grease[] greases = GameObject.FindObjectsOfType<Grease>();
-        foreach (Grease grease in greases)
+        MultiField[] greases = GameObject.FindObjectsOfType<MultiField>();
+        foreach (MultiField grease in greases)
         {
             if (grease != null)
             {

@@ -1,7 +1,7 @@
 using UnityEngine;
 using static Define;
 
-public class Fog : Skill
+public class SingleField : Skill
 {
     void Start()
     {
@@ -11,12 +11,12 @@ public class Fog : Skill
     public override void Execute()
     {
         PlayerSkill playerSkill = PlayerController.Instance.PlayerSkill;
-        playerSkill.ExcuteEffect(ElementalEffect.Fog, Vector3.down * 5);
-        playerSkill.IsLightningStrong = true;
+        playerSkill.ExcuteEffect(ElementalEffect.SingleField, Vector3.down * 5);
+        playerSkill.IsSingleField = true;
     }
 
     void OnDestroy()
     {
-        playerSkill.IsLightningStrong = false;
+        playerSkill.IsSingleField = false;
     }
 }

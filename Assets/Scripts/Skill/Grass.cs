@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static Define;
 
-public class Fire : Skill
+public class Grass : Skill
 {
     int _baseDamage = 1;
     int _strongDamage = 2;
@@ -26,7 +26,7 @@ public class Fire : Skill
         // 단일, 범위 둘 다
         if (playerSkill.IsSingleField && playerSkill.IsMultiField) 
         {
-            WideAttack(enemies, ElementalEffect.SuperFire, _strongDamage, false);
+            WideAttack(enemies, ElementalEffect.SuperGrass, _strongDamage, false);
             playerSkill.DestroyGrease();
             Debug.Log($"모든 적에게 {_strongDamage} 데미지!");
         }
@@ -34,14 +34,14 @@ public class Fire : Skill
         else if (playerSkill.IsSingleField)
         {
             enemies = GameManager.Instance.GetFrontEnemie();
-            WideAttack(enemies, ElementalEffect.SingleFire, _strongDamage, false);
+            WideAttack(enemies, ElementalEffect.SingleGrass, _strongDamage, false);
             playerSkill.DestroyGrease();
             Debug.Log($"1명 적에게 {_strongDamage} 데미지!");
         }
         // 범위
         else if (playerSkill.IsMultiField)
         {
-            WideAttack(enemies, ElementalEffect.MultiFire, _baseDamage, false);
+            WideAttack(enemies, ElementalEffect.MultiGrass, _baseDamage, false);
             playerSkill.DestroyGrease();
             Debug.Log($"모든 적에게 {_strongDamage} 데미지!");
             
@@ -50,7 +50,7 @@ public class Fire : Skill
         else
         {
             enemies = GameManager.Instance.GetFrontEnemies();
-            WideAttack(enemies, ElementalEffect.Fire, _baseDamage);
+            WideAttack(enemies, ElementalEffect.Grass, _baseDamage);
         }
 
         
