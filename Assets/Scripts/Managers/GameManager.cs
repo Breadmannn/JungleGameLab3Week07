@@ -165,6 +165,25 @@ public class GameManager : MonoBehaviour
 
         return _currentEnemyList.Where(enemy => Mathf.Approximately(enemy.transform.position.x, minX)).ToList();
     }
+    
+    // 적 중 가장 앞에 있는 적 반환 (1명만)
+    public List<Enemy> GetFrontEnemie()
+    {
+        float minX = float.MaxValue;
+        int minIndex = -1;
+        for(int i=0; i<_currentEnemyList.Count; i++)
+        {
+            if (_currentEnemyList[i] == null)
+                continue;
+            if (_currentEnemyList[i].transform.position.x < minX)
+            {
+                minX = _currentEnemyList[i].transform.position.x;
+                minIndex = i;
+            }
+        }
+
+        return new List<Enemy> { _currentEnemyList[minIndex] };
+    }
 
     // 소환 지점 검사
     public bool CheckSpawnPoint(out Vector3 spawnPoint)

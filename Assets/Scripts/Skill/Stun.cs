@@ -1,17 +1,17 @@
+
+
 using System.Collections.Generic;
 using UnityEngine;
 using static Define;
 
-public class Lightning : Skill
+public class Stun : Skill
 {
-    int _baseDamage = 3;
     int _strongDamage = 4;
 
     void Start()
     {
         Init();
     }
-
     public override void Execute()
     {
         if (GameManager.Instance.CurrentEnemyList == null || GameManager.Instance.CurrentEnemyList.Count == 0)
@@ -22,12 +22,21 @@ public class Lightning : Skill
 
         PlayerSkill playerSkill = PlayerController.Instance.PlayerSkill;
         List<Enemy> enemies = GameManager.Instance.GetFrontEnemies();
-        if (playerSkill.IsLightningStrong)
+        if (playerSkill.IsSingleField)
         {
-            WideAttack(enemies, ElementalEffect.StrongLightning, _strongDamage, true);
+            WideAttack(enemies, ElementalEffect.Stun, _strongDamage, true);
             playerSkill.DestroyFog();
-            Debug.Log($"모든 적에게 {_strongDamage} 데미지!");
         }
-        WideAttack(enemies, ElementalEffect.Lightning, _baseDamage);
+
+        enemies = GameManager.Instance.CurrentEnemyList;
+        foreach (Enemy enemy in enemies)
+        {
+            if (enemy.gameObject.activeSelf)
+            {
+                enemy.ApplyState(EnemyState.Shock);
+                PlayerController.Instance.PlayerSkill.ExcuteEffect(ElementalEffect.Stun, enemy.transform.position);
+            }
+        }
+        Debug.Log($"모든 적 스턴!");
     }
 }

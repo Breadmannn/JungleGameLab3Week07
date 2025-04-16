@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class Water : Skill
 {
     int _baseDamage = 1;
+    int _strongDamage = 2;
 
     void Start()
     {
@@ -20,9 +21,38 @@ public class Water : Skill
         }
 
         PlayerSkill playerSkill = PlayerController.Instance.PlayerSkill;
+        List<Enemy> enemies = GameManager.Instance.CurrentEnemyList;
+        
+        // 단일, 범위 둘 다
+        if (playerSkill.IsSingleField && playerSkill.IsMultiField) 
+        {
+            WideAttack(enemies, ElementalEffect.SuperWater, _strongDamage, false);
+            playerSkill.DestroyGrease();
+            Debug.Log($"모든 적에게 {_strongDamage} 데미지!");
+        }
+        // 단일
+        else if (playerSkill.IsSingleField)
+        {
+            enemies = GameManager.Instance.GetFrontEnemie();
+            WideAttack(enemies, ElementalEffect.SingleWater, _strongDamage, false);
+            playerSkill.DestroyGrease();
+            Debug.Log($"1명 적에게 {_strongDamage} 데미지!");
+        }
+        // 범위
+        else if (playerSkill.IsMultiField)
+        {
+            WideAttack(enemies, ElementalEffect.MultiWater, _baseDamage, false);
+            playerSkill.DestroyGrease();
+            Debug.Log($"모든 적에게 {_strongDamage} 데미지!");
+            
+        }
+        //기본
+        else
+        {
+            enemies = GameManager.Instance.GetFrontEnemies();
+            WideAttack(enemies, ElementalEffect.Water, _baseDamage);
+        }
 
-        // 맨 앞의 적에게 baseDamage를 줌
-        List<Enemy> enemies = GameManager.Instance.GetFrontEnemies();
-        WideAttack(enemies, ElementalEffect.Water, _baseDamage);
+        
     }
 }

@@ -5,6 +5,7 @@ using static Define;
 public class Skill : MonoBehaviour
 {
     protected PlayerSkill playerSkill;
+    protected Elemental elemental;
     CameraController _cameraController;
 
     public void Init()

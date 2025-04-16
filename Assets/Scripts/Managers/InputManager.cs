@@ -53,7 +53,7 @@ public class InputManager : MonoBehaviour
             if (castValue.y == 1) // Flame (화염)
             {
                 
-                selectElementalAction.Invoke(Elemental.Flame);
+                selectElementalAction.Invoke(Elemental.Fire);
                 makePressBtnFX?.Invoke(0);
                 //Debug.Log("Flame 키 입력: 화염");
             }
@@ -65,7 +65,7 @@ public class InputManager : MonoBehaviour
             }
             else if (castValue.y == -1) // Oil (기름)
             {
-                selectElementalAction.Invoke(Elemental.Ground);
+                selectElementalAction.Invoke(Elemental.Grass);
                 //Debug.Log("Oil 키 입력: 기름");
                 makePressBtnFX?.Invoke(2);
             }
