@@ -57,9 +57,9 @@ public class DataManager
         {
             1, new float[][]
             {
-                new float[]{1.0f, 0.0f, 0.0f, 0.0f, 0.0f },
-                new float[]{1.0f, 0.0f, 0.0f, 0.0f, 0.0f },
-                new float[]{1.0f, 0.0f, 0.0f, 0.0f, 0.0f }
+                new float[]{0.0f, 0.9f, 0.1f, 0.0f, 0.0f },
+                new float[]{0.0f, 0.8f, 0.2f, 0.0f, 0.0f },
+                new float[]{0.0f, 0.7f, 0.3f, 0.0f, 0.0f }
             }
         },
 
@@ -67,9 +67,9 @@ public class DataManager
         {
             2, new float[][]
             {
-                new float[]{1.0f, 0.0f, 0.0f, 0.0f, 0.0f },
-                new float[]{1.0f, 0.0f, 0.0f, 0.0f, 0.0f },
-                new float[]{1.0f, 0.0f, 0.0f, 0.0f, 0.0f }
+                new float[]{0.0f, 0.8f, 0.1f, 0.1f, 0.0f },
+                new float[]{0.0f, 0.7f, 0.2f, 0.1f, 0.0f },
+                new float[]{0.0f, 0.6f, 0.2f, 0.2f, 0.0f }
             }
         },
 
@@ -77,9 +77,9 @@ public class DataManager
         {
             3, new float[][]
             {
-                new float[]{1.0f, 0.0f, 0.0f, 0.0f, 0.0f },
-                new float[]{1.0f, 0.0f, 0.0f, 0.0f, 0.0f },
-                new float[]{1.0f, 0.0f, 0.0f, 0.0f, 0.0f }
+                new float[]{0.0f, 0.7f, 0.2f, 0.1f, 0.0f },
+                new float[]{0.0f, 0.5f, 0.2f, 0.2f, 0.1f },
+                new float[]{0.0f, 0.3f, 0.3f, 0.3f, 0.1f }
             }
         },
 
@@ -87,9 +87,9 @@ public class DataManager
         {
             4, new float[][]
             {
-                new float[]{1.0f, 0.0f, 0.0f, 0.0f, 0.0f },
-                new float[]{1.0f, 0.0f, 0.0f, 0.0f, 0.0f },
-                new float[]{1.0f, 0.0f, 0.0f, 0.0f, 0.0f }
+                new float[]{0.0f, 0.5f, 0.2f, 0.2f, 0.1f },
+                new float[]{0.0f, 0.3f, 0.3f, 0.2f, 0.2f },
+                new float[]{0.0f, 0.1f, 0.3f, 0.3f, 0.3f }
             }
         }
     };
