@@ -53,4 +53,9 @@ public class Manager : MonoBehaviour
     {
 
     }
+
+    public void SetStageClearCanvas()
+    {
+        UI.SetStageClearCanvas(FindFirstObjectByType<UI_FindStageClearCanvas>().gameObject);
+    }
 }

@@ -56,6 +56,11 @@ public class Define
         Normal,    // 기본타입
         Special,   // 특수타입(강적)
         Confuse,    // 혼란타입
+        TestType0,
+        TestType1,
+        TestType2,
+        TestType3,
+        TestType4
     }
     public enum Translation
     {

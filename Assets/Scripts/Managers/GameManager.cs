@@ -2,6 +2,7 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using static Define;
+using System.Collections;
 
 // 게임 전반적인 관리 담당
 // 적 소환, 플레이어 및 동료 관리, 웨이브 관리 등
@@ -12,11 +13,12 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance => _instance;
 
     [Header("적 및 웨이브")]
+    [SerializeField] int _currentStage = 0;                                               // 현재 스테이지
     int _currentWave = 0;                                                                 // 현재 웨이브
     int _waveMonsterCount = 0;                                                            // 웨이브 몬스터 수
     [SerializeField] List<(Enemy enemyPrefab, float weight)> _currentWaveSpawnInfoList;   // 현재 웨이브의 적 정보 리스트
     [SerializeField] Transform _enemySpawnPoint;                                          // 적 소환 지점
-    int _noneMonsetCount = 0;                                                             // 공백 몬스터 수
+    int _noneMonsterCount = 0;                                                             // 공백 몬스터 수
 
     [Header("플레이어 및 동료")]
     public PlayerController PlayerController => _playerController;
@@ -30,12 +32,20 @@ public class GameManager : MonoBehaviour
     public List<Enemy> CurrentEnemyList => _currentEnemyList;
     List<Enemy> _currentEnemyList = new List<Enemy>();      // 현재 적 리스트 
 
+    //[Header("스테이지 메타데이터")]
+    //[SerializeField] SpriteRenderer _background; // 배경 생기면 넣어야 할 가능성. 당장엔 안씀.
+
     void Awake()
     {
         if (_instance == null)
+        {
             _instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
         else
+        {
             Destroy(gameObject);
+        }
 
         _playerController = FindAnyObjectByType<PlayerController>();
         _friend = FindAnyObjectByType<Friend>();
@@ -45,16 +55,43 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         _friend.PrepareElemental(); // 동료 마법 준비
-        StartWave();
+        //StartWave();
+        LoadStage(_currentStage);
         //Debug.Log($"웨이브 {_currentWave} 시작! 가중치: Normal={_weightedEnemies.First(e => _normalEnemyPrefabList.Contains(e.prefab)).weight}, Special={_weightedEnemies.First(e => _specialEnemyPrefabList.Contains(e.prefab)).weight}, Confuse={_weightedEnemies.First(e => _confuseEnemyPrefabList.Contains(e.prefab)).weight}");
+    }
+
+    // 240417 추가함수
+    // 스테이지 인덱스로 정보를 로드
+    public void LoadStage(int stageIndex)
+    {
+        _currentStage = stageIndex;
+        _currentWave = 0;
+        _currentEnemyList.Clear();
+
+        var stageData = Manager.Data.GetStageData(stageIndex);
+        // background 변경하는 부분. 임시 생략
+        BGM bgm = stageIndex switch
+        {
+            0 => BGM.Title,
+            1 => BGM.Main,
+            2 => BGM.Main,
+            3 => BGM.Boss,
+            4 => BGM.Boss,
+            _ => BGM.Title
+        };
+        Manager.Sound.PlayBGM(bgm);
+        RhythmManager.Instance.SetBpm(); // 240417 인덱스 있는 함수도 설정해야함
+        StartWave();
     }
 
     public void StartWave()
     {
-        if (Manager.Data.WaveInfoDict.TryGetValue(_currentWave, out List<(Enemy enemy, float weight)> currentWaveInfoList))
+        //if (Manager.Data.WaveInfoDict.TryGetValue(_currentWave, out List<(Enemy enemy, float weight)> currentWaveInfoList))
+        if (Manager.Data.GetStageWaveInfo(_currentStage).TryGetValue(_currentWave, out var currentWaveInfoList))
         {
             _currentWaveSpawnInfoList = currentWaveInfoList;
-            _waveMonsterCount = 20;
+            // 250417: 몬스터 개체수 지정하는 부분
+            _waveMonsterCount = _currentStage == 0 ? 1 : 20;
             _currentWave++;
             Manager.UI.updateWaveAction?.Invoke(_currentWave); // UI 업데이트
 
@@ -63,35 +100,37 @@ public class GameManager : MonoBehaviour
             {
                 if (_currentWave <= 3)
                 {
-                    _noneMonsetCount = 10;
+                    _noneMonsterCount = 10;
                 }
                 else
                 {
-                    _noneMonsetCount = 5;
+                    _noneMonsterCount = 5;
                 }
             }
             else
             {
-                _noneMonsetCount = 0;
+                _noneMonsterCount = 0;
             }
             //Debug.Log($"웨이브 {_currentWave} 시작! 가중치: Normal={currentWaveInfoList.First(e => _normalEnemyPrefabList.Contains(e.prefab)).weight}, Special={waveConfig.First(e => _specialEnemyPrefabList.Contains(e.prefab)).weight}, Confuse={waveConfig.First(e => _confuseEnemyPrefabList.Contains(e.prefab)).weight}");
         }
         else
         {
-            Manager.Scene.LoadScene(SceneType.GameClearScene);
-            Debug.Log($"웨이브 {_currentWave} 설정이 없습니다! Clear Scene으로 이동합니다.");
-            return;
+            // 250417: UI에 결과 canvas 만들어야함
+            //Manager.Scene.LoadScene(SceneType.GameClearScene);
+            //Debug.Log($"웨이브 {_currentWave} 설정이 없습니다! Clear Scene으로 이동합니다.");
+            //return;
+            StartCoroutine(ShowClearCanvasAndProceed());
         }
     }
 
     // 적 소환
     public void SpawnEnemy(Vector3 spawnPoint)
     {
-        if(!CheckSpawnCondition()) 
+        if (!CheckSpawnCondition())
             return;
         if (_currentWave < 6)
         {
-            if (_noneMonsetCount > 0)
+            if (_noneMonsterCount > 0)
             {
                 if (Random.value > 0.3f)
                 {
@@ -101,7 +140,7 @@ public class GameManager : MonoBehaviour
                     _waveMonsterCount--;
                     //Debug.Log($"웨이브 {_currentWave} 몬스터 타입{enemy}");
                 }
-                else { _waveMonsterCount--; _noneMonsetCount--; }
+                else { _waveMonsterCount--; _noneMonsterCount--; }
             }
             else
             {
@@ -117,8 +156,6 @@ public class GameManager : MonoBehaviour
             _currentEnemyList.Add(_currentEnemy);
         }
         _waveMonsterCount--;
-       
-
     }
 
     Enemy GetRandomEnemy()
@@ -208,5 +245,25 @@ public class GameManager : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    public void NextStage()
+    {
+        LoadStage(++_currentStage);
+    }
+
+    IEnumerator ShowClearCanvasAndProceed()
+    {
+        Manager.UI.ShowStageResult(_currentStage);
+        yield return new WaitForSeconds(1f);
+        Manager.UI.HideResult();
+        if (_currentStage < 4)
+        {
+            NextStage();
+        }
+        else
+        {
+            Manager.Scene.LoadScene(SceneType.GameClearScene);
+        }
     }
 }
