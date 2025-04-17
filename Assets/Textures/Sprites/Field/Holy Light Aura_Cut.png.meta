@@ -1,19 +1,28 @@
 fileFormatVersion: 2
-guid: 1b607e448d6c48241a7d8e791ad87475
+guid: c2e70a9bcacc33045900598b9e5a88c4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3664983861114067704
-    second: Leaves_0
+      213: 2312152206340407208
+    second: Holy Light Aura_Cut_0
   - first:
-      213: -5999245757173483519
-    second: Leaves_1
+      213: 4194111224513883512
+    second: Holy Light Aura_Cut_1
   - first:
-      213: -8532703326110650893
-    second: Leaves_2
+      213: 7383463917340222846
+    second: Holy Light Aura_Cut_2
   - first:
-      213: 83947755850914152
-    second: Leaves_3
+      213: -309043784896053163
+    second: Holy Light Aura_Cut_3
+  - first:
+      213: -1677355595768194560
+    second: Holy Light Aura_Cut_4
+  - first:
+      213: 806146337587129004
+    second: Holy Light Aura_Cut_5
+  - first:
+      213: -2468979927436502590
+    second: Holy Light Aura_Cut_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +55,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -60,7 +69,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -84,7 +93,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -135,13 +144,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Leaves_0
+      name: Holy Light Aura_Cut_0
       rect:
         serializedVersion: 2
-        x: 56
-        y: 117
-        width: 11
-        height: 7
+        x: 24
+        y: 119
+        width: 49
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8fa5e3d5763acd230800000000000000
-      internalID: 3664983861114067704
+      spriteID: 8af3e8d6e2a661020800000000000000
+      internalID: 2312152206340407208
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leaves_1
+      name: Holy Light Aura_Cut_1
       rect:
         serializedVersion: 2
-        x: 77
-        y: 113
-        width: 8
-        height: 10
+        x: 120
+        y: 119
+        width: 49
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 108b76be4c56ebca0800000000000000
-      internalID: -5999245757173483519
+      spriteID: 87de0a5ffe9743a30800000000000000
+      internalID: 4194111224513883512
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leaves_2
+      name: Holy Light Aura_Cut_2
       rect:
         serializedVersion: 2
-        x: 19
-        y: 53
-        width: 12
-        height: 6
+        x: 216
+        y: 119
+        width: 49
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3fd6169788fb59980800000000000000
-      internalID: -8532703326110650893
+      spriteID: e756af44055577660800000000000000
+      internalID: 7383463917340222846
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leaves_3
+      name: Holy Light Aura_Cut_3
       rect:
         serializedVersion: 2
-        x: 45
-        y: 28
-        width: 12
-        height: 7
+        x: 311
+        y: 119
+        width: 50
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,8 +225,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8695f270a0e3a2100800000000000000
-      internalID: 83947755850914152
+      spriteID: 5508a35a05e06bbf0800000000000000
+      internalID: -309043784896053163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Holy Light Aura_Cut_4
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 119
+        width: 49
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00a193009f5d8b8e0800000000000000
+      internalID: -1677355595768194560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Holy Light Aura_Cut_5
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 23
+        width: 49
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caaecd8a2d1003b00800000000000000
+      internalID: 806146337587129004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Holy Light Aura_Cut_6
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 23
+        width: 49
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c9d39356db6cbdd0800000000000000
+      internalID: -2468979927436502590
       vertices: []
       indices: 
       edges: []
@@ -236,10 +311,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Leaves_0: 3664983861114067704
-      Leaves_1: -5999245757173483519
-      Leaves_2: -8532703326110650893
-      Leaves_3: 83947755850914152
+      Holy Light Aura_Cut_0: 2312152206340407208
+      Holy Light Aura_Cut_1: 4194111224513883512
+      Holy Light Aura_Cut_2: 7383463917340222846
+      Holy Light Aura_Cut_3: -309043784896053163
+      Holy Light Aura_Cut_4: -1677355595768194560
+      Holy Light Aura_Cut_5: 806146337587129004
+      Holy Light Aura_Cut_6: -2468979927436502590
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
