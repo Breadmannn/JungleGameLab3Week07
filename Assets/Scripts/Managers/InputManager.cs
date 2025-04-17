@@ -50,20 +50,20 @@ public class InputManager : MonoBehaviour
             Vector2 castValue = context.ReadValue<Vector2>();
 
             // 키보드 입력 감지
-            if (castValue.y == 1) // Flame (화염)
+            if (castValue.y == 1) // W : 불
             {
 
                 selectElementalAction.Invoke(Elemental.Fire);
                 makePressBtnFX?.Invoke(0);
                 Debug.Log("w 입력");
             }
-            else if (castValue.x == 1) // Frost (냉기)
+            else if (castValue.x == 1) // E : 물
             {
                 selectElementalAction.Invoke(Elemental.Water);
                 makePressBtnFX?.Invoke(1);
                 Debug.Log("e 입력");
             }
-            else if (castValue.x == -1) // Lightning (번개)
+            else if (castValue.x == -1) // Q : 풀
             {
                 selectElementalAction.Invoke(Elemental.Grass);
                 makePressBtnFX?.Invoke(3);
