@@ -47,7 +47,7 @@ public class Skill : MonoBehaviour
                 }
 
                 playerSkill.ExcuteEffect(elementalEffect, position);
-                enemyList[i].TakeDamage(damage);
+                enemyList[i].TakeDamage(damage, elemental);
                 CameraController.Instance.ShakeCamera(2f);
             }
         }

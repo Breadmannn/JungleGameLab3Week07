@@ -177,10 +177,10 @@ public class Enemy : MonoBehaviour, IStatus
         // 공격 애니메이션 재생
         _animator.SetTrigger("AttackTrigger");
         // 적이 벽에 닿으면 벽 파괴
-        if (target.TryGetComponent<Wall>(out Wall wall))
-        {
-            Destroy(target);
-        }
+        //if (target.TryGetComponent<Wall>(out Wall wall))
+        //{
+        //    Destroy(target);
+        //}
         if (target.TryGetComponent<PlayerController>(out PlayerController player))
         {
             player.TakeDamage(100, Elemental.None); // 플레이어에게 데미지 입히기

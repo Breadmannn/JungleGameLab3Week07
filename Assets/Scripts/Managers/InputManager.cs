@@ -69,12 +69,12 @@ public class InputManager : MonoBehaviour
                 //Debug.Log("Oil 키 입력: 기름");
                 makePressBtnFX?.Invoke(2);
             }
-            else if (castValue.x == -1) // Lightning (번개)
-            {
-                selectElementalAction.Invoke(Elemental.Lightning);
-                makePressBtnFX?.Invoke(3);
-                //Debug.Log("Lightning 키 입력: 번개");
-            }
+            //else if (castValue.x == -1) // Lightning (번개)
+            //{
+            //    selectElementalAction.Invoke(Elemental.Lightning);
+            //    makePressBtnFX?.Invoke(3);
+            //    //Debug.Log("Lightning 키 입력: 번개");
+            //}
         }
         //else if (context.canceled)
         //{

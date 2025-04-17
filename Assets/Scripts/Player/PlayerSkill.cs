@@ -80,7 +80,7 @@ public class PlayerSkill : MonoBehaviour
             float delayTime = 5f;
 
             // 애니메이터 존재하는 경우
-            if(effectInstance.TryGetComponent<Animator>(out Animator anim) && effect != ElementalEffect.EnemyShock)
+            if(effectInstance.TryGetComponent<Animator>(out Animator anim) && effect != ElementalEffect.Stun)
             {
                 AnimationClip clip = anim.runtimeAnimatorController.animationClips.FirstOrDefault();
                 delayTime = clip.length;
