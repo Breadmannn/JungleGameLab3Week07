@@ -2886,10 +2886,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 182095086513031691, guid: 26f8df5c234d61d4398b25a7342fb6e6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 35
+      objectReference: {fileID: 0}
     - target: {fileID: 190591429608006876, guid: 26f8df5c234d61d4398b25a7342fb6e6, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 409210287730211598, guid: 26f8df5c234d61d4398b25a7342fb6e6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a6b84e636783fa8438f09376959d3e27, type: 3}
     - target: {fileID: 1569198389855745936, guid: 26f8df5c234d61d4398b25a7342fb6e6, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.1679
@@ -2905,6 +2913,14 @@ PrefabInstance:
     - target: {fileID: 1569198389855745936, guid: 26f8df5c234d61d4398b25a7342fb6e6, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -51
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675480663418854110, guid: 26f8df5c234d61d4398b25a7342fb6e6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1876636582519798421, guid: 26f8df5c234d61d4398b25a7342fb6e6, type: 3}
+      propertyPath: m_Name
+      value: BG Grass
       objectReference: {fileID: 0}
     - target: {fileID: 2474074308625826060, guid: 26f8df5c234d61d4398b25a7342fb6e6, type: 3}
       propertyPath: m_Name
@@ -3014,8 +3030,17 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 93
       objectReference: {fileID: 0}
+    - target: {fileID: 8426368632435576363, guid: 26f8df5c234d61d4398b25a7342fb6e6, type: 3}
+      propertyPath: m_Name
+      value: BG Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 8681144578581507479, guid: 26f8df5c234d61d4398b25a7342fb6e6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3600202834957334876, guid: 26f8df5c234d61d4398b25a7342fb6e6, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7267909084032288587, guid: 26f8df5c234d61d4398b25a7342fb6e6, type: 3}
       insertIndex: 0
@@ -9746,8 +9771,7 @@ MonoBehaviour:
   _elementalSprites:
   - {fileID: 1098286324429101383, guid: fce4f5cceab8f22428351ffecbcc24a1, type: 3}
   - {fileID: 6049605792901559095, guid: bc1118dfc57834d42b40668753e28533, type: 3}
-  - {fileID: 2555306400629851598, guid: eef58f33622befb48ba922b34144d466, type: 3}
-  - {fileID: -894095381526335850, guid: d8cca2083027839409a96a748162b300, type: 3}
+  - {fileID: 21300000, guid: a6b84e636783fa8438f09376959d3e27, type: 3}
 --- !u!95 &3217144395199235783
 Animator:
   serializedVersion: 7
