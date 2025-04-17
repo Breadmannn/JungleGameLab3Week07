@@ -1,145 +1,37 @@
 fileFormatVersion: 2
-guid: 24b275cffbb991d42a67c5e30c7dd87f
+guid: c4bcbd5c384dcfc41ae3746ef0a175da
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6317161338769077217
-    second: GrassStrong_0
+      213: 4560032686666394689
+    second: WaterBumwe_0
   - first:
-      213: -6455999772769984730
-    second: GrassStrong_1
+      213: 3908684057057378052
+    second: WaterBumwe_1
   - first:
-      213: -8048471484801984980
-    second: GrassStrong_2
+      213: -5111922477150411186
+    second: WaterBumwe_2
   - first:
-      213: 8620133072385256755
-    second: GrassStrong_3
+      213: -4206789594156566587
+    second: WaterBumwe_3
   - first:
-      213: 7212705405699156257
-    second: GrassStrong_4
+      213: 5737044497133149225
+    second: WaterBumwe_4
   - first:
-      213: -2325490969009503426
-    second: GrassStrong_5
+      213: 8150487192120457801
+    second: WaterBumwe_5
   - first:
-      213: 4375350001032640499
-    second: GrassStrong_6
+      213: -1104752451242484424
+    second: WaterBumwe_6
   - first:
-      213: -2418160349241965719
-    second: GrassStrong_7
+      213: -589408496490625831
+    second: WaterBumwe_7
   - first:
-      213: 6900107388876220948
-    second: GrassStrong_8
+      213: -6016787301831477247
+    second: WaterBumwe_8
   - first:
-      213: 2338394998797159132
-    second: GrassStrong_9
-  - first:
-      213: 14378733737765521
-    second: GrassStrong_10
-  - first:
-      213: 9013127148740772293
-    second: GrassStrong_11
-  - first:
-      213: 1260827109925025903
-    second: GrassStrong_12
-  - first:
-      213: 2390083586658761624
-    second: GrassStrong_13
-  - first:
-      213: -5864150900068902609
-    second: GrassStrong_14
-  - first:
-      213: 7740593672163233983
-    second: GrassStrong_15
-  - first:
-      213: 6568873163863184776
-    second: GrassStrong_16
-  - first:
-      213: 6065122761268809309
-    second: GrassStrong_17
-  - first:
-      213: -4223148170439423449
-    second: GrassStrong_18
-  - first:
-      213: -5951791855800062030
-    second: GrassStrong_19
-  - first:
-      213: -6344123352720662274
-    second: GrassStrong_20
-  - first:
-      213: 751628620966313372
-    second: GrassStrong_21
-  - first:
-      213: -881419427445903008
-    second: GrassStrong_22
-  - first:
-      213: 7625043810151588884
-    second: GrassStrong_23
-  - first:
-      213: -8559616169027767143
-    second: GrassStrong_24
-  - first:
-      213: 4152241359859690834
-    second: GrassStrong_25
-  - first:
-      213: -2071802154433107967
-    second: GrassStrong_26
-  - first:
-      213: 3450650386265665405
-    second: GrassStrong_27
-  - first:
-      213: 1239620281614205360
-    second: GrassStrong_28
-  - first:
-      213: 5057724555343412583
-    second: GrassStrong_29
-  - first:
-      213: 3724562033889001624
-    second: GrassStrong_30
-  - first:
-      213: 5697974340902669424
-    second: GrassStrong_31
-  - first:
-      213: -3354147768362584247
-    second: GrassStrong_32
-  - first:
-      213: 2378714419624682565
-    second: GrassStrong_33
-  - first:
-      213: -4440639671751413447
-    second: GrassStrong_34
-  - first:
-      213: 1637320104769364506
-    second: GrassStrong_35
-  - first:
-      213: -6373796902273906258
-    second: GrassStrong_36
-  - first:
-      213: -2446540763251118727
-    second: GrassStrong_37
-  - first:
-      213: 1485113437562820689
-    second: GrassStrong_38
-  - first:
-      213: -2754864792683452851
-    second: GrassStrong_39
-  - first:
-      213: -2783914369273062978
-    second: GrassStrong_40
-  - first:
-      213: -3621949316234283462
-    second: GrassStrong_41
-  - first:
-      213: 7846862049160916952
-    second: GrassStrong_42
-  - first:
-      213: -5261129361448347192
-    second: GrassStrong_43
-  - first:
-      213: -1566988462098387615
-    second: GrassStrong_44
-  - first:
-      213: 5444101075636905977
-    second: GrassStrong_45
+      213: 5295196730613181528
+    second: WaterBumwe_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -261,243 +153,221 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GrassStrong_2
+      name: WaterBumwe_0
       rect:
         serializedVersion: 2
-        x: 67
-        y: 22
-        width: 26
-        height: 25
+        x: 29
+        y: 0
+        width: 6
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f1c86dd6b3fe458a0800000000000000
-      internalID: -6317161338769077217
+      spriteID: 14cabe4819d784f30800000000000000
+      internalID: 4560032686666394689
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GrassStrong_4
+      name: WaterBumwe_1
       rect:
         serializedVersion: 2
-        x: 179
-        y: 9
-        width: 60
-        height: 53
+        x: 76
+        y: 0
+        width: 42
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c265483c3d51e4090800000000000000
-      internalID: -8048471484801984980
+      spriteID: 40f3328d07f6e3630800000000000000
+      internalID: 3908684057057378052
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GrassStrong_5
+      name: WaterBumwe_2
       rect:
         serializedVersion: 2
-        x: 241
-        y: 3
-        width: 51
-        height: 60
+        x: 139
+        y: 0
+        width: 42
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 33dae10ab5dd0a770800000000000000
-      internalID: 8620133072385256755
+      spriteID: e466d16579dce09b0800000000000000
+      internalID: -5111922477150411186
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GrassStrong_8
+      name: WaterBumwe_3
       rect:
         serializedVersion: 2
-        x: 433
-        y: 12
-        width: 59
-        height: 45
+        x: 205
+        y: 0
+        width: 38
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f68734a839b5f7110800000000000000
-      internalID: 1260827109925025903
+      spriteID: 5c7fc73172b7e95c0800000000000000
+      internalID: -4206789594156566587
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GrassStrong_9
+      name: WaterBumwe_4
       rect:
         serializedVersion: 2
-        x: 499
-        y: 9
-        width: 51
-        height: 47
+        x: 267
+        y: 0
+        width: 42
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f291b1473d95e9ea0800000000000000
-      internalID: -5864150900068902609
+      spriteID: 92c1b30f2931e9f40800000000000000
+      internalID: 5737044497133149225
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GrassStrong_10
+      name: WaterBumwe_5
       rect:
         serializedVersion: 2
-        x: 564
-        y: 9
-        width: 56
-        height: 46
+        x: 333
+        y: 0
+        width: 38
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fb01de3feec1c6b60800000000000000
-      internalID: 7740593672163233983
+      spriteID: 94af5b80be85c1170800000000000000
+      internalID: 8150487192120457801
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GrassStrong_3
+      name: WaterBumwe_6
       rect:
         serializedVersion: 2
-        x: 121
-        y: 12
-        width: 49
-        height: 46
+        x: 399
+        y: 0
+        width: 34
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 88559a2d653592b50800000000000000
-      internalID: 6568873163863184776
+      spriteID: 83d13f2bf712ba0f0800000000000000
+      internalID: -1104752451242484424
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GrassStrong_6
+      name: WaterBumwe_7
       rect:
         serializedVersion: 2
-        x: 296
-        y: 4
-        width: 63
-        height: 47
+        x: 468
+        y: 38
+        width: 21
+        height: 26
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ef023dd5c6525f7a0800000000000000
-      internalID: -6344123352720662274
+      spriteID: 9d44413681002d7f0800000000000000
+      internalID: -589408496490625831
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GrassStrong_7
+      name: WaterBumwe_8
       rect:
         serializedVersion: 2
-        x: 370
-        y: 1
-        width: 55
-        height: 54
+        x: 468
+        y: 7
+        width: 21
+        height: 35
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 994f86fe172263980800000000000000
-      internalID: -8559616169027767143
+      spriteID: 108f049c3d3108ca0800000000000000
+      internalID: -6016787301831477247
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GrassStrong_1
+      name: WaterBumwe_9
       rect:
         serializedVersion: 2
-        x: 14
-        y: 30
-        width: 7
-        height: 7
+        x: 478
+        y: 0
+        width: 10
+        height: 10
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d7fed657e3c23ef20800000000000000
-      internalID: 3450650386265665405
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GrassStrong_11
-      rect:
-        serializedVersion: 2
-        x: 627
-        y: 9
-        width: 55
-        height: 49
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1473c6db068f97e4ca2a48f6368b23f1
-      internalID: 52857922
+      spriteID: 85c22001f515c7940800000000000000
+      internalID: 5295196730613181528
       vertices: []
       indices: 
       edges: []
@@ -506,7 +376,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 01a5aa46b9e1cca49a56f1ee7fb5e24e
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -516,18 +386,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      0: 52857922
-      GrassStrong_1: 3450650386265665405
-      GrassStrong_10: 7740593672163233983
-      GrassStrong_11: 52857922
-      GrassStrong_2: -6317161338769077217
-      GrassStrong_3: 6568873163863184776
-      GrassStrong_4: -8048471484801984980
-      GrassStrong_5: 8620133072385256755
-      GrassStrong_6: -6344123352720662274
-      GrassStrong_7: -8559616169027767143
-      GrassStrong_8: 1260827109925025903
-      GrassStrong_9: -5864150900068902609
+      WaterBumwe_0: 4560032686666394689
+      WaterBumwe_1: 3908684057057378052
+      WaterBumwe_2: -5111922477150411186
+      WaterBumwe_3: -4206789594156566587
+      WaterBumwe_4: 5737044497133149225
+      WaterBumwe_5: 8150487192120457801
+      WaterBumwe_6: -1104752451242484424
+      WaterBumwe_7: -589408496490625831
+      WaterBumwe_8: -6016787301831477247
+      WaterBumwe_9: 5295196730613181528
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

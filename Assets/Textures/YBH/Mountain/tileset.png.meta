@@ -1,145 +1,28 @@
 fileFormatVersion: 2
-guid: 24b275cffbb991d42a67c5e30c7dd87f
+guid: 501b32b0003182440a416f633a228a9c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6317161338769077217
-    second: GrassStrong_0
+      213: 5663061954668274717
+    second: tileset_0
   - first:
-      213: -6455999772769984730
-    second: GrassStrong_1
+      213: 6007627129536956325
+    second: tileset_1
   - first:
-      213: -8048471484801984980
-    second: GrassStrong_2
+      213: -7486092956772349302
+    second: tileset_2
   - first:
-      213: 8620133072385256755
-    second: GrassStrong_3
+      213: -3627264120405484348
+    second: tileset_3
   - first:
-      213: 7212705405699156257
-    second: GrassStrong_4
+      213: -4815885190406460031
+    second: tileset_4
   - first:
-      213: -2325490969009503426
-    second: GrassStrong_5
+      213: 7477116942032994148
+    second: tileset_5
   - first:
-      213: 4375350001032640499
-    second: GrassStrong_6
-  - first:
-      213: -2418160349241965719
-    second: GrassStrong_7
-  - first:
-      213: 6900107388876220948
-    second: GrassStrong_8
-  - first:
-      213: 2338394998797159132
-    second: GrassStrong_9
-  - first:
-      213: 14378733737765521
-    second: GrassStrong_10
-  - first:
-      213: 9013127148740772293
-    second: GrassStrong_11
-  - first:
-      213: 1260827109925025903
-    second: GrassStrong_12
-  - first:
-      213: 2390083586658761624
-    second: GrassStrong_13
-  - first:
-      213: -5864150900068902609
-    second: GrassStrong_14
-  - first:
-      213: 7740593672163233983
-    second: GrassStrong_15
-  - first:
-      213: 6568873163863184776
-    second: GrassStrong_16
-  - first:
-      213: 6065122761268809309
-    second: GrassStrong_17
-  - first:
-      213: -4223148170439423449
-    second: GrassStrong_18
-  - first:
-      213: -5951791855800062030
-    second: GrassStrong_19
-  - first:
-      213: -6344123352720662274
-    second: GrassStrong_20
-  - first:
-      213: 751628620966313372
-    second: GrassStrong_21
-  - first:
-      213: -881419427445903008
-    second: GrassStrong_22
-  - first:
-      213: 7625043810151588884
-    second: GrassStrong_23
-  - first:
-      213: -8559616169027767143
-    second: GrassStrong_24
-  - first:
-      213: 4152241359859690834
-    second: GrassStrong_25
-  - first:
-      213: -2071802154433107967
-    second: GrassStrong_26
-  - first:
-      213: 3450650386265665405
-    second: GrassStrong_27
-  - first:
-      213: 1239620281614205360
-    second: GrassStrong_28
-  - first:
-      213: 5057724555343412583
-    second: GrassStrong_29
-  - first:
-      213: 3724562033889001624
-    second: GrassStrong_30
-  - first:
-      213: 5697974340902669424
-    second: GrassStrong_31
-  - first:
-      213: -3354147768362584247
-    second: GrassStrong_32
-  - first:
-      213: 2378714419624682565
-    second: GrassStrong_33
-  - first:
-      213: -4440639671751413447
-    second: GrassStrong_34
-  - first:
-      213: 1637320104769364506
-    second: GrassStrong_35
-  - first:
-      213: -6373796902273906258
-    second: GrassStrong_36
-  - first:
-      213: -2446540763251118727
-    second: GrassStrong_37
-  - first:
-      213: 1485113437562820689
-    second: GrassStrong_38
-  - first:
-      213: -2754864792683452851
-    second: GrassStrong_39
-  - first:
-      213: -2783914369273062978
-    second: GrassStrong_40
-  - first:
-      213: -3621949316234283462
-    second: GrassStrong_41
-  - first:
-      213: 7846862049160916952
-    second: GrassStrong_42
-  - first:
-      213: -5261129361448347192
-    second: GrassStrong_43
-  - first:
-      213: -1566988462098387615
-    second: GrassStrong_44
-  - first:
-      213: 5444101075636905977
-    second: GrassStrong_45
+      213: -396035294860175646
+    second: tileset_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -186,7 +69,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -261,13 +144,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GrassStrong_2
+      name: tileset_0
       rect:
         serializedVersion: 2
-        x: 67
-        y: 22
-        width: 26
-        height: 25
+        x: 15
+        y: 15
+        width: 82
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f1c86dd6b3fe458a0800000000000000
-      internalID: -6317161338769077217
+      spriteID: d142805f7dc379e40800000000000000
+      internalID: 5663061954668274717
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GrassStrong_4
+      name: tileset_1
       rect:
         serializedVersion: 2
-        x: 179
-        y: 9
-        width: 60
-        height: 53
+        x: 111
+        y: 15
+        width: 34
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -298,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c265483c3d51e4090800000000000000
-      internalID: -8048471484801984980
+      spriteID: 5a7cc076b016f5350800000000000000
+      internalID: 6007627129536956325
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GrassStrong_5
+      name: tileset_2
       rect:
         serializedVersion: 2
-        x: 241
-        y: 3
-        width: 51
-        height: 60
+        x: 159
+        y: 15
+        width: 34
+        height: 82
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 33dae10ab5dd0a770800000000000000
-      internalID: 8620133072385256755
+      spriteID: a8ac70c6e1e0c1890800000000000000
+      internalID: -7486092956772349302
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GrassStrong_8
+      name: tileset_3
       rect:
         serializedVersion: 2
-        x: 433
-        y: 12
-        width: 59
-        height: 45
+        x: 207
+        y: 15
+        width: 34
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -342,20 +225,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f68734a839b5f7110800000000000000
-      internalID: 1260827109925025903
+      spriteID: 4cc16b4208e59adc0800000000000000
+      internalID: -3627264120405484348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GrassStrong_9
+      name: tileset_4
       rect:
         serializedVersion: 2
-        x: 499
-        y: 9
-        width: 51
-        height: 47
+        x: 255
+        y: 15
+        width: 18
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -364,20 +247,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f291b1473d95e9ea0800000000000000
-      internalID: -5864150900068902609
+      spriteID: 18d22ca5fe98a2db0800000000000000
+      internalID: -4815885190406460031
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GrassStrong_10
+      name: tileset_5
       rect:
         serializedVersion: 2
-        x: 564
-        y: 9
-        width: 56
-        height: 46
+        x: 287
+        y: 15
+        width: 34
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -386,20 +269,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fb01de3feec1c6b60800000000000000
-      internalID: 7740593672163233983
+      spriteID: 46f7ee94e3e04c760800000000000000
+      internalID: 7477116942032994148
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GrassStrong_3
+      name: tileset_6
       rect:
         serializedVersion: 2
-        x: 121
-        y: 12
-        width: 49
-        height: 46
+        x: 335
+        y: 15
+        width: 18
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -408,96 +291,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 88559a2d653592b50800000000000000
-      internalID: 6568873163863184776
+      spriteID: 2e697536ffff08af0800000000000000
+      internalID: -396035294860175646
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GrassStrong_6
+      name: tileset_7
       rect:
         serializedVersion: 2
-        x: 296
-        y: 4
-        width: 63
-        height: 47
+        x: 65
+        y: 80
+        width: 31
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ef023dd5c6525f7a0800000000000000
-      internalID: -6344123352720662274
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GrassStrong_7
-      rect:
-        serializedVersion: 2
-        x: 370
-        y: 1
-        width: 55
-        height: 54
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 994f86fe172263980800000000000000
-      internalID: -8559616169027767143
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GrassStrong_1
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 30
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d7fed657e3c23ef20800000000000000
-      internalID: 3450650386265665405
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GrassStrong_11
-      rect:
-        serializedVersion: 2
-        x: 627
-        y: 9
-        width: 55
-        height: 49
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1473c6db068f97e4ca2a48f6368b23f1
-      internalID: 52857922
+      spriteID: 549367c503bd6e244adf44c65ab0b340
+      internalID: -1841328480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_8
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 16
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cd6d3597b6b73248bbb721013ec7325
+      internalID: -135585528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_9
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc22cc4563dba6441873127c629dadb2
+      internalID: -1552653812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_10
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4df3e85821c6b18499e4e55373420342
+      internalID: -637312468
       vertices: []
       indices: 
       edges: []
@@ -506,7 +389,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 01a5aa46b9e1cca49a56f1ee7fb5e24e
+    spriteID: 46ef414936616e742acbb8fc6acf26e8
     internalID: 0
     vertices: []
     indices: 
@@ -516,18 +399,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      0: 52857922
-      GrassStrong_1: 3450650386265665405
-      GrassStrong_10: 7740593672163233983
-      GrassStrong_11: 52857922
-      GrassStrong_2: -6317161338769077217
-      GrassStrong_3: 6568873163863184776
-      GrassStrong_4: -8048471484801984980
-      GrassStrong_5: 8620133072385256755
-      GrassStrong_6: -6344123352720662274
-      GrassStrong_7: -8559616169027767143
-      GrassStrong_8: 1260827109925025903
-      GrassStrong_9: -5864150900068902609
+      tileset_10: -637312468
+      tileset_7: -1841328480
+      tileset_8: -135585528
+      tileset_9: -1552653812
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
