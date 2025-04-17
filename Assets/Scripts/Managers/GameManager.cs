@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour
     public List<Enemy> CurrentEnemyList => _currentEnemyList;
     List<Enemy> _currentEnemyList = new List<Enemy>();      // 현재 적 리스트 
 
+    Coroutine NextStageCoroutine;
+
     //[Header("스테이지 메타데이터")]
     //[SerializeField] SpriteRenderer _background; // 배경 생기면 넣어야 할 가능성. 당장엔 안씀.
 
@@ -119,7 +121,10 @@ public class GameManager : MonoBehaviour
             //Manager.Scene.LoadScene(SceneType.GameClearScene);
             //Debug.Log($"웨이브 {_currentWave} 설정이 없습니다! Clear Scene으로 이동합니다.");
             //return;
-            StartCoroutine(ShowClearCanvasAndProceed());
+            if (NextStageCoroutine == null)
+            {
+                NextStageCoroutine = StartCoroutine(ShowClearCanvasAndProceed());
+            }
         }
     }
 
@@ -249,6 +254,7 @@ public class GameManager : MonoBehaviour
 
     public void NextStage()
     {
+        Debug.LogWarning($"NextStage:{_currentStage}");
         LoadStage(++_currentStage);
     }
 
@@ -256,6 +262,12 @@ public class GameManager : MonoBehaviour
     {
         Manager.UI.ShowStageResult(_currentStage);
         yield return new WaitForSeconds(1f);
+        Time.timeScale = 0f;
+        while (!Input.GetKeyDown(KeyCode.Space))
+        {
+            yield return null;
+        }
+        Time.timeScale = 1f;
         Manager.UI.HideResult();
         if (_currentStage < 4)
         {
@@ -265,5 +277,7 @@ public class GameManager : MonoBehaviour
         {
             Manager.Scene.LoadScene(SceneType.GameClearScene);
         }
+
+        NextStageCoroutine = null;
     }
 }

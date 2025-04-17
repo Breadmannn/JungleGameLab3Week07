@@ -41,15 +41,15 @@ public class DataManager
 
     Dictionary<int, float[][]> _stageWaveWeights = new Dictionary<int, float[][]>
     {
-        // [0]: 허수아비 [1]: 약한적 [2]: 강한적 [3]: 속성적 [4]: 탱커
+        // [0]: 허수아비 [1]: 약한적 [2]: 강한적 [3]: 불저항 [4]: 물저항 [5]: 풀저항 [6]: 탱커
 
         // 스테이지 0: 튜토리얼 -> 로비노래
         {
             0, new float[][]
             {
-                new float[] {1.0f, 0.0f, 0.0f, 0.0f, 0.0f },
-                new float[] {1.0f, 0.0f, 0.0f, 0.0f, 0.0f },
-                new float[] {1.0f, 0.0f, 0.0f, 0.0f, 0.0f }
+                new float[] {1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f },
+                new float[] {1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f },
+                new float[] {1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f }
             }
         },
 
@@ -57,9 +57,9 @@ public class DataManager
         {
             1, new float[][]
             {
-                new float[]{0.0f, 0.9f, 0.1f, 0.0f, 0.0f },
-                new float[]{0.0f, 0.8f, 0.2f, 0.0f, 0.0f },
-                new float[]{0.0f, 0.7f, 0.3f, 0.0f, 0.0f }
+                new float[]{0.0f, 0.9f, 0.1f, 0.0f, 0.0f, 0.0f, 0.0f },
+                new float[]{0.0f, 0.8f, 0.2f, 0.0f, 0.0f, 0.0f, 0.0f },
+                new float[]{0.0f, 0.7f, 0.3f, 0.0f, 0.0f, 0.0f, 0.0f }
             }
         },
 
@@ -67,9 +67,9 @@ public class DataManager
         {
             2, new float[][]
             {
-                new float[]{0.0f, 0.8f, 0.1f, 0.1f, 0.0f },
-                new float[]{0.0f, 0.7f, 0.2f, 0.1f, 0.0f },
-                new float[]{0.0f, 0.6f, 0.2f, 0.2f, 0.0f }
+                new float[]{0.0f, 0.5f, 0.3f, 0.2f, 0.0f, 0.0f, 0.0f },
+                new float[]{0.0f, 0.5f, 0.3f, 0.0f, 0.2f, 0.0f, 0.0f },
+                new float[]{0.0f, 0.5f, 0.3f, 0.0f, 0.0f, 0.2f, 0.0f }
             }
         },
 
@@ -77,9 +77,9 @@ public class DataManager
         {
             3, new float[][]
             {
-                new float[]{0.0f, 0.7f, 0.2f, 0.1f, 0.0f },
-                new float[]{0.0f, 0.5f, 0.2f, 0.2f, 0.1f },
-                new float[]{0.0f, 0.3f, 0.3f, 0.3f, 0.1f }
+                new float[]{0.0f, 0.4f, 0.3f, 0.15f, 0.0f, 0.15f, 0.0f },
+                new float[]{0.0f, 0.3f, 0.3f, 0.0f, 0.15f, 0.15f, 0.1f },
+                new float[]{0.0f, 0.1f, 0.3f, 0.1f, 0.1f, 0.1f, 0.3f }
             }
         },
 
@@ -87,9 +87,9 @@ public class DataManager
         {
             4, new float[][]
             {
-                new float[]{0.0f, 0.5f, 0.2f, 0.2f, 0.1f },
-                new float[]{0.0f, 0.3f, 0.3f, 0.2f, 0.2f },
-                new float[]{0.0f, 0.1f, 0.3f, 0.3f, 0.3f }
+                new float[]{0.0f, 0.1f, 0.4f, 0.1f, 0.1f, 0.1f, 0.2f },
+                new float[]{0.0f, 0.2f, 0.2f, 0.1f, 0.1f, 0.1f, 0.3f },
+                new float[]{0.0f, 0.1f, 0.2f, 0.1f, 0.1f, 0.1f, 0.4f }
             }
         }
     };
@@ -117,6 +117,8 @@ public class DataManager
         _enemyPrefabDict.Add(EnemyType.TestType2, Resources.LoadAll<Enemy>("Prefabs/Enemies/TestStage2").ToList());
         _enemyPrefabDict.Add(EnemyType.TestType3, Resources.LoadAll<Enemy>("Prefabs/Enemies/TestStage3").ToList());
         _enemyPrefabDict.Add(EnemyType.TestType4, Resources.LoadAll<Enemy>("Prefabs/Enemies/TestStage4").ToList());
+        _enemyPrefabDict.Add(EnemyType.TestType5, Resources.LoadAll<Enemy>("Prefabs/Enemies/TestStage5").ToList());
+        _enemyPrefabDict.Add(EnemyType.TestType6, Resources.LoadAll<Enemy>("Prefabs/Enemies/TestStage6").ToList());
 
         //SetWaveInfo();
         SetStageWaveInfo();
@@ -169,12 +171,16 @@ public class DataManager
                 float TestType2Weight = _enemyPrefabDict[EnemyType.TestType2].Count > 0 ? weights[i][2] / _enemyPrefabDict[EnemyType.TestType2].Count : 0f;
                 float TestType3Weight = _enemyPrefabDict[EnemyType.TestType3].Count > 0 ? weights[i][3] / _enemyPrefabDict[EnemyType.TestType3].Count : 0f;
                 float TestType4Weight = _enemyPrefabDict[EnemyType.TestType4].Count > 0 ? weights[i][4] / _enemyPrefabDict[EnemyType.TestType4].Count : 0f;
+                float TestType5Weight = _enemyPrefabDict[EnemyType.TestType5].Count > 0 ? weights[i][5] / _enemyPrefabDict[EnemyType.TestType5].Count : 0f;
+                float TestType6Weight = _enemyPrefabDict[EnemyType.TestType6].Count > 0 ? weights[i][6] / _enemyPrefabDict[EnemyType.TestType6].Count : 0f;
 
                 _enemyPrefabDict[EnemyType.TestType0].ForEach(enemy => _stageWaveInfoDict[stage][i].Add((enemy, TestType0Weight)));
                 _enemyPrefabDict[EnemyType.TestType1].ForEach(enemy => _stageWaveInfoDict[stage][i].Add((enemy, TestType1Weight)));
                 _enemyPrefabDict[EnemyType.TestType2].ForEach(enemy => _stageWaveInfoDict[stage][i].Add((enemy, TestType2Weight)));
                 _enemyPrefabDict[EnemyType.TestType3].ForEach(enemy => _stageWaveInfoDict[stage][i].Add((enemy, TestType3Weight)));
                 _enemyPrefabDict[EnemyType.TestType4].ForEach(enemy => _stageWaveInfoDict[stage][i].Add((enemy, TestType4Weight)));
+                _enemyPrefabDict[EnemyType.TestType5].ForEach(enemy => _stageWaveInfoDict[stage][i].Add((enemy, TestType5Weight)));
+                _enemyPrefabDict[EnemyType.TestType6].ForEach(enemy => _stageWaveInfoDict[stage][i].Add((enemy, TestType6Weight)));
             }
         }
     }

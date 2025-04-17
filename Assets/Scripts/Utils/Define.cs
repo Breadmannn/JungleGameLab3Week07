@@ -60,7 +60,9 @@ public class Define
         TestType1,
         TestType2,
         TestType3,
-        TestType4
+        TestType4,
+        TestType5,
+        TestType6
     }
     public enum Translation
     {
