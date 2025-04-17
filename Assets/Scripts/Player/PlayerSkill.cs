@@ -61,7 +61,7 @@ public class PlayerSkill : MonoBehaviour
     {
         foreach (var skillEffect in _skillEffects)
         {
-            if (skillEffect.name.Contains(effect.ToString()))
+            if (skillEffect.name.Equals(effect.ToString()))
             {
                 return skillEffect;
             }

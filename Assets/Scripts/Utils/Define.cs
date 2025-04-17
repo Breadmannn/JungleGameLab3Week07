@@ -65,7 +65,7 @@ public class Define
         //------------------------------------------------------------------------------------
         범위 =       (1 << Elemental.Fire) | (1 << Elemental.Water),          //멀티  = 불 + 물
         단일 =  (1 << Elemental.Fire) | (1 << Elemental.Grass),         // 단일 = 불 + 풀
-        기절 =        (1 << Elemental.Water) | (1 << Elemental.Grass),     // 속박 = 물 + 풀
+        속박 =        (1 << Elemental.Water) | (1 << Elemental.Grass),     // 속박 = 물 + 풀
         
     }
 
