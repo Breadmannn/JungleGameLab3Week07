@@ -156,14 +156,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15264a0f38d7b43489bd4f3df3fed674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyType: 0
   _enemyState: 0
   _moveType: 0
   _positionY1: 0
   _positionY2: 0
   _hp: 3
   _steelHp: 0
-  _sturnCoolCount: 0
+  resistance: 3
+  _stunCoolCount: 0
 --- !u!1 &6795153135896606445
 GameObject:
   m_ObjectHideFlags: 0
