@@ -27,22 +27,23 @@ public class Water : Skill
         if (playerSkill.IsSingleField && playerSkill.IsMultiField) 
         {
             WideAttack(enemies, ElementalEffect.SuperWater, _strongDamage, false);
-            playerSkill.DestroyGrease();
+            playerSkill.DestroyMultiField();
+            playerSkill.DestroySingleField();
             Debug.Log($"모든 적에게 {_strongDamage} 데미지!");
         }
         // 단일
         else if (playerSkill.IsSingleField)
         {
-            enemies = GameManager.Instance.GetFrontEnemie();
+            enemies = GameManager.Instance.GetFrontEnemy();
             WideAttack(enemies, ElementalEffect.SingleWater, _strongDamage, false);
-            playerSkill.DestroyGrease();
+            playerSkill.DestroySingleField();
             Debug.Log($"1명 적에게 {_strongDamage} 데미지!");
         }
         // 범위
         else if (playerSkill.IsMultiField)
         {
             WideAttack(enemies, ElementalEffect.MultiWater, _baseDamage, false);
-            playerSkill.DestroyGrease();
+            playerSkill.DestroyMultiField();
             Debug.Log($"모든 적에게 {_strongDamage} 데미지!");
             
         }

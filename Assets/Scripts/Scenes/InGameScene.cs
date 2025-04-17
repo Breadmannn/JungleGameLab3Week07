@@ -8,5 +8,7 @@ public class InGameScene : BaseScene
         SceneType = Define.SceneType.InGameScene;
         Manager.Sound.PlayBGM(Define.BGM.Main);
         Debug.Log("InGameScene 초기화");
+
+        Manager.Instance.SetStageClearCanvas();
     }
 }

@@ -9,9 +9,7 @@ public class Enemy : MonoBehaviour, IStatus
     Animator _anim;
     EnemyHearts _hearts; // 적 체력 UI
 
-    public EnemyType EnemyType => _enemyType;
     public EnemyState EnemyState => _enemyState;
-    [SerializeField] EnemyType _enemyType;                           // 적 타입
     [SerializeField] EnemyState _enemyState = EnemyState.None;       // 적 상태
 
     [SerializeField] int _moveType = 0;
@@ -29,7 +27,7 @@ public class Enemy : MonoBehaviour, IStatus
     float _moveSpeed = 2f;                      // 비트당 이동 거리
     [SerializeField] Elemental resistance;
 
-    [SerializeField] int _sturnCoolCount = 0;   // 기절 쿨 카운트
+    [SerializeField] int _stunCoolCount = 0;   // 기절 쿨 카운트
     Animator _animator;                         // 적 애니메이터
 
     void Awake()
@@ -46,11 +44,11 @@ public class Enemy : MonoBehaviour, IStatus
     {
         Wriggle();
         // 스턴 판정
-        if (_enemyState == EnemyState.Shock && _sturnCoolCount > 0) // 스턴 상태일 때는 이동하지 않음
+        if (_enemyState == EnemyState.Stun && _stunCoolCount > 0) // 스턴 상태일 때는 이동하지 않음
         {
             _isMoving = false; // 이동 중지
-            _sturnCoolCount--;
-            if (_sturnCoolCount == 0) // 스턴 상태 해제
+            _stunCoolCount--;
+            if (_stunCoolCount == 0) // 스턴 상태 해제
             {
                 _enemyState = EnemyState.None;
                 _isMoving = true;
@@ -113,8 +111,7 @@ public class Enemy : MonoBehaviour, IStatus
                 transform.position += (Vector3)(Vector2.left * _moveSpeed); // 왼쪽으로 이동
                 if (!_halfMove)
                 {
-                    StartCoroutine(   
-                        MoveHalfBeat()); // 반 박자 이동
+                    StartCoroutine(MoveHalfBeat()); // 반 박자 이동
                 }
                 _halfMove = false; // 반 박자 이동
                 break;
@@ -139,7 +136,7 @@ public class Enemy : MonoBehaviour, IStatus
     // 적 상태 변경
     public void ApplyState(EnemyState newState)
     {
-        _sturnCoolCount = 2;
+        _stunCoolCount = 2;
         _enemyState = newState;
         Debug.Log($"적 상태: {_enemyState}");
     }

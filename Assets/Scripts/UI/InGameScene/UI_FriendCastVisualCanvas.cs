@@ -38,23 +38,24 @@ public class UI_FriendCastVisualCanvas : MonoBehaviour
     }
 
     // 원소 이미지 및 말풍선 색 설정
-    public void SetElementalImage(bool isLying, Define.Elemental elemental)
+    public void SetElementalImage(Define.Elemental elemental)
     {
         _friendCastVisualCanvas.enabled = true;
         int idx = (int)elemental;
         _elementalImage.sprite = _elementalSprites[idx];
-        _backgroundImage.color = isLying ? _colorNotCertain : _colorCertain;
+        _backgroundImage.color = _colorCertain;
+        uiAnim.SetTrigger("Show");
 
-        if(isLying)
-        {
-            uiAnim.SetTrigger("Show");
-            StartCoroutine(ShakeWhenLying());
-        }
-        else
-        {
-            uiAnim.SetTrigger("Show");
-            //StartCoroutine(ShakeWhenLying());
-        }
+        //if (isLying)
+        //{
+        //    uiAnim.SetTrigger("Show");
+        //    StartCoroutine(ShakeWhenLying());
+        //}
+        //else
+        //{
+        //    uiAnim.SetTrigger("Show");
+        //    //StartCoroutine(ShakeWhenLying());
+        //}
         //ShowLying
     }
 

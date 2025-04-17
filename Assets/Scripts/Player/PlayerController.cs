@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour, IStatus
 
     [Header("비트 판정")]
     bool _isPerfect;
-    
+
     Animator _anim;       // Wriggle 애니메이터
     Animator _visualAnim; // 비주얼 애니메이터
 
@@ -70,20 +70,23 @@ public class PlayerController : MonoBehaviour, IStatus
         _visualAnim.SetTrigger("AttackTrigger");
 
         _playerSkill.ApplyInteraction(interaction);
-        if (interaction != ElementalEffect.None)
-        {
-            //_playerSkill.ApplyInteraction(interaction);
-            // Debug.Log($"반응 발생: {interaction}");
-            // Enemy firstEnemy = GameManager.Instance._currentEnemyList[0];
-            //_friend.UpdatePreviewElemental();
-            Manager.Sound.PlayEffect(Effect.BossDeath);
-            _friend.PrepareElemental(); // 친구 마법 예고 다시
-        }
-        else
-        {
-            //Debug.Log($"조합 실패: 플레이어({_playerElemental}) + 친구(visual: {_friend.VisualElemental} real: {_friend.RealElemental})는 잘못된 마법(기본 데미지 적용)");
-            Manager.Sound.PlayEffect(Effect.NormalElemental);
-        }
+        Manager.Sound.PlayEffect(Effect.BossDeath);
+        _friend.PrepareElemental(); // 친구 마법 예고 다시
+
+        //if (interaction != ElementalEffect.None)
+        //{
+        //    //_playerSkill.ApplyInteraction(interaction);
+        //    // Debug.Log($"반응 발생: {interaction}");
+        //    // Enemy firstEnemy = GameManager.Instance._currentEnemyList[0];
+        //    //_friend.UpdatePreviewElemental();
+        //    Manager.Sound.PlayEffect(Effect.BossDeath);
+        //    _friend.PrepareElemental(); // 친구 마법 예고 다시
+        //}
+        //else
+        //{
+        //    //Debug.Log($"조합 실패: 플레이어({_playerElemental}) + 친구(visual: {_friend.VisualElemental} real: {_friend.RealElemental})는 잘못된 마법(기본 데미지 적용)");
+        //    Manager.Sound.PlayEffect(Effect.NormalElemental);
+        //}
     }
 
     // 플레이어 데미지 피해 

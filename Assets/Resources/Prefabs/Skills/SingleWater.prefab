@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5676204725134821514}
   - component: {fileID: 7450380582772504977}
   - component: {fileID: 7839582964971983968}
-  - component: {fileID: 8790018497755862559}
   m_Layer: 0
   m_Name: SingleWater
   m_TagString: Untagged
@@ -115,18 +114,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8790018497755862559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5346039712479276195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5f7ac7076bd92044a29587930304f3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &35883333604573639
 PrefabInstance:
   m_ObjectHideFlags: 0
