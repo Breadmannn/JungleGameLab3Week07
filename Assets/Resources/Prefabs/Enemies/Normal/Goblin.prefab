@@ -160,7 +160,7 @@ MonoBehaviour:
   _moveType: 0
   _positionY1: 0
   _positionY2: 0
-  _hp: 3
+  _hp: 1
   _steelHp: 0
   resistance: 3
   _stunCoolCount: 0
