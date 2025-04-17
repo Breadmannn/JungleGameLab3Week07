@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UI_ControlCanvas : MonoBehaviour
 {
-    [SerializeField] Image[] btnImage; // Content as Flame, Water, Ground, Lightning
+    [SerializeField] Image[] btnImage; // Content as Flame, Water, Grass
 
     Coroutine _showPressBtnFXCoroutine;
 
