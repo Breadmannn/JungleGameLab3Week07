@@ -15084,6 +15084,131 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1455525050
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1561201547741903107, guid: e2ba7e226fa0abb4096e685af7cc7b17, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.800677
+      objectReference: {fileID: 0}
+    - target: {fileID: 1561201547741903107, guid: e2ba7e226fa0abb4096e685af7cc7b17, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.301837
+      objectReference: {fileID: 0}
+    - target: {fileID: 1561201547741903107, guid: e2ba7e226fa0abb4096e685af7cc7b17, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1561201547741903107, guid: e2ba7e226fa0abb4096e685af7cc7b17, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1561201547741903107, guid: e2ba7e226fa0abb4096e685af7cc7b17, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1561201547741903107, guid: e2ba7e226fa0abb4096e685af7cc7b17, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1561201547741903107, guid: e2ba7e226fa0abb4096e685af7cc7b17, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1561201547741903107, guid: e2ba7e226fa0abb4096e685af7cc7b17, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1561201547741903107, guid: e2ba7e226fa0abb4096e685af7cc7b17, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1561201547741903107, guid: e2ba7e226fa0abb4096e685af7cc7b17, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2441263143864851607, guid: e2ba7e226fa0abb4096e685af7cc7b17, type: 3}
+      propertyPath: m_Size.x
+      value: 1.9166666
+      objectReference: {fileID: 0}
+    - target: {fileID: 2441263143864851607, guid: e2ba7e226fa0abb4096e685af7cc7b17, type: 3}
+      propertyPath: m_Size.y
+      value: 2.4166667
+      objectReference: {fileID: 0}
+    - target: {fileID: 2441263143864851607, guid: e2ba7e226fa0abb4096e685af7cc7b17, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2b6d743b412328141ba10cafd6d7d9e8, type: 3}
+    - target: {fileID: 2441263143864851607, guid: e2ba7e226fa0abb4096e685af7cc7b17, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2441263143864851607, guid: e2ba7e226fa0abb4096e685af7cc7b17, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2441263143864851607, guid: e2ba7e226fa0abb4096e685af7cc7b17, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2441263143864851607, guid: e2ba7e226fa0abb4096e685af7cc7b17, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588119300000020770, guid: e2ba7e226fa0abb4096e685af7cc7b17, type: 3}
+      propertyPath: m_Name
+      value: Slime
+      objectReference: {fileID: 0}
+    - target: {fileID: 4886268755291022240, guid: e2ba7e226fa0abb4096e685af7cc7b17, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5766ef58240f95f4698c34592dbe16d9, type: 3}
+    - target: {fileID: 4886268755291022240, guid: e2ba7e226fa0abb4096e685af7cc7b17, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4886268755291022240, guid: e2ba7e226fa0abb4096e685af7cc7b17, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4886268755291022240, guid: e2ba7e226fa0abb4096e685af7cc7b17, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4886268755291022240, guid: e2ba7e226fa0abb4096e685af7cc7b17, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259615883228776211, guid: e2ba7e226fa0abb4096e685af7cc7b17, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3b3d502bca311444fafc8b1f0f0a121d, type: 3}
+    - target: {fileID: 6259615883228776211, guid: e2ba7e226fa0abb4096e685af7cc7b17, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259615883228776211, guid: e2ba7e226fa0abb4096e685af7cc7b17, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259615883228776211, guid: e2ba7e226fa0abb4096e685af7cc7b17, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259615883228776211, guid: e2ba7e226fa0abb4096e685af7cc7b17, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e2ba7e226fa0abb4096e685af7cc7b17, type: 3}
 --- !u!1 &1463286977
 GameObject:
   m_ObjectHideFlags: 0
@@ -20366,7 +20491,7 @@ Transform:
   m_GameObject: {fileID: 1882671709}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.07, y: -8.91, z: 0}
+  m_LocalPosition: {x: 2.086, y: -8.894, z: 0}
   m_LocalScale: {x: 3.589937, y: 3.46018, z: 3.46018}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24961,3 +25086,4 @@ SceneRoots:
   - {fileID: 1981618762163338674}
   - {fileID: 3977393250417449657}
   - {fileID: 804024421953216532}
+  - {fileID: 1455525050}
