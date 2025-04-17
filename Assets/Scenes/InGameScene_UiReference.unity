@@ -8928,7 +8928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29771a56e67f6af45898f8a6cf4a739f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bpm: 80
+  _bpm: 60
   _isJudging: 0
   _isJudgeChangedToTrue: 0
   _isJudgeChangedToFalse: 0

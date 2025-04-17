@@ -1,0 +1,1293 @@
+fileFormatVersion: 2
+guid: 24b275cffbb991d42a67c5e30c7dd87f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6317161338769077217
+    second: GrassStrong_0
+  - first:
+      213: -6455999772769984730
+    second: GrassStrong_1
+  - first:
+      213: -8048471484801984980
+    second: GrassStrong_2
+  - first:
+      213: 8620133072385256755
+    second: GrassStrong_3
+  - first:
+      213: 7212705405699156257
+    second: GrassStrong_4
+  - first:
+      213: -2325490969009503426
+    second: GrassStrong_5
+  - first:
+      213: 4375350001032640499
+    second: GrassStrong_6
+  - first:
+      213: -2418160349241965719
+    second: GrassStrong_7
+  - first:
+      213: 6900107388876220948
+    second: GrassStrong_8
+  - first:
+      213: 2338394998797159132
+    second: GrassStrong_9
+  - first:
+      213: 14378733737765521
+    second: GrassStrong_10
+  - first:
+      213: 9013127148740772293
+    second: GrassStrong_11
+  - first:
+      213: 1260827109925025903
+    second: GrassStrong_12
+  - first:
+      213: 2390083586658761624
+    second: GrassStrong_13
+  - first:
+      213: -5864150900068902609
+    second: GrassStrong_14
+  - first:
+      213: 7740593672163233983
+    second: GrassStrong_15
+  - first:
+      213: 6568873163863184776
+    second: GrassStrong_16
+  - first:
+      213: 6065122761268809309
+    second: GrassStrong_17
+  - first:
+      213: -4223148170439423449
+    second: GrassStrong_18
+  - first:
+      213: -5951791855800062030
+    second: GrassStrong_19
+  - first:
+      213: -6344123352720662274
+    second: GrassStrong_20
+  - first:
+      213: 751628620966313372
+    second: GrassStrong_21
+  - first:
+      213: -881419427445903008
+    second: GrassStrong_22
+  - first:
+      213: 7625043810151588884
+    second: GrassStrong_23
+  - first:
+      213: -8559616169027767143
+    second: GrassStrong_24
+  - first:
+      213: 4152241359859690834
+    second: GrassStrong_25
+  - first:
+      213: -2071802154433107967
+    second: GrassStrong_26
+  - first:
+      213: 3450650386265665405
+    second: GrassStrong_27
+  - first:
+      213: 1239620281614205360
+    second: GrassStrong_28
+  - first:
+      213: 5057724555343412583
+    second: GrassStrong_29
+  - first:
+      213: 3724562033889001624
+    second: GrassStrong_30
+  - first:
+      213: 5697974340902669424
+    second: GrassStrong_31
+  - first:
+      213: -3354147768362584247
+    second: GrassStrong_32
+  - first:
+      213: 2378714419624682565
+    second: GrassStrong_33
+  - first:
+      213: -4440639671751413447
+    second: GrassStrong_34
+  - first:
+      213: 1637320104769364506
+    second: GrassStrong_35
+  - first:
+      213: -6373796902273906258
+    second: GrassStrong_36
+  - first:
+      213: -2446540763251118727
+    second: GrassStrong_37
+  - first:
+      213: 1485113437562820689
+    second: GrassStrong_38
+  - first:
+      213: -2754864792683452851
+    second: GrassStrong_39
+  - first:
+      213: -2783914369273062978
+    second: GrassStrong_40
+  - first:
+      213: -3621949316234283462
+    second: GrassStrong_41
+  - first:
+      213: 7846862049160916952
+    second: GrassStrong_42
+  - first:
+      213: -5261129361448347192
+    second: GrassStrong_43
+  - first:
+      213: -1566988462098387615
+    second: GrassStrong_44
+  - first:
+      213: 5444101075636905977
+    second: GrassStrong_45
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GrassStrong_0
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 22
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1c86dd6b3fe458a0800000000000000
+      internalID: -6317161338769077217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_1
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 44
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62fda0a796ea766a0800000000000000
+      internalID: -6455999772769984730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_2
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 9
+        width: 60
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c265483c3d51e4090800000000000000
+      internalID: -8048471484801984980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_3
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 24
+        width: 37
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33dae10ab5dd0a770800000000000000
+      internalID: 8620133072385256755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_4
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 38
+        width: 7
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 129ec381a5da81460800000000000000
+      internalID: 7212705405699156257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_5
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 41
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e334fcfd8423abfd0800000000000000
+      internalID: -2325490969009503426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_6
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 41
+        width: 6
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f73e83f4ad58bc30800000000000000
+      internalID: 4375350001032640499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_7
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 39
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9638f7d69f7f07ed0800000000000000
+      internalID: -2418160349241965719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_8
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 43
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41ae302ac1b12cf50800000000000000
+      internalID: 6900107388876220948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_9
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 43
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdacadfacd5a37020800000000000000
+      internalID: 2338394998797159132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_10
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 40
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19a62c4d165133000800000000000000
+      internalID: 14378733737765521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_11
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 45
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c18f10636f051d70800000000000000
+      internalID: 9013127148740772293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_12
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 27
+        width: 32
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f68734a839b5f7110800000000000000
+      internalID: 1260827109925025903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_13
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 47
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89b794edb584b2120800000000000000
+      internalID: 2390083586658761624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_14
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 14
+        width: 41
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f291b1473d95e9ea0800000000000000
+      internalID: -5864150900068902609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_15
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 14
+        width: 144
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb01de3feec1c6b60800000000000000
+      internalID: 7740593672163233983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_16
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 12
+        width: 49
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88559a2d653592b50800000000000000
+      internalID: 6568873163863184776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_17
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 29
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5e40985405ab2450800000000000000
+      internalID: 6065122761268809309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_18
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 37
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72a0e1b3d1d5465c0800000000000000
+      internalID: -4223148170439423449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_19
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 27
+        width: 25
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bf69f157dcf66da0800000000000000
+      internalID: -5951791855800062030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_20
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 27
+        width: 35
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef023dd5c6525f7a0800000000000000
+      internalID: -6344123352720662274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_21
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 37
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9db6bb9f325e6a00800000000000000
+      internalID: 751628620966313372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_22
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 27
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06175f063b194c3f0800000000000000
+      internalID: -881419427445903008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_23
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 37
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41460e432f891d960800000000000000
+      internalID: 7625043810151588884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_24
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 27
+        width: 38
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 994f86fe172263980800000000000000
+      internalID: -8559616169027767143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_25
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 38
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25d2f1c6489bf9930800000000000000
+      internalID: 4152241359859690834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 38
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 108202cdaea7f33e0800000000000000
+      internalID: -2071802154433107967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_27
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 30
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7fed657e3c23ef20800000000000000
+      internalID: 3450650386265665405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_28
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 4
+        width: 10
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b10cfd0414043110800000000000000
+      internalID: 1239620281614205360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_29
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 21
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76db305afa5a03640800000000000000
+      internalID: 5057724555343412583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_30
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 3
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8904cddaf6d40b330800000000000000
+      internalID: 3724562033889001624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_31
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 22
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07c4bc05975431f40800000000000000
+      internalID: 5697974340902669424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_32
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 20
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 947349e206ca371d0800000000000000
+      internalID: -3354147768362584247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_33
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 27
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54424d36924e20120800000000000000
+      internalID: 2378714419624682565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_34
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 20
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 931ffbdfebdaf52c0800000000000000
+      internalID: -4440639671751413447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_35
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 27
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a12226cd5fde8b610800000000000000
+      internalID: 1637320104769364506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_36
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 28
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea98a79bc79bb87a0800000000000000
+      internalID: -6373796902273906258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_37
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 26
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97d67ed53242c0ed0800000000000000
+      internalID: -2446540763251118727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_38
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 26
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15857119dce2c9410800000000000000
+      internalID: 1485113437562820689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_39
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 19
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d466fd32111c4c9d0800000000000000
+      internalID: -2754864792683452851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_40
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 27
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb99f5681ac8d59d0800000000000000
+      internalID: -2783914369273062978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_41
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 3
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a36f26b69404cbdc0800000000000000
+      internalID: -3621949316234283462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_42
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 18
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dfeab19577a5ec60800000000000000
+      internalID: 7846862049160916952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_43
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 15
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c95e7d68b6bcf6b0800000000000000
+      internalID: -5261129361448347192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_44
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 17
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16d6d75cb40f04ae0800000000000000
+      internalID: -1566988462098387615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassStrong_45
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 18
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f7e8ae85155d8b40800000000000000
+      internalID: 5444101075636905977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
