@@ -10,6 +10,7 @@ public class Fire : Skill
     void Start()
     {
         Init();
+        elemental = Elemental.Fire;
     }
 
     public override void Execute()
@@ -27,22 +28,23 @@ public class Fire : Skill
         if (playerSkill.IsSingleField && playerSkill.IsMultiField) 
         {
             WideAttack(enemies, ElementalEffect.SuperFire, _strongDamage, false);
-            playerSkill.DestroyGrease();
+            playerSkill.DestroyMultiField();
+            playerSkill.DestroySingleField();
             Debug.Log($"모든 적에게 {_strongDamage} 데미지!");
         }
         // 단일
         else if (playerSkill.IsSingleField)
         {
-            enemies = GameManager.Instance.GetFrontEnemie();
+            enemies = GameManager.Instance.GetFrontEnemy();
             WideAttack(enemies, ElementalEffect.SingleFire, _strongDamage, false);
-            playerSkill.DestroyGrease();
+            playerSkill.DestroySingleField();
             Debug.Log($"1명 적에게 {_strongDamage} 데미지!");
         }
         // 범위
         else if (playerSkill.IsMultiField)
         {
             WideAttack(enemies, ElementalEffect.MultiFire, _baseDamage, false);
-            playerSkill.DestroyGrease();
+            playerSkill.DestroyMultiField();
             Debug.Log($"모든 적에게 {_strongDamage} 데미지!");
             
         }

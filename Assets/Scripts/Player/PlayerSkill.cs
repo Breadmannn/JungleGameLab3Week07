@@ -89,26 +89,26 @@ public class PlayerSkill : MonoBehaviour
         }
     }
 
-    public void DestroyFog()
+    public void DestroySingleField()
     {
-        SingleField[] fogs = GameObject.FindObjectsOfType<SingleField>();
-        foreach (SingleField fog in fogs)
+        SingleField[] singleFields = GameObject.FindObjectsOfType<SingleField>();
+        foreach (SingleField single in singleFields)
         {
-            if (fog != null)
+            if (single != null)
             {
-                Destroy(fog.gameObject);
+                Destroy(single.gameObject);
             }
         }
     }
 
-    public void DestroyGrease()
+    public void DestroyMultiField()
     {
-        MultiField[] greases = GameObject.FindObjectsOfType<MultiField>();
-        foreach (MultiField grease in greases)
+        MultiField[] multifields = GameObject.FindObjectsOfType<MultiField>();
+        foreach (MultiField multifield in multifields)
         {
-            if (grease != null)
+            if (multifield != null)
             {
-                Destroy(grease.gameObject);
+                Destroy(multifield.gameObject);
             }
         }
     }

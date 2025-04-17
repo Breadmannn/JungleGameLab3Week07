@@ -167,7 +167,7 @@ public class GameManager : MonoBehaviour
     }
     
     // 적 중 가장 앞에 있는 적 반환 (1명만)
-    public List<Enemy> GetFrontEnemie()
+    public List<Enemy> GetFrontEnemy()
     {
         float minX = float.MaxValue;
         int minIndex = -1;

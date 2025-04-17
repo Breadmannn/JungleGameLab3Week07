@@ -20,20 +20,20 @@ public class Stun : Skill
             return;
         }
 
-        PlayerSkill playerSkill = PlayerController.Instance.PlayerSkill;
+        //PlayerSkill playerSkill = PlayerController.Instance.PlayerSkill;
         List<Enemy> enemies = GameManager.Instance.GetFrontEnemies();
-        if (playerSkill.IsSingleField)
-        {
-            WideAttack(enemies, ElementalEffect.Stun, _strongDamage, true);
-            playerSkill.DestroyFog();
-        }
+        //if (playerSkill.IsSingleField)
+        //{
+        //    WideAttack(enemies, ElementalEffect.Stun, _strongDamage, true);
+        //    playerSkill.DestroyFog();
+        //}
 
         enemies = GameManager.Instance.CurrentEnemyList;
         foreach (Enemy enemy in enemies)
         {
             if (enemy.gameObject.activeSelf)
             {
-                enemy.ApplyState(EnemyState.Shock);
+                enemy.ApplyState(EnemyState.Stun);
                 PlayerController.Instance.PlayerSkill.ExcuteEffect(ElementalEffect.Stun, enemy.transform.position);
             }
         }

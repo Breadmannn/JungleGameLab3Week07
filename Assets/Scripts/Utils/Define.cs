@@ -15,7 +15,7 @@ public class Define
     public enum  EnemyState
     {
         None,      // 없음
-        Shock,     // 감전, 기절
+        Stun,     // 감전, 기절
     }
 
     // 원소 효과
