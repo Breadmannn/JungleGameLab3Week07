@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7246756494644127875}
   m_Layer: 0
-  m_Name: GrassWeak
+  m_Name: GrassMulty_single
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -120,7 +120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3431020526302432481}
   m_Layer: 0
-  m_Name: GrassMulty
+  m_Name: MultiGrass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
