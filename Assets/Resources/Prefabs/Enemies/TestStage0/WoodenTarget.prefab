@@ -156,8 +156,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15264a0f38d7b43489bd4f3df3fed674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyState: 0
-  _moveType: 1
+  _enemyState: 1
+  _moveType: 0
   _positionY1: 0
   _positionY2: 0
   _hp: 10000
