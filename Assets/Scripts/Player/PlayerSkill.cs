@@ -82,8 +82,12 @@ public class PlayerSkill : MonoBehaviour
             GameObject effectInstance = Instantiate(skillEffect, pos, Quaternion.identity);
             float delayTime = 5f;
 
+            if(effect == ElementalEffect.MultiFire || effect == ElementalEffect.MultiWater|| effect == ElementalEffect.MultiGrass)
+            {
+                delayTime = 1f;
+            }
             // 애니메이터 존재하는 경우
-            if(effectInstance.TryGetComponent<Animator>(out Animator anim) && effect != ElementalEffect.Stun)
+            if (effectInstance.TryGetComponent<Animator>(out Animator anim) && effect != ElementalEffect.Stun)
             {
                 AnimationClip clip = anim.runtimeAnimatorController.animationClips.FirstOrDefault();
                 delayTime = clip.length;
