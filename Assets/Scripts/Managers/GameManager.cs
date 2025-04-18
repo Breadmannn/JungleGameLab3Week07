@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour
             _currentWaveSpawnInfoList = currentWaveInfoList;
             // 250417: 몬스터 개체수 지정하는 부분
             //_waveMonsterCount = _currentStage == 0 ? 1 : 20;
-            _waveMonsterCount = 10;
+            _waveMonsterCount = 30;
             _currentWave++;
             Manager.UI.updateWaveAction?.Invoke(_currentWave); // UI 업데이트
 

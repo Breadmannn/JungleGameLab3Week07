@@ -29,7 +29,7 @@ public class Water : Skill
         {
             WideAttack(enemies, ElementalEffect.MultiWater, _fieldDamage, false);
             enemies = GameManager.Instance.GetFrontEnemy();
-            WideAttack(enemies, ElementalEffect.SingleWater, _strongDamage, false);
+            WideAttack(enemies, ElementalEffect.SingleWater, _strongDamage);
             playerSkill.DestroyMultiField();
             playerSkill.DestroySingleField();
             Debug.Log($"모든 적에게 {_fieldDamage} 데미지!");
@@ -39,7 +39,7 @@ public class Water : Skill
         else if (playerSkill.IsSingleField)
         {
             enemies = GameManager.Instance.GetFrontEnemy();
-            WideAttack(enemies, ElementalEffect.SingleWater, _strongDamage, false);
+            WideAttack(enemies, ElementalEffect.SingleWater, _strongDamage);
             playerSkill.DestroySingleField();
             Debug.Log($"1명 적에게 {_strongDamage} 데미지!");
         }

@@ -29,7 +29,7 @@ public class Grass : Skill
         {
             WideAttack(enemies, ElementalEffect.MultiGrass, _fieldDamage, false);
             enemies = GameManager.Instance.GetFrontEnemy();
-            WideAttack(enemies, ElementalEffect.SingleGrass, _strongDamage, false);
+            WideAttack(enemies, ElementalEffect.SingleGrass, _strongDamage);
             playerSkill.DestroyMultiField();
             playerSkill.DestroySingleField();
             Debug.Log($"모든 적에게 {_strongDamage} 데미지!");
@@ -38,7 +38,7 @@ public class Grass : Skill
         else if (playerSkill.IsSingleField)
         {
             enemies = GameManager.Instance.GetFrontEnemy();
-            WideAttack(enemies, ElementalEffect.SingleGrass, _strongDamage, false);
+            WideAttack(enemies, ElementalEffect.SingleGrass, _strongDamage);
             playerSkill.DestroySingleField();
             Debug.Log($"1명 적에게 {_strongDamage} 데미지!");
         }
