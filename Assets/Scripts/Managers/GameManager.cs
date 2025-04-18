@@ -74,21 +74,20 @@ public class GameManager : MonoBehaviour
         // background 변경하는 부분. 임시 생략
         BGM bgm = stageIndex switch
         {
-            0 => BGM.Title,
+            0 => BGM.Main,
             1 => BGM.Main,
-            2 => BGM.Main,
+            2 => BGM.Boss,
             3 => BGM.Boss,
-            4 => BGM.Boss,
             _ => BGM.Title
         };
         Manager.Sound.PlayBGM(bgm);
         RhythmManager.Instance.SetBpm(stageIndex switch
         {
+            //0 => 66,
             0 => 66,
-            1 => 66,
-            2 => 70,
-            3 => 74,
-            4 => 78,
+            1 => 70,
+            2 => 74,
+            3 => 78,
             _ => 66
         }); // 240417 인덱스 있는 함수도 설정해야함
 
@@ -274,7 +273,7 @@ public class GameManager : MonoBehaviour
     {
         // 스테이지 정지
         Manager.UI.FadeOut();
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1.2f);
         Manager.UI.ShowStageResult(_currentStage);
         Time.timeScale = 0f;
 

@@ -11,7 +11,8 @@ public class Friend : MonoBehaviour
     //public Elemental VisualElemental => _visualElemental;
     public Elemental RealElemental => _realElemental;
     [SerializeField] Elemental _realElemental = Elemental.None;     // 실제 속성
-    UI_FriendCastVisualCanvas _friendCastVisualCanvas;              // 동료 마법 예고 UI
+    //UI_FriendCastVisualCanvas _friendCastVisualCanvas;              // 동료 마법 예고 UI
+    [SerializeField] UI_FriendCastVisualCanvas _friendCastVisualCanvas;              // 동료 마법 예고 UI
     Animator _visualAnim;                                               // 애니메이터
     public Animator Anim => _visualAnim; // 애니메이터
     Animator _anim;                                         // 비주얼 애니메이터
@@ -26,7 +27,7 @@ public class Friend : MonoBehaviour
             _instance = this;
 
         _anim = GetComponent<Animator>();
-        _friendCastVisualCanvas = GetComponentInChildren<UI_FriendCastVisualCanvas>();
+        //_friendCastVisualCanvas = GetComponentInChildren<UI_FriendCastVisualCanvas>();
         _visualAnim = transform.Find("Visual").GetComponent<Animator>();
     }
 

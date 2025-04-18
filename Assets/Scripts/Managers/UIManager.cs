@@ -61,8 +61,8 @@ public class UIManager
     // 250417 추가: 스테이지 클리어 관련
     public void ShowStageResult(int stage)
     {
-        _clearText.text = $"Stage {stage + 1} Cleared!";
-        _clearTextShadow.text = $"Stage {stage + 1} Cleared!";
+        _clearText.text = $"Stage {stage + 1} Clear!";
+        _clearTextShadow.text = $"Stage {stage + 1} Clear!";
         //_clearUI.GetComponent<Canvas>().enabled = true;
         _clearUI.SetActive(true);
     }

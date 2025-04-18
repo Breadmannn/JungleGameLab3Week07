@@ -49,7 +49,7 @@ public class SoundManager
     // BGM 재생
     public void PlayBGM(BGM bgm)
     {
-        //_bgmSource.clip = _bgmDict[bgm];
+        _bgmSource.clip = _bgmDict[bgm];
         _bgmSource.pitch = 1f;
         _bgmSource.Play();
     }
@@ -57,7 +57,7 @@ public class SoundManager
     // 효과음 재생
     public void PlayEffect(Effect effect)
     {
-        //_effectSource.PlayOneShot(_effectDict[effect]);
+        _effectSource.PlayOneShot(_effectDict[effect]);
     }
 
     public void Clear()

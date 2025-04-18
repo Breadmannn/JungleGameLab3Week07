@@ -1289,7 +1289,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &348651186
 RectTransform:
@@ -1336,7 +1336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 132c79ce18553904bb99a28577a1bd12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadePanel: {fileID: 0}
+  fadePanel: {fileID: 1973101850}
   fadeOutDuration: 0.5
   fadeInDuration: 0.5
 --- !u!1 &410335889
@@ -8237,11 +8237,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &1897244102 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4880887517018547840, guid: 40ce6a75b4d4ff44e93df0092df0b9d4, type: 3}
-  m_PrefabInstance: {fileID: 4199691218011905697}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1899039996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10544,6 +10539,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 540713199889832383, guid: 40ce6a75b4d4ff44e93df0092df0b9d4, type: 3}
+      propertyPath: _friendCastVisualCanvas
+      value: 
+      objectReference: {fileID: 3034535983018407404}
     - target: {fileID: 4880887517018547840, guid: 40ce6a75b4d4ff44e93df0092df0b9d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12
@@ -10595,10 +10594,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 4991247863416058347, guid: 40ce6a75b4d4ff44e93df0092df0b9d4, type: 3}
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4880887517018547840, guid: 40ce6a75b4d4ff44e93df0092df0b9d4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8975646641872657467}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40ce6a75b4d4ff44e93df0092df0b9d4, type: 3}
 --- !u!1 &4539327803024278309
@@ -10860,7 +10856,9 @@ MonoBehaviour:
   _playerSkill: {fileID: 0}
   _hp: 100
   _maxHp: 100
+  playerElemental: 0
   _singleFieldEffect: {fileID: 0}
+  tutorial: 0
 --- !u!114 &6379248636665555067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10922,7 +10920,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _realElemental: 0
+  _friendCastVisualCanvas: {fileID: 0}
   _singleFieldEffect: {fileID: 0}
+  isTutorial: 0
 --- !u!212 &6919531896434436723
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11263,7 +11263,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2573322960874309524}
-  m_Father: {fileID: 1897244102}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -11311,6 +11311,7 @@ SceneRoots:
   - {fileID: 533636118}
   - {fileID: 803362844}
   - {fileID: 1502337608}
+  - {fileID: 8975646641872657467}
   - {fileID: 1539727116}
   - {fileID: 303856420}
   - {fileID: 1635300549}

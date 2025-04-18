@@ -80,11 +80,11 @@ public class PlayerSkill : MonoBehaviour
         if (skillEffect != null)
         {
             GameObject effectInstance = Instantiate(skillEffect, pos, Quaternion.identity);
-            float delayTime = 5f;
+            float delayTime = 0.8f;
 
-            if(effect == ElementalEffect.MultiFire || effect == ElementalEffect.MultiWater|| effect == ElementalEffect.MultiGrass)
+            if(effect == ElementalEffect.MultiField)
             {
-                delayTime = 1f;
+                delayTime = 5f;
             }
             // 애니메이터 존재하는 경우
             if (effectInstance.TryGetComponent<Animator>(out Animator anim) && effect != ElementalEffect.Stun)
