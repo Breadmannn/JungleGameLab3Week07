@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour, IStatus
     public int SteelHealth => _steelHp;
     [SerializeField] int _steelHp = 0; // 강철 HP
     float _moveSpeed = 2f;                      // 비트당 이동 거리
-    [SerializeField] Elemental resistance;
+    [SerializeField] Elemental weak;
 
     [SerializeField] int _stunCoolCount = 0;   // 기절 쿨 카운트
     Animator _animator;                         // 적 애니메이터
@@ -64,17 +64,6 @@ public class Enemy : MonoBehaviour, IStatus
             }
             return;
         }
-
-        //// 벽 체크: Wall 스크립트가 포함된 오브젝트가 x-2에 있으면 공격
-        //foreach (Wall obj in FindObjectsByType<Wall>(FindObjectsSortMode.None))
-        //{
-        //    if (Mathf.Approximately(obj.transform.position.x, transform.position.x - 2))
-        //    {
-        //        Attack(obj.gameObject);
-        //        _isMoving = false; // 이동 중지
-        //        return;
-        //    }
-        //}
 
         // 플레이어 체크
         if (Mathf.Approximately(PlayerController.Instance.transform.position.x, transform.position.x - 2))
@@ -149,9 +138,9 @@ public class Enemy : MonoBehaviour, IStatus
     {
         if (Friend.Instance.isTutorial) return;
 
-        if (resistance != Elemental.None && resistance == skillElement)
+        if (weak != Elemental.None)
         {
-            return;
+            if(weak != skillElement) return;
         }
         _animator.SetTrigger("HitTrigger");
         int steelDamage = amount - _hp; // 강철 HP에 입힐 데미지;
