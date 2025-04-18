@@ -34,8 +34,8 @@ public class TutorialManager : MonoBehaviour
     bool fire;
     bool water;
     bool grass;
-
-
+    bool _disableInput;                             //연속인풋 방지용
+    bool _isGoingNext;                            //다음 튜토리얼로 전환중인가
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
     {
@@ -85,32 +85,31 @@ public class TutorialManager : MonoBehaviour
     }
     void HandleTutorialInput(Elemental input)
     {
+        if (_isGoingNext) return; // 이미 전환 중인 경우 무시
+
         switch (input)
-        {
-            case Elemental.Fire:
-                fire = true; water = false; grass = false;
-                break;
-            case Elemental.Water:
-                water = true; fire = false; grass = false;
-                break;
-            case Elemental.Grass:
-                grass = true; fire = false; water = false;
-                break;
-        }
-        CurrentTutorialEvent(_currentStep); // 현재 튜토리얼 불러오기
-        Debug.LogError(_currentStep);
+            {
+                case Elemental.Fire:
+                    fire = true; water = false; grass = false;
+                    break;
+                case Elemental.Water:
+                    water = true; fire = false; grass = false;
+                    break;
+                case Elemental.Grass:
+                    grass = true; fire = false; water = false;
+                    break;
+            }
+            CurrentTutorialEvent(_currentStep); // 현재 튜토리얼 불러오기
+            Debug.LogError(_currentStep);
     }
     #region 튜토리얼 이벤트들(하드코딩)
     void IntroTutorial()
     {
-        _tutorialText.text = "일어났구나!";
+        _isGoingNext = true;
+        _tutorialText.text = "일어났구나!\n"+"그럼 슬슬 마법연습 시작할까?";
         _friend.Anim.SetTrigger("HitTrigger"); // 친구 애니메이션 시작
-        //튜토리얼 시작
-        //튜토리얼 시작 버튼 클릭시
-        //튜토리얼 시작
         _friend.PrepareElemental(Elemental.None);
         //대충 텍스트 다 나오면
-        //        _tutorialText.text = "일어났구나!" +"그럼 슬슬 마법연습 시작해볼까?"
         StartCoroutine(NextStepAfterDelay(3f)); // 3초 후 다음 단계로 넘어감
     }
     void GrassTutorial()
@@ -187,7 +186,7 @@ public class TutorialManager : MonoBehaviour
     void FreePracticeTutorial() // 자유 연습 튜토리얼
     {
         _playerController.tutorial = false;
-        _tutorialText.text = "원하는만큼 자유롭게 연습하고 돌아가자!\n" + "돌아가고 싶어지면 Space를 눌러!";
+        _tutorialText.text = "원하는만큼 자유롭게 연습하고 가자!\n" + "연습을 끝내고 싶으면 Space를 눌러!";
     }
     void TutorialEnd()
     {
@@ -202,24 +201,29 @@ public class TutorialManager : MonoBehaviour
     }
     void Proceed(string successText)
     {
+        if (_currentStep == TutorialStep.Intro) return; // 인트로 단계에서는 진행 불가
+        if (_isGoingNext) return; // 이미 전환 중인 경우 무시
+        _isGoingNext = true;
         _tutorialText.text = successText;
         Debug.LogError($"튜토리얼 성공: {_currentStep}");
         StartCoroutine(NextStepAfterDelay(3f));
     }
-    IEnumerator NextStepAfterDelay(float delaySeconds) // 튜토리얼 다음단계로 넘어가기
-    {
-        yield return new WaitForSeconds(delaySeconds);
-        Debug.LogError("튜토리얼 다음 단계로 넘어감");
-        // 현재 단계 + 1 → 다음 단계로 전환
-        _currentStep = (TutorialStep)((int)_currentStep + 1);
-        CurrentTutorialEvent(_currentStep);
-        Boolreset();
-
-    }
     void Boolreset()
     {
+
         fire = false;
         water = false;
         grass = false;
+    }
+    IEnumerator NextStepAfterDelay(float delaySeconds) // 튜토리얼 다음단계로 넘어가기
+    {
+       
+            yield return new WaitForSeconds(delaySeconds);
+            Debug.LogError("튜토리얼 다음 단계로 넘어감");
+            // 현재 단계 + 1 → 다음 단계로 전환
+            _currentStep = (TutorialStep)((int)_currentStep + 1);
+            CurrentTutorialEvent(_currentStep);
+            Boolreset();
+            _isGoingNext = false; // 입력 활성화
     }
 }
