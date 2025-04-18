@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      TileTileSquareDaeChae_0: 7836528387139875721
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
