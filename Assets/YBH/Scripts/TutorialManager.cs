@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using static Define;
+using System.IO.Compression;
 public class TutorialManager : MonoBehaviour
 {
     enum TutorialStep // 튜토리얼 단계
@@ -150,7 +151,7 @@ public class TutorialManager : MonoBehaviour
     }
     void CombineFireWaterTutorial() // 멀티필드 튜토리얼
     {
-        Tutorial("불물불물불물!@!@!@!@.\n", Elemental.Water);
+        Tutorial("그러면 이제 다른 마법을 써보자!\n"+ "불+물부터 가볼까?", Elemental.Water);
         if (fire)
         {
             Proceed("안개다!\n" + "이건 범위마법을 쓰기 위한 준비야!");
@@ -166,7 +167,7 @@ public class TutorialManager : MonoBehaviour
     }
     void CombineFireGrassTutorial() //단일필드 튜토리얼
     {
-        Tutorial("이번에는 풀과 불 마법을 더해보자!", Elemental.Grass);
+        Tutorial("이번에는 풀 마법을 준비할래!\n"+" 거기에 불 마법을 더해보자!", Elemental.Grass);
         if (fire)
         {
             Proceed("마력이 흐르는게 느껴져?\n" + "이상태로 속성마법을 써보자!");
