@@ -6,10 +6,12 @@ public class SingleField : Skill
     void Start()
     {
         Init();
+       
     }
 
     public override void Execute()
     {
+        FindAnyObjectByType<UI_ElementIcon>().SetBackColorSingle();
         PlayerSkill playerSkill = PlayerController.Instance.PlayerSkill;
         Friend.Instance.SetSingleField(true);
         PlayerController.Instance.SetSingleField(true);

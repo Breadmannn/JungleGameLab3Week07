@@ -13,7 +13,10 @@ public class UI_FriendCastVisualCanvas : MonoBehaviour
 
     [Header("Color")]
     Color _colorCertain;
-    Color _colorNotCertain;
+    Color _colorRed;
+    Color _colorGreen;
+    Color _colorBlue;
+    
 
     [Header("Animation")]
     Animator uiAnim;
@@ -31,8 +34,11 @@ public class UI_FriendCastVisualCanvas : MonoBehaviour
         _backgroundImage = images[0]; // 말풍선
         _elementalImage = images[1];  // 원소 이미지
 
-        ColorUtility.TryParseHtmlString("#00D0FF", out _colorCertain);
-        ColorUtility.TryParseHtmlString("#FFBD1B", out _colorNotCertain);
+        ColorUtility.TryParseHtmlString("#FFFFFF", out _colorCertain);
+        ColorUtility.TryParseHtmlString("#FFC2C2", out _colorRed);
+        ColorUtility.TryParseHtmlString("#C2FFC2", out _colorGreen);
+        ColorUtility.TryParseHtmlString("#C2C2FF", out _colorBlue);
+        
 
         uiAnim = GetComponent<Animator>();
     }
@@ -43,7 +49,14 @@ public class UI_FriendCastVisualCanvas : MonoBehaviour
         _friendCastVisualCanvas.enabled = true;
         int idx = (int)elemental;
         _elementalImage.sprite = _elementalSprites[idx];
-        _backgroundImage.color = _colorCertain;
+        if (elemental == Define.Elemental.Fire)
+            _backgroundImage.color = _colorRed;
+        else if (elemental == Define.Elemental.Water)
+            _backgroundImage.color = _colorBlue;
+        else if (elemental == Define.Elemental.Grass)
+            _backgroundImage.color = _colorGreen;
+        else
+            _backgroundImage.color = _colorCertain;
         uiAnim.SetTrigger("Show");
 
         //if (isLying)

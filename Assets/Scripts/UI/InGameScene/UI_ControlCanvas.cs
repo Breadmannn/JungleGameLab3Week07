@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UI_ControlCanvas : MonoBehaviour
 {
     [SerializeField] Image[] btnImage; // Content as Flame, Water, Grass
+    [SerializeField] Image skillIconImage; // 스킬 아이콘 이미지
 
     Coroutine _showPressBtnFXCoroutine;
 
@@ -29,6 +30,7 @@ public class UI_ControlCanvas : MonoBehaviour
     
     private IEnumerator ShowPressBtnFX(CanvasGroup cg, Image buttonImage, RectTransform buttonRect)
     {
+        //skillIconImage.sprite = buttonImage.transform.GetChild(1).GetComponent<Image>().sprite;
         float duration = 0.1f; // 빠른 반응성
         float elapsed = 0f;
         Vector3 originalScale = buttonRect.localScale;

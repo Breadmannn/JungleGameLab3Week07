@@ -12,13 +12,16 @@ public class PlayerSkill : MonoBehaviour
     [SerializeField] bool _isSingleField = false;     // 전기 속성 강화
     GameObject[] _skillEffects;
     Dictionary<ElementalEffect, Skill> _skillDict;
+    UI_ElementIcon _elementIcon;
 
+    
     void Start()
     {
         // Skills 폴더의 모든 GameObject 로드
         _skillEffects = Manager.Resource.LoadAll<GameObject>("Prefabs/Skills");
 
         _skillDict = Manager.Data.SkillDict;
+        _elementIcon = FindAnyObjectByType<UI_ElementIcon>();
     }
 
     // 마법 조합 결과 반환
@@ -91,13 +94,16 @@ public class PlayerSkill : MonoBehaviour
 
     public void DestroySingleField()
     {
+        
         PlayerController.Instance.SetSingleField(false);
         Friend.Instance.SetSingleField(false);
         IsSingleField = false;
+        _elementIcon.SetBackColorNone();
     }
 
     public void DestroyMultiField()
     {
+        
         MultiField[] multifields = GameObject.FindObjectsOfType<MultiField>();
         foreach (MultiField multifield in multifields)
         {
