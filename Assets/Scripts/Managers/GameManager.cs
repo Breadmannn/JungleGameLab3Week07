@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     public Enemy CurrentEnemy => _currentEnemy;
 
     public List<Enemy> CurrentEnemyList => _currentEnemyList;
-    List<Enemy> _currentEnemyList = new List<Enemy>();      // 현재 적 리스트 
+    [SerializeField] List<Enemy> _currentEnemyList = new List<Enemy>();      // 현재 적 리스트 
 
     Coroutine NextStageCoroutine; // 스테이지 클리어 패널이 두 번 나오지 않도록 코루틴 레퍼런스 저장
 
@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
         if (_instance == null)
         {
             _instance = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -56,16 +56,33 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        _friend.PrepareElemental(Elemental.None); // 동료 마법 준비
-        //StartWave();
-        LoadStage(_currentStage);
+        string sceneName = Manager.Scene.GetActiveScene().name;
+        _friend.PrepareElemental(Elemental.None);
+        //if (sceneName == "InGameScene")
+        //{
+        //    LoadStage(_currentStage);
+        //}
+        if (sceneName == "TutorialScene")
+        {
+            InitializeTutorial();
+        }
+        
+        _friend.PrepareElemental(Elemental.Fire);
+        if (sceneName == "InGameScene")
+        {
+            LoadStage(_currentStage);
+        }
+
         //Debug.Log($"웨이브 {_currentWave} 시작! 가중치: Normal={_weightedEnemies.First(e => _normalEnemyPrefabList.Contains(e.prefab)).weight}, Special={_weightedEnemies.First(e => _specialEnemyPrefabList.Contains(e.prefab)).weight}, Confuse={_weightedEnemies.First(e => _confuseEnemyPrefabList.Contains(e.prefab)).weight}");
     }
+
 
     // 240417 추가함수
     // 스테이지 인덱스로 정보를 로드
     public void LoadStage(int stageIndex)
     {
+        Debug.LogWarning("LoadStage 호출");
+
         _currentStage = stageIndex;
         _currentWave = 0;
         _currentEnemyList.Clear();
@@ -139,6 +156,28 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void InitializeTutorial()
+    {
+        // 상태 초기화
+        _currentStage = 0;
+        _currentWave = 0;
+        _currentWaveSpawnInfoList = null;
+        _currentEnemyList.Clear();
+        _waveMonsterCount = 0;
+        _noneMonsterCount = 0;
+
+        // BGM, BPM 설정
+        Manager.Sound.PlayBGM(BGM.Main);
+        RhythmManager.Instance.SetBpm(70);
+
+        // 필드에서 EnemyType.Tutorial 몬스터 찾기
+        Enemy[] allEnemies = FindObjectsOfType<Enemy>();
+
+
+        _currentEnemy = allEnemies[0];
+        _currentEnemyList.Add(_currentEnemy);
+    }
+
     // 적 소환
     public void SpawnEnemy(Vector3 spawnPoint)
     {
@@ -191,17 +230,23 @@ public class GameManager : MonoBehaviour
 
     bool CheckSpawnCondition()
     {
-
-        if (_waveMonsterCount <= 0)
+        if (Manager.Scene.GetActiveScene().name == "InGameScene")
         {
-            if(_currentEnemyList.Count == 0)
+            if (_waveMonsterCount <= 0)
             {
-                StartWave(); // 다음 웨이브 시작
-                Debug.Log($"웨이브 {_currentWave} 시작!");
+                if (_currentEnemyList.Count == 0)
+                {
+                    StartWave(); // 다음 웨이브 시작
+                    Debug.Log($"웨이브 {_currentWave} 시작!");
+                }
+                return false;
             }
+            return true;
+        }
+        else
+        {
             return false;
         }
-        return true;
     }
 
     // 적 중 가장 앞에 있는 적 반환 (여러 개면 전부 반환)

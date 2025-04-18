@@ -46,6 +46,8 @@ public class UI_FriendCastVisualCanvas : MonoBehaviour
     // 원소 이미지 및 말풍선 색 설정
     public void SetElementalImage(Define.Elemental elemental)
     {
+        if (elemental == Define.Elemental.None) return;
+
         _friendCastVisualCanvas.enabled = true;
         int idx = (int)elemental;
         _elementalImage.sprite = _elementalSprites[idx];

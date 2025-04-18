@@ -8,7 +8,8 @@ public class Define
         TitleScene,
         InGameScene,
         GameOverScene,
-        GameClearScene
+        GameClearScene,
+        TutorialScene
     }
 
     // 적 상태
@@ -55,7 +56,8 @@ public class Define
         FireRes,    // 불저항
         WaterRes,   // 물저항
         GrassRes,   // 풀저항
-        Special   // 탱크
+        Special,   // 탱크
+        Tutorial
     }
     public enum Translation
     {

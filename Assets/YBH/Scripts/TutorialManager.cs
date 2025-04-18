@@ -20,7 +20,7 @@ public class TutorialManager : MonoBehaviour
         FreePractice,
         End
     }
-    
+
     TutorialStep _currentStep = TutorialStep.Intro; // 현재 튜토리얼 단계
     public Elemental tutoElemental = Elemental.None;       // 튜토리얼 속성
     [Header("튜토리얼 UI")]
@@ -43,7 +43,7 @@ public class TutorialManager : MonoBehaviour
         _tutorialText = _tutorialCanvas.GetComponentInChildren<TextMeshProUGUI>();//튜토리얼 텍스트
         _friend = FindAnyObjectByType<Friend>();                                  //친구찾기
         _playerController = FindAnyObjectByType<PlayerController>();              //플레이어 찾기
-        
+
     }
     void Start()
     {
@@ -73,7 +73,7 @@ public class TutorialManager : MonoBehaviour
             case TutorialStep.Intro: IntroTutorial(); break;
             case TutorialStep.Grass: GrassTutorial(); break;
             case TutorialStep.Fire: FireTutorial(); break;
-            case TutorialStep.Water:WaterTutorial(); break;
+            case TutorialStep.Water: WaterTutorial(); break;
             case TutorialStep.Combine_FireWater: CombineFireWaterTutorial(); break;     //범위시너지
             case TutorialStep.ConbineCast: CombineCast(); break;                        //멀티필드
             case TutorialStep.Combine_FireGrass: CombineFireGrassTutorial(); break;     //단일시너지
@@ -108,8 +108,15 @@ public class TutorialManager : MonoBehaviour
         _isGoingNext = true;
         _tutorialText.text = "일어났구나!\n"+"그럼 슬슬 마법연습 시작할까?";
         _friend.Anim.SetTrigger("HitTrigger"); // 친구 애니메이션 시작
-        _friend.PrepareElemental(Elemental.None);
+
+        //튜토리얼 시작
+        //튜토리얼 시작 버튼 클릭시
+        //튜토리얼 시작
+        _friend.PrepareElemental(Elemental.Fire);
         //대충 텍스트 다 나오면
+        //        _tutorialText.text = "일어났구나!" +"그럼 슬슬 마법연습 시작해볼까?"
+        Debug.LogError("코루틴 시작");
+
         StartCoroutine(NextStepAfterDelay(3f)); // 3초 후 다음 단계로 넘어감
     }
     void GrassTutorial()
@@ -117,9 +124,8 @@ public class TutorialManager : MonoBehaviour
         Tutorial("리듬에 맞춰서 풀속성 마법을 사용해봐!!\n" + "풀 속성은 Q로 사용할 수 있어!!!\n", Elemental.Grass);
         if (grass)
         {
-            Proceed("잘했어! 풀 마법 성공이야!\n"+"적한테 피해를 줬어!");
+            Proceed("잘했어! 풀 마법 성공이야!\n" + "적한테 피해를 줬어!");
         }
-
     }
     void FireTutorial()
     {
@@ -147,7 +153,7 @@ public class TutorialManager : MonoBehaviour
         Tutorial("불물불물불물!@!@!@!@.\n", Elemental.Water);
         if (fire)
         {
-            Proceed("안개다!\n"+"이건 범위마법을 쓰기 위한 준비야!");
+            Proceed("안개다!\n" + "이건 범위마법을 쓰기 위한 준비야!");
         }
     }
     void CombineCast()
@@ -155,7 +161,7 @@ public class TutorialManager : MonoBehaviour
         Tutorial("안개가 깔렸으니 같은 속성을 사용해보자!", Elemental.Water);
         if (water)
         {
-            Proceed("좋았어! 범위공격 성공!\n" +"안개에 속성마법을 사용하면 범위공격이야.");
+            Proceed("좋았어! 범위공격 성공!\n" + "안개에 속성마법을 사용하면 범위공격이야.");
         }
     }
     void CombineFireGrassTutorial() //단일필드 튜토리얼
@@ -186,7 +192,10 @@ public class TutorialManager : MonoBehaviour
     void FreePracticeTutorial() // 자유 연습 튜토리얼
     {
         _playerController.tutorial = false;
-        _tutorialText.text = "원하는만큼 자유롭게 연습하고 가자!\n" + "연습을 끝내고 싶으면 Space를 눌러!";
+
+        //Friend.Instance.isTutorial = false;
+        Friend.Instance.isFreePractice = true;
+        _tutorialText.text = "원하는만큼 자유롭게 연습하고 돌아가자!\n" + "돌아가고 싶어지면 오른쪽 아래 버튼을 눌러!";
     }
     void TutorialEnd()
     {

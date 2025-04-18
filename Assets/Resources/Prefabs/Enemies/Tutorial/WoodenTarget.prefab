@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyState: 1
-  _moveType: 0
+  _moveType: 3
   _positionY1: 0
   _positionY2: 0
   _hp: 10000

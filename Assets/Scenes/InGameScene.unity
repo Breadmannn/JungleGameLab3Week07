@@ -715,7 +715,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1600, y: -1000}
+  m_AnchoredPosition: {x: 1572, y: -974}
   m_SizeDelta: {x: 320, y: 80}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &275110187
@@ -2074,6 +2074,7 @@ MonoBehaviour:
   _enemySpawnPoint: {fileID: 0}
   _playerController: {fileID: 0}
   _friend: {fileID: 0}
+  _currentEnemyList: []
 --- !u!4 &533636118
 Transform:
   m_ObjectHideFlags: 0
@@ -6016,7 +6017,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &1539727116
 RectTransform:
@@ -10923,6 +10924,7 @@ MonoBehaviour:
   _friendCastVisualCanvas: {fileID: 0}
   _singleFieldEffect: {fileID: 0}
   isTutorial: 0
+  isFreePractice: 0
 --- !u!212 &6919531896434436723
 SpriteRenderer:
   m_ObjectHideFlags: 0

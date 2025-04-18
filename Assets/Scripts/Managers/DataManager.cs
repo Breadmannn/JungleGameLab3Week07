@@ -119,6 +119,7 @@ public class DataManager
         _enemyPrefabDict.Add(EnemyType.WaterRes, Resources.LoadAll<Enemy>("Prefabs/Enemies/WaterRes").ToList());
         _enemyPrefabDict.Add(EnemyType.GrassRes, Resources.LoadAll<Enemy>("Prefabs/Enemies/GrassRes").ToList());
         _enemyPrefabDict.Add(EnemyType.Special, Resources.LoadAll<Enemy>("Prefabs/Enemies/Special").ToList());
+        _enemyPrefabDict.Add(EnemyType.Tutorial, Resources.LoadAll<Enemy>("Prefabs/Enemies/Tutorial").ToList());
 
         //SetWaveInfo();
         SetStageWaveInfo();
@@ -190,6 +191,17 @@ public class DataManager
     public Dictionary<int, List<(Enemy enemy, float weight)>> GetStageWaveInfo(int stage)
     {
         return _stageWaveInfoDict.ContainsKey(stage) ? _stageWaveInfoDict[stage] : new Dictionary<int, List<(Enemy, float)>>();
+    }
+
+    public Dictionary<int, List<(Enemy enemy, float weight)>> GetTutorialStageWaveInfo()
+    {
+        Dictionary<int, List<(Enemy, float)>> tutorialDict = new Dictionary<int, List<(Enemy, float)>>();
+        tutorialDict[0] = new List<(Enemy, float)>();
+
+        tutorialDict[0].Add((_enemyPrefabDict[EnemyType.Tutorial][0], 1.0f));
+
+
+        return tutorialDict;
     }
 
     public (AudioClip music, float bpm, GameObject background) GetStageData(int stage)

@@ -21,4 +21,9 @@ public class SceneManagerEX
     {
         CurrentScene.Clear();
     }
+
+    public Scene GetActiveScene()
+    {
+        return SceneManager.GetActiveScene();
+    }
 }

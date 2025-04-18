@@ -127,6 +127,9 @@ public class Enemy : MonoBehaviour, IStatus
                     _isMoving = true;
                 }
                 break;
+            case 3:
+                // 튜토리얼 허수아비를 위한 케이스
+                break;
             default:
                 Debug.LogError("이동 타입이 잘못되었습니다.");
                 break;
@@ -144,6 +147,8 @@ public class Enemy : MonoBehaviour, IStatus
     // 피해 입기
     public void TakeDamage(int amount, Elemental skillElement)
     {
+        if (Friend.Instance.isTutorial) return;
+
         if (resistance != Elemental.None && resistance == skillElement)
         {
             return;
@@ -171,6 +176,8 @@ public class Enemy : MonoBehaviour, IStatus
     // 공격
     void Attack(GameObject target)
     {
+        if (Friend.Instance.isTutorial) return;
+
         // 공격 애니메이션 재생
         _animator.SetTrigger("AttackTrigger");
         // 적이 벽에 닿으면 벽 파괴

@@ -20,6 +20,7 @@ public class Friend : MonoBehaviour
     
     // 튜토리얼 관련 변수
     public bool isTutorial = false;                          //튜토리얼인지 체크
+    public bool isFreePractice = false;
     TutorialManager tutorialManager;           // 튜토리얼 매니저
     void Awake()
     {
@@ -36,8 +37,15 @@ public class Friend : MonoBehaviour
     {
         if (isTutorial)
         {
-            _realElemental = elemental;
-            Debug.LogError("튜토리얼진행중");
+            if (isFreePractice)
+            {
+                _realElemental = GetRandomElemental();
+            }
+            else
+            {
+                _realElemental = elemental;
+                Debug.LogError("튜토리얼진행중");
+            }
         }
         else
         {
@@ -49,6 +57,7 @@ public class Friend : MonoBehaviour
             // 동료 마법 예고 UI에 원소 표시
         }
         _friendCastVisualCanvas.SetElementalImage(_realElemental);
+        
         //Debug.Log($"친구 예고: 실제({_realElemental})");
     }
 
