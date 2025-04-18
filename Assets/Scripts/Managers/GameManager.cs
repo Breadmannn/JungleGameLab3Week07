@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        _friend.PrepareElemental(); // 동료 마법 준비
+        _friend.PrepareElemental(Elemental.None); // 동료 마법 준비
         //StartWave();
         LoadStage(_currentStage);
         //Debug.Log($"웨이브 {_currentWave} 시작! 가중치: Normal={_weightedEnemies.First(e => _normalEnemyPrefabList.Contains(e.prefab)).weight}, Special={_weightedEnemies.First(e => _specialEnemyPrefabList.Contains(e.prefab)).weight}, Confuse={_weightedEnemies.First(e => _confuseEnemyPrefabList.Contains(e.prefab)).weight}");

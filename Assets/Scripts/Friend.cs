@@ -16,7 +16,10 @@ public class Friend : MonoBehaviour
     public Animator Anim => _visualAnim; // 애니메이터
     Animator _anim;                                         // 비주얼 애니메이터
     [SerializeField] GameObject _singleFieldEffect;
-
+    
+    // 튜토리얼 관련 변수
+    public bool isTutorial = false;                          //튜토리얼인지 체크
+    TutorialManager tutorialManager;           // 튜토리얼 매니저
     void Awake()
     {
         if (_instance == null)
@@ -28,14 +31,22 @@ public class Friend : MonoBehaviour
     }
 
     // 마법 준비
-    public void PrepareElemental()
+    public void PrepareElemental(Elemental elemental)
     {
-        // 무작위 속성 선택해서 예고
-        //_visualElemental = GetRandomElemental();
-        _realElemental = GetRandomElemental();
-        //TryMistake();
+        if (isTutorial)
+        {
+            _realElemental = elemental;
+            Debug.LogError("튜토리얼진행중");
+        }
+        else
+        {
+            // 무작위 속성 선택해서 예고
+            //_visualElemental = GetRandomElemental();
+            _realElemental = GetRandomElemental();
+            //TryMistake();
 
-        // 동료 마법 예고 UI에 원소 표시
+            // 동료 마법 예고 UI에 원소 표시
+        }
         _friendCastVisualCanvas.SetElementalImage(_realElemental);
         //Debug.Log($"친구 예고: 실제({_realElemental})");
     }
@@ -53,5 +64,11 @@ public class Friend : MonoBehaviour
     public void SetSingleField(bool state)
     {
         _singleFieldEffect.SetActive(state);
+    }
+    public void TutorialElemental(Elemental elemental)
+    {
+        Elemental tutoElemental = elemental;
+        _friendCastVisualCanvas.SetElementalImage(tutoElemental);
+
     }
 }
