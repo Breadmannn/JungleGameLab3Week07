@@ -12,7 +12,7 @@ public class Define
     }
 
     // 적 상태
-    public enum  EnemyState
+    public enum EnemyState
     {
         None,      // 없음
         Stun,     // 감전, 기절
@@ -21,14 +21,14 @@ public class Define
     // 원소 효과
     public enum ElementalEffect
     {
-        
-        Fire =     (1 << Elemental.Fire) | (1 << Elemental.Fire),          // 불 = 불 + 불
-        Water =     (1 << Elemental.Water) | (1 << Elemental.Water),          // 물 = 물 + 물
-        Grass =      (1 << Elemental.Grass) | (1 << Elemental.Grass),        // 풀 = 풀 + 풀
+
+        Fire = (1 << Elemental.Fire) | (1 << Elemental.Fire),          // 불 = 불 + 불
+        Water = (1 << Elemental.Water) | (1 << Elemental.Water),          // 물 = 물 + 물
+        Grass = (1 << Elemental.Grass) | (1 << Elemental.Grass),        // 풀 = 풀 + 풀
         //------------------------------------------------------------------------------------
-        MultiField =       (1 << Elemental.Fire) | (1 << Elemental.Water),          //멀티  = 불 + 물
-        SingleField =  (1 << Elemental.Fire) | (1 << Elemental.Grass),         // 단일 = 불 + 풀
-        Stun =        (1 << Elemental.Water) | (1 << Elemental.Grass),     // 속박 = 물 + 풀
+        MultiField = (1 << Elemental.Fire) | (1 << Elemental.Water),          //멀티  = 불 + 물
+        SingleField = (1 << Elemental.Fire) | (1 << Elemental.Grass),         // 단일 = 불 + 풀
+        Stun = (1 << Elemental.Water) | (1 << Elemental.Grass),     // 속박 = 물 + 풀
         MultiFire,
         MultiGrass,
         MultiWater,
@@ -51,26 +51,22 @@ public class Define
     public enum EnemyType
     {
         Normal,    // 기본타입
-        Special,   // 특수타입(강적)
-        Confuse,    // 혼란타입
-        TestType0,
-        TestType1,
-        TestType2,
-        TestType3,
-        TestType4,
-        TestType5,
-        TestType6
+        Strong,    // 강한 타입
+        FireRes,    // 불저항
+        WaterRes,   // 물저항
+        GrassRes,   // 풀저항
+        Special   // 탱크
     }
     public enum Translation
     {
-        불 =     (1 << Elemental.Fire) | (1 << Elemental.Fire),          // 불 = 불 + 불
-        물 =     (1 << Elemental.Water) | (1 << Elemental.Water),          // 물 = 물 + 물
-        풀 =      (1 << Elemental.Grass) | (1 << Elemental.Grass),        // 풀 = 풀 + 풀
+        불 = (1 << Elemental.Fire) | (1 << Elemental.Fire),          // 불 = 불 + 불
+        물 = (1 << Elemental.Water) | (1 << Elemental.Water),          // 물 = 물 + 물
+        풀 = (1 << Elemental.Grass) | (1 << Elemental.Grass),        // 풀 = 풀 + 풀
         //------------------------------------------------------------------------------------
-        범위 =       (1 << Elemental.Fire) | (1 << Elemental.Water),          //멀티  = 불 + 물
-        단일 =  (1 << Elemental.Fire) | (1 << Elemental.Grass),         // 단일 = 불 + 풀
-        속박 =        (1 << Elemental.Water) | (1 << Elemental.Grass),     // 속박 = 물 + 풀
-        
+        범위 = (1 << Elemental.Fire) | (1 << Elemental.Water),          //멀티  = 불 + 물
+        단일 = (1 << Elemental.Fire) | (1 << Elemental.Grass),         // 단일 = 불 + 풀
+        속박 = (1 << Elemental.Water) | (1 << Elemental.Grass),     // 속박 = 물 + 풀
+
     }
 
     #region Sound

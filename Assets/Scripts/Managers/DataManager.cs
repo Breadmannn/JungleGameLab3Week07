@@ -97,11 +97,11 @@ public class DataManager
     [Header("스킬")]
     Dictionary<ElementalEffect, Skill> _skillDict = new Dictionary<ElementalEffect, Skill>();   // 스킬 딕셔너리
     public Dictionary<ElementalEffect, Skill> SkillDict => _skillDict;
-    
+
 
     Dictionary<string, SkillInfo> _skillInfoDict = new Dictionary<string, SkillInfo>();
     public Dictionary<string, SkillInfo> SkillInfoDict => _skillInfoDict;
-    
+
 
 
     public void Init()
@@ -112,13 +112,12 @@ public class DataManager
         //_enemyPrefabDict.Add(EnemyType.Confuse, Resources.LoadAll<Enemy>("Prefabs/Enemies/Confuse").ToList());
 
         // 250417 KWS: 테스트 몬스터 로드. 추후 프리펩 이름 변경요망
-        _enemyPrefabDict.Add(EnemyType.TestType0, Resources.LoadAll<Enemy>("Prefabs/Enemies/TestStage0").ToList());
-        _enemyPrefabDict.Add(EnemyType.TestType1, Resources.LoadAll<Enemy>("Prefabs/Enemies/TestStage1").ToList());
-        _enemyPrefabDict.Add(EnemyType.TestType2, Resources.LoadAll<Enemy>("Prefabs/Enemies/TestStage2").ToList());
-        _enemyPrefabDict.Add(EnemyType.TestType3, Resources.LoadAll<Enemy>("Prefabs/Enemies/TestStage3").ToList());
-        _enemyPrefabDict.Add(EnemyType.TestType4, Resources.LoadAll<Enemy>("Prefabs/Enemies/TestStage4").ToList());
-        _enemyPrefabDict.Add(EnemyType.TestType5, Resources.LoadAll<Enemy>("Prefabs/Enemies/TestStage5").ToList());
-        _enemyPrefabDict.Add(EnemyType.TestType6, Resources.LoadAll<Enemy>("Prefabs/Enemies/TestStage6").ToList());
+        _enemyPrefabDict.Add(EnemyType.Normal, Resources.LoadAll<Enemy>("Prefabs/Enemies/Normal").ToList());
+        _enemyPrefabDict.Add(EnemyType.Strong, Resources.LoadAll<Enemy>("Prefabs/Enemies/Strong").ToList());
+        _enemyPrefabDict.Add(EnemyType.FireRes, Resources.LoadAll<Enemy>("Prefabs/Enemies/FireRes").ToList());
+        _enemyPrefabDict.Add(EnemyType.WaterRes, Resources.LoadAll<Enemy>("Prefabs/Enemies/WaterRes").ToList());
+        _enemyPrefabDict.Add(EnemyType.GrassRes, Resources.LoadAll<Enemy>("Prefabs/Enemies/GrassRes").ToList());
+        _enemyPrefabDict.Add(EnemyType.Special, Resources.LoadAll<Enemy>("Prefabs/Enemies/Special").ToList());
 
         //SetWaveInfo();
         SetStageWaveInfo();
@@ -166,21 +165,20 @@ public class DataManager
             for (int i = 0; i < weights.Length; i++)
             {
                 _stageWaveInfoDict[stage][i] = new List<(Enemy, float)>();
-                float TestType0Weight = _enemyPrefabDict[EnemyType.TestType0].Count > 0 ? weights[i][0] / _enemyPrefabDict[EnemyType.TestType0].Count : 0f;
-                float TestType1Weight = _enemyPrefabDict[EnemyType.TestType1].Count > 0 ? weights[i][1] / _enemyPrefabDict[EnemyType.TestType1].Count : 0f;
-                float TestType2Weight = _enemyPrefabDict[EnemyType.TestType2].Count > 0 ? weights[i][2] / _enemyPrefabDict[EnemyType.TestType2].Count : 0f;
-                float TestType3Weight = _enemyPrefabDict[EnemyType.TestType3].Count > 0 ? weights[i][3] / _enemyPrefabDict[EnemyType.TestType3].Count : 0f;
-                float TestType4Weight = _enemyPrefabDict[EnemyType.TestType4].Count > 0 ? weights[i][4] / _enemyPrefabDict[EnemyType.TestType4].Count : 0f;
-                float TestType5Weight = _enemyPrefabDict[EnemyType.TestType5].Count > 0 ? weights[i][5] / _enemyPrefabDict[EnemyType.TestType5].Count : 0f;
-                float TestType6Weight = _enemyPrefabDict[EnemyType.TestType6].Count > 0 ? weights[i][6] / _enemyPrefabDict[EnemyType.TestType6].Count : 0f;
+                float NormalWeight = _enemyPrefabDict[EnemyType.Normal].Count > 0 ? weights[i][0] / _enemyPrefabDict[EnemyType.Normal].Count : 0f;
+                float StrongWeight = _enemyPrefabDict[EnemyType.Strong].Count > 0 ? weights[i][1] / _enemyPrefabDict[EnemyType.Strong].Count : 0f;
+                float FireResWeight = _enemyPrefabDict[EnemyType.FireRes].Count > 0 ? weights[i][2] / _enemyPrefabDict[EnemyType.FireRes].Count : 0f;
+                float WaterResWeight = _enemyPrefabDict[EnemyType.WaterRes].Count > 0 ? weights[i][3] / _enemyPrefabDict[EnemyType.WaterRes].Count : 0f;
+                float GrassResWeight = _enemyPrefabDict[EnemyType.GrassRes].Count > 0 ? weights[i][4] / _enemyPrefabDict[EnemyType.GrassRes].Count : 0f;
+                float SpecialWeight = _enemyPrefabDict[EnemyType.Special].Count > 0 ? weights[i][5] / _enemyPrefabDict[EnemyType.Special].Count : 0f;
 
-                _enemyPrefabDict[EnemyType.TestType0].ForEach(enemy => _stageWaveInfoDict[stage][i].Add((enemy, TestType0Weight)));
-                _enemyPrefabDict[EnemyType.TestType1].ForEach(enemy => _stageWaveInfoDict[stage][i].Add((enemy, TestType1Weight)));
-                _enemyPrefabDict[EnemyType.TestType2].ForEach(enemy => _stageWaveInfoDict[stage][i].Add((enemy, TestType2Weight)));
-                _enemyPrefabDict[EnemyType.TestType3].ForEach(enemy => _stageWaveInfoDict[stage][i].Add((enemy, TestType3Weight)));
-                _enemyPrefabDict[EnemyType.TestType4].ForEach(enemy => _stageWaveInfoDict[stage][i].Add((enemy, TestType4Weight)));
-                _enemyPrefabDict[EnemyType.TestType5].ForEach(enemy => _stageWaveInfoDict[stage][i].Add((enemy, TestType5Weight)));
-                _enemyPrefabDict[EnemyType.TestType6].ForEach(enemy => _stageWaveInfoDict[stage][i].Add((enemy, TestType6Weight)));
+
+                _enemyPrefabDict[EnemyType.Normal].ForEach(enemy => _stageWaveInfoDict[stage][i].Add((enemy, NormalWeight)));
+                _enemyPrefabDict[EnemyType.Strong].ForEach(enemy => _stageWaveInfoDict[stage][i].Add((enemy, StrongWeight)));
+                _enemyPrefabDict[EnemyType.FireRes].ForEach(enemy => _stageWaveInfoDict[stage][i].Add((enemy, FireResWeight)));
+                _enemyPrefabDict[EnemyType.WaterRes].ForEach(enemy => _stageWaveInfoDict[stage][i].Add((enemy, WaterResWeight)));
+                _enemyPrefabDict[EnemyType.GrassRes].ForEach(enemy => _stageWaveInfoDict[stage][i].Add((enemy, GrassResWeight)));
+                _enemyPrefabDict[EnemyType.Special].ForEach(enemy => _stageWaveInfoDict[stage][i].Add((enemy, SpecialWeight)));
             }
         }
     }

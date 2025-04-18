@@ -211,7 +211,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: da684e1dac74ed74a9d8462338cd3d0e, type: 3}
-  m_Color: {r: 0, g: 0.46707344, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.48477888, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 7400097546238577695}
   - component: {fileID: 839133013436868945}
   m_Layer: 0
-  m_Name: FlameSlime
+  m_Name: WaterSlime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -318,7 +318,7 @@ MonoBehaviour:
   _positionY2: 0
   _hp: 2
   _steelHp: 0
-  resistance: 0
+  resistance: 1
   _stunCoolCount: 0
 --- !u!1 &7401918212399869468
 GameObject:
