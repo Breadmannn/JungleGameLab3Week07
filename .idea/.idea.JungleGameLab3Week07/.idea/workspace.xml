@@ -7,13 +7,10 @@
     <list default="true" id="a79b9c99-f21e-4e8b-ba95-20cb69004ebb" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JungleGameLab3Week07/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JungleGameLab3Week07/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/InGameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/InGameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSkill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSkill.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skill/MultiField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Skill/MultiField.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skill/SingleField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Skill/SingleField.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/InGameScene/UI_ControlCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InGameScene/UI_ControlCanvas.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/InGameScene/UI_FriendCastVisualCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InGameScene/UI_FriendCastVisualCanvas.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Ui/Chatbox.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Ui/Chatbox.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Ui/SkillDetermination_UI 1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Ui/SkillDetermination_UI 1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Friend.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Friend.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/InGameScene/UI_ElementIcon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InGameScene/UI_ElementIcon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Elemental/Water.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Elemental/Water.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
