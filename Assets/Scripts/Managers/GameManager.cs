@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour
             _ => 66
         }); // 240417 인덱스 있는 함수도 설정해야함
 
-        Debug.Log($"Current BPM: {RhythmManager.Instance.BPM}");
+        //Debug.Log($"Current BPM: {RhythmManager.Instance.BPM}");
 
         StartWave();
     }
@@ -104,7 +104,8 @@ public class GameManager : MonoBehaviour
         {
             _currentWaveSpawnInfoList = currentWaveInfoList;
             // 250417: 몬스터 개체수 지정하는 부분
-            _waveMonsterCount = _currentStage == 0 ? 1 : 20;
+            //_waveMonsterCount = _currentStage == 0 ? 1 : 20;
+            _waveMonsterCount = 10;
             _currentWave++;
             Manager.UI.updateWaveAction?.Invoke(_currentWave); // UI 업데이트
 
@@ -287,7 +288,7 @@ public class GameManager : MonoBehaviour
         // 스테이지 재시작
         Time.timeScale = 1f;
         Manager.UI.HideResult();
-        if (_currentStage < 4)
+        if (_currentStage < 3)
         {
             NextStage();
         }

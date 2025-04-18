@@ -37,7 +37,7 @@ public class Friend : MonoBehaviour
 
         // 동료 마법 예고 UI에 원소 표시
         _friendCastVisualCanvas.SetElementalImage(_realElemental);
-        Debug.Log($"친구 예고: 실제({_realElemental})");
+        //Debug.Log($"친구 예고: 실제({_realElemental})");
     }
 
     public Elemental GetRandomElemental()

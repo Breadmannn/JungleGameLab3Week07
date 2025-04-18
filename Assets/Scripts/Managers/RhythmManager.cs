@@ -67,13 +67,13 @@ public class RhythmManager : MonoBehaviour
             _isJudgeChangedToFalse = true; // 판정이 바뀐 비트
             _isJudgeChangedToTrue = false; // 판정이 바뀐 비트
             GameManager.Instance.PlayerController.HasInputThisBeat = false; // 입력 초기화
-            Debug.Log("판정 종료");
+            //Debug.Log("판정 종료");
         }
         else if (!_isJudgeChangedToTrue && !_isJudging && AudioSettings.dspTime >= _beatWindow.SuccessStart2)
         {
             _isJudging = true; // 판정 시작
             _isJudgeChangedToTrue = true; // 판정이 바뀐 비트
-            Debug.Log("판정 시작");
+            //Debug.Log("판정 시작");
         }
     }
 
@@ -157,6 +157,6 @@ public class RhythmManager : MonoBehaviour
     public void IncreaseBPM()
     {
         _bpm += _increaseBPM;
-        Debug.Log($"BPM increased: {BPM}");
+        //Debug.Log($"BPM increased: {BPM}");
     }
 }
