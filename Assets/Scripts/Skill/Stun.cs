@@ -6,8 +6,6 @@ using static Define;
 
 public class Stun : Skill
 {
-    int _strongDamage = 4;
-
     void Start()
     {
         Init();
@@ -20,16 +18,7 @@ public class Stun : Skill
             return;
         }
 
-        //PlayerSkill playerSkill = PlayerController.Instance.PlayerSkill;
-        List<Enemy> enemies = GameManager.Instance.GetFrontEnemies();
-        //if (playerSkill.IsSingleField)
-        //{
-        //    WideAttack(enemies, ElementalEffect.Stun, _strongDamage, true);
-        //    playerSkill.DestroyFog();
-        //}
-
-        enemies = GameManager.Instance.CurrentEnemyList;
-        foreach (Enemy enemy in enemies)
+        foreach (Enemy enemy in GameManager.Instance.CurrentEnemyList)
         {
             if (enemy.gameObject.activeSelf)
             {

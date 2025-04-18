@@ -11,12 +11,8 @@ public class SingleField : Skill
     public override void Execute()
     {
         PlayerSkill playerSkill = PlayerController.Instance.PlayerSkill;
-        playerSkill.ExcuteEffect(ElementalEffect.SingleField, Vector3.down * 5);
+        Friend.Instance.SetSingleField(true);
+        PlayerController.Instance.SetSingleField(true);
         playerSkill.IsSingleField = true;
-    }
-
-    void OnDestroy()
-    {
-        playerSkill.IsSingleField = false;
     }
 }

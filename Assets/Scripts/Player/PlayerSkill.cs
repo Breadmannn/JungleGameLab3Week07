@@ -91,14 +91,9 @@ public class PlayerSkill : MonoBehaviour
 
     public void DestroySingleField()
     {
-        SingleField[] singleFields = GameObject.FindObjectsOfType<SingleField>();
-        foreach (SingleField single in singleFields)
-        {
-            if (single != null)
-            {
-                Destroy(single.gameObject);
-            }
-        }
+        PlayerController.Instance.SetSingleField(false);
+        Friend.Instance.SetSingleField(false);
+        IsSingleField = false;
     }
 
     public void DestroyMultiField()

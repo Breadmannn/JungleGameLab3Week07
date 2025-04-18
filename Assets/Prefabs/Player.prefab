@@ -390,6 +390,7 @@ MonoBehaviour:
   _playerSkill: {fileID: 0}
   _hp: 100
   _maxHp: 100
+  _singleFieldEffect: {fileID: 5683490148753422549}
 --- !u!114 &2321265523820770290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,7 +422,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2497799908544753423
 Transform:
   m_ObjectHideFlags: 0

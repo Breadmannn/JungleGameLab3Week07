@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour, IStatus
     public Elemental PlayerElemental => _playerElemental;
     public bool HasInputThisBeat { get { return _hasInputThisBeat; } set { _hasInputThisBeat = value; } } // 현재 비트에서 입력 여부
     Elemental _playerElemental;
+    [SerializeField] GameObject _singleFieldEffect;
     bool _hasInputThisBeat = false;     // 현재 비트에서 입력 여부
     Friend _friend;                     // 친구
 
@@ -35,11 +36,15 @@ public class PlayerController : MonoBehaviour, IStatus
         else
             Destroy(gameObject);
 
-        InputManager.Instance.selectElementalAction += SelectElemental; // 원소 선택 이벤트 등록
-        _friend = FindAnyObjectByType<Friend>();
         _playerSkill = GetComponent<PlayerSkill>();
         _anim = GetComponent<Animator>();
         _visualAnim = transform.Find("Visual").GetComponent<Animator>();
+    }
+
+    private void Start()
+    {
+        InputManager.Instance.selectElementalAction += SelectElemental; // 원소 선택 이벤트 등록
+        _friend = FindAnyObjectByType<Friend>();
     }
 
     // 플레이어 마법 시전
@@ -72,21 +77,6 @@ public class PlayerController : MonoBehaviour, IStatus
         _playerSkill.ApplyInteraction(interaction);
         Manager.Sound.PlayEffect(Effect.BossDeath);
         _friend.PrepareElemental(); // 친구 마법 예고 다시
-
-        //if (interaction != ElementalEffect.None)
-        //{
-        //    //_playerSkill.ApplyInteraction(interaction);
-        //    // Debug.Log($"반응 발생: {interaction}");
-        //    // Enemy firstEnemy = GameManager.Instance._currentEnemyList[0];
-        //    //_friend.UpdatePreviewElemental();
-        //    Manager.Sound.PlayEffect(Effect.BossDeath);
-        //    _friend.PrepareElemental(); // 친구 마법 예고 다시
-        //}
-        //else
-        //{
-        //    //Debug.Log($"조합 실패: 플레이어({_playerElemental}) + 친구(visual: {_friend.VisualElemental} real: {_friend.RealElemental})는 잘못된 마법(기본 데미지 적용)");
-        //    Manager.Sound.PlayEffect(Effect.NormalElemental);
-        //}
     }
 
     // 플레이어 데미지 피해 
@@ -115,5 +105,10 @@ public class PlayerController : MonoBehaviour, IStatus
     public void Wriggle()
     {
         _anim.SetTrigger("WriggleTrigger");
+    }
+
+    public void SetSingleField(bool state)
+    {
+        _singleFieldEffect.SetActive(state);
     }
 }
