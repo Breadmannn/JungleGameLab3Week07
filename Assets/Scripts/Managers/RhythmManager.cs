@@ -103,6 +103,12 @@ public class RhythmManager : MonoBehaviour
         Manager.Sound.SetBGMPitch((float)_bpm);     // BGM 재생 속도 조절
     }
 
+    public void SetBpm(int bpm)
+    {
+        _bpm = (double)bpm;
+        SetBpm();
+    }
+
     // 정박자
     void RegularBeat()
     {
@@ -151,5 +157,6 @@ public class RhythmManager : MonoBehaviour
     public void IncreaseBPM()
     {
         _bpm += _increaseBPM;
+        Debug.Log($"BPM increased: {BPM}");
     }
 }
