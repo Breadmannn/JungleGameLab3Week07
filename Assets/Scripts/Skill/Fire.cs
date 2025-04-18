@@ -4,8 +4,9 @@ using static Define;
 
 public class Fire : Skill
 {
-    int _baseDamage = 1;
-    int _strongDamage = 2;
+    int _fieldDamage = 1;
+    int _baseDamage = 2;
+    int _strongDamage = 3;
 
     void Start()
     {
@@ -27,7 +28,9 @@ public class Fire : Skill
         // 단일, 범위 둘 다
         if (playerSkill.IsSingleField && playerSkill.IsMultiField) 
         {
-            WideAttack(enemies, ElementalEffect.SuperFire, _strongDamage, false);
+            WideAttack(enemies, ElementalEffect.MultiFire, _fieldDamage, false);
+            enemies = GameManager.Instance.GetFrontEnemy();
+            WideAttack(enemies, ElementalEffect.SingleFire, _strongDamage, false);
             playerSkill.DestroyMultiField();
             playerSkill.DestroySingleField();
             Debug.Log($"모든 적에게 {_strongDamage} 데미지!");
@@ -43,7 +46,7 @@ public class Fire : Skill
         // 범위
         else if (playerSkill.IsMultiField)
         {
-            WideAttack(enemies, ElementalEffect.MultiFire, _baseDamage, false);
+            WideAttack(enemies, ElementalEffect.MultiFire, _fieldDamage, false);
             playerSkill.DestroyMultiField();
             Debug.Log($"모든 적에게 {_strongDamage} 데미지!");
             

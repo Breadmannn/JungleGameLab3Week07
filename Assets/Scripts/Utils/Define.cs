@@ -35,9 +35,6 @@ public class Define
         SingleFire,
         SingleGrass,
         SingleWater,
-        SuperFire,
-        SuperWater,
-        SuperGrass,
         None
     }
 
