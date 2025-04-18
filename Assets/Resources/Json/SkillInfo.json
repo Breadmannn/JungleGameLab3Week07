@@ -2,27 +2,27 @@
   "skillInfoList": [
       {
         "SkillName": "불",
-        "SkillDescription": "[불+불] 화염구 발사!"
+        "SkillDescription": "[불+불] 블 속성 공격"
       },
       {
         "SkillName": "물",
-        "SkillDescription": "[물+물] 시원해져라 얍!"
+        "SkillDescription": "[물+물] 물 속성 공격"
       },
       {
         "SkillName": "풀",
-        "SkillDescription": "[풀+풀]벽 하나 세울게! 한번정도는 막아줄거야!"
+        "SkillDescription": "[풀+풀] 풀 속성 공격"
       },
       {
         "SkillName": "범위",
-        "SkillDescription": "[불+물]번개 꽝!"
+        "SkillDescription": "[불+물] 다음 공격 시 범위 공격"
       },
       {
         "SkillName": "단일",
-        "SkillDescription": "[불+풀]다들 젖었어! 정전기만 살짝 일으키면..?"
+        "SkillDescription": "[불+풀] 다음 공격 시 강화 공격"
       },
       {
         "SkillName": "속박",
-        "SkillDescription": "[물+풀]타올라라 활활!"
+        "SkillDescription": "[물+풀] 필드에 있는 모든 적 속박"
       }
   ]
 }
