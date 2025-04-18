@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     public List<Enemy> CurrentEnemyList => _currentEnemyList;
     List<Enemy> _currentEnemyList = new List<Enemy>();      // 현재 적 리스트 
 
-    Coroutine NextStageCoroutine;
+    Coroutine NextStageCoroutine; // 스테이지 클리어 패널이 두 번 나오지 않도록 코루틴 레퍼런스 저장
 
     //[Header("스테이지 메타데이터")]
     //[SerializeField] SpriteRenderer _background; // 배경 생기면 넣어야 할 가능성. 당장엔 안씀.
@@ -260,13 +260,20 @@ public class GameManager : MonoBehaviour
 
     IEnumerator ShowClearCanvasAndProceed()
     {
+        // 스테이지 정지
+        Manager.UI.FadeOut();
+        yield return new WaitForSeconds(1.5f);
         Manager.UI.ShowStageResult(_currentStage);
-        yield return new WaitForSeconds(1f);
         Time.timeScale = 0f;
+
+
+        // 키 입력 전까지 스테이지 시작 대기
         while (!Input.GetKeyDown(KeyCode.Space))
         {
             yield return null;
         }
+
+        // 스테이지 재시작
         Time.timeScale = 1f;
         Manager.UI.HideResult();
         if (_currentStage < 4)
