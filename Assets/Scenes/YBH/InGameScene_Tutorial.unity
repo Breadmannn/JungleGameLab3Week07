@@ -2204,7 +2204,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 209.91998, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &179136255
 MonoBehaviour:
@@ -2226,9 +2226,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Q\uB85C \uBD88\uC744 \uC0AC\uC6A9\uD560 \uC218 \uC788\uC5B4!!!!!!!!!!!!!!\nW\uB85C\uB294
-    \uBB3C\uC744 \uC0AC\uC6A9\uD560 \uC218 \uC788\uC5B4!!!!!!!!!!!!!!!\nE\uB85C\uB294
-    \uD480\uC744 \uC0AC\uC6A9\uD560 \uC218 \uC788\uC5B4!!!!!!!@!@"
+  m_text: "\uB85CQ \uBD88\uC744 \uC0AC\uC6A9\uD560 \uC218 \uC788\uC5B4!!!!!!\nW\uB294
+    \uBB3C\uC744 \uC0AC\uC6A9\uD560 \uC218 \uC788\uC5B4!!!!!!\nE\uB294 \uD480!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ed19b17703c97d04c8a6d658df4f966b, type: 2}
   m_sharedMaterial: {fileID: 8602872573438281453, guid: ed19b17703c97d04c8a6d658df4f966b, type: 2}
@@ -2293,7 +2292,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -18.744446, w: -31.721313}
+  m_margin: {x: -11.10202, y: 0, z: -18.744446, w: -31.721313}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -13032,7 +13031,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -446.3, y: 31.5}
+  m_AnchoredPosition: {x: -484, y: 30}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1274825200
@@ -13070,7 +13069,7 @@ MonoBehaviour:
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 1
+  m_ChildControlWidth: 0
   m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
@@ -23787,6 +23786,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4880887517018547840, guid: 40ce6a75b4d4ff44e93df0092df0b9d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4991247863416058347, guid: 40ce6a75b4d4ff44e93df0092df0b9d4, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5696780805374611764, guid: 40ce6a75b4d4ff44e93df0092df0b9d4, type: 3}
