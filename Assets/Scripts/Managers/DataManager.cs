@@ -44,52 +44,52 @@ public class DataManager
         // [0]: 허수아비 [1]: 약한적 [2]: 강한적 [3]: 불저항 [4]: 물저항 [5]: 풀저항 [6]: 탱커
 
         // 스테이지 0: 튜토리얼 -> 로비노래
-        {
-            0, new float[][]
-            {
-                new float[] {1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f },
-                new float[] {1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f },
-                new float[] {1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f }
-            }
-        },
+        //{
+        //    0, new float[][]
+        //    {
+        //        new float[] {1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f },
+        //        new float[] {1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f },
+        //        new float[] {1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f }
+        //    }
+        //},
 
         // 스테이지 1: 쉬움 -> 기존노래
         {
-            1, new float[][]
+            0, new float[][]
             {
-                new float[]{0.0f, 0.9f, 0.1f, 0.0f, 0.0f, 0.0f, 0.0f },
-                new float[]{0.0f, 0.8f, 0.2f, 0.0f, 0.0f, 0.0f, 0.0f },
-                new float[]{0.0f, 0.7f, 0.3f, 0.0f, 0.0f, 0.0f, 0.0f }
+                new float[]{0.9f, 0.1f, 0.0f, 0.0f, 0.0f, 0.0f },
+                new float[]{0.8f, 0.2f, 0.0f, 0.0f, 0.0f, 0.0f },
+                new float[]{0.7f, 0.3f, 0.0f, 0.0f, 0.0f, 0.0f }
             }
         },
 
         // 스테이지 2: 노멀 -> 기존노래
         {
-            2, new float[][]
+            1, new float[][]
             {
-                new float[]{0.0f, 0.5f, 0.3f, 0.2f, 0.0f, 0.0f, 0.0f },
-                new float[]{0.0f, 0.5f, 0.3f, 0.0f, 0.2f, 0.0f, 0.0f },
-                new float[]{0.0f, 0.5f, 0.3f, 0.0f, 0.0f, 0.2f, 0.0f }
+                new float[]{0.5f, 0.3f, 0.2f, 0.0f, 0.0f, 0.0f },
+                new float[]{0.5f, 0.3f, 0.0f, 0.2f, 0.0f, 0.0f },
+                new float[]{0.5f, 0.3f, 0.0f, 0.0f, 0.2f, 0.0f }
             }
         },
 
         // 스테이지 3: 어려움 -> 보스노래
         {
-            3, new float[][]
+            2, new float[][]
             {
-                new float[]{0.0f, 0.4f, 0.3f, 0.15f, 0.0f, 0.15f, 0.0f },
-                new float[]{0.0f, 0.3f, 0.3f, 0.0f, 0.15f, 0.15f, 0.1f },
-                new float[]{0.0f, 0.1f, 0.3f, 0.1f, 0.1f, 0.1f, 0.3f }
+                new float[]{0.4f, 0.3f, 0.15f, 0.0f, 0.15f, 0.0f },
+                new float[]{0.3f, 0.3f, 0.0f, 0.15f, 0.15f, 0.1f },
+                new float[]{0.1f, 0.3f, 0.1f, 0.1f, 0.1f, 0.3f }
             }
         },
 
         // 스테이지 4: 짱어려움 -> 보스노래
         {
-            4, new float[][]
+            3, new float[][]
             {
-                new float[]{0.0f, 0.1f, 0.4f, 0.1f, 0.1f, 0.1f, 0.2f },
-                new float[]{0.0f, 0.2f, 0.2f, 0.1f, 0.1f, 0.1f, 0.3f },
-                new float[]{0.0f, 0.1f, 0.2f, 0.1f, 0.1f, 0.1f, 0.4f }
+                new float[]{0.1f, 0.4f, 0.1f, 0.1f, 0.1f, 0.2f },
+                new float[]{0.2f, 0.2f, 0.1f, 0.1f, 0.1f, 0.3f },
+                new float[]{0.1f, 0.2f, 0.1f, 0.1f, 0.1f, 0.4f }
             }
         }
     };
@@ -112,6 +112,7 @@ public class DataManager
         //_enemyPrefabDict.Add(EnemyType.Confuse, Resources.LoadAll<Enemy>("Prefabs/Enemies/Confuse").ToList());
 
         // 250417 KWS: 테스트 몬스터 로드. 추후 프리펩 이름 변경요망
+        //_enemyPrefabDict.Add(EnemyType., Resources.LoadAll<Enemy>("Prefabs/Enemies/Normal").ToList());
         _enemyPrefabDict.Add(EnemyType.Normal, Resources.LoadAll<Enemy>("Prefabs/Enemies/Normal").ToList());
         _enemyPrefabDict.Add(EnemyType.Strong, Resources.LoadAll<Enemy>("Prefabs/Enemies/Strong").ToList());
         _enemyPrefabDict.Add(EnemyType.FireRes, Resources.LoadAll<Enemy>("Prefabs/Enemies/FireRes").ToList());
@@ -211,27 +212,27 @@ public class DataManager
 
     private void LoadStageData()
     {
+        //_stageDataDict[0] = (
+        //    music: Resources.Load<AudioClip>("Sounds/BGM/Title"),
+        //    bpm: 70f,
+        //    background: Resources.Load<GameObject>("Background/Boss")
+        //);
         _stageDataDict[0] = (
-            music: Resources.Load<AudioClip>("Sounds/BGM/Title"),
+            music: Resources.Load<AudioClip>("Sounds/BGM/Main"),
             bpm: 70f,
             background: Resources.Load<GameObject>("Background/Boss")
         );
         _stageDataDict[1] = (
             music: Resources.Load<AudioClip>("Sounds/BGM/Main"),
-            bpm: 70f,
-            background: Resources.Load<GameObject>("Background/Boss")
-        );
-        _stageDataDict[2] = (
-            music: Resources.Load<AudioClip>("Sounds/BGM/Main"),
             bpm: 74f,
             background: Resources.Load<GameObject>("Background/Boss")
         );
-        _stageDataDict[3] = (
+        _stageDataDict[2] = (
             music: Resources.Load<AudioClip>("Sounds/BGM/Boss"),
             bpm: 78f,
             background: Resources.Load<GameObject>("Background/Boss")
         );
-        _stageDataDict[4] = (
+        _stageDataDict[3] = (
             music: Resources.Load<AudioClip>("Sounds/BGM/Boss"),
             bpm: 82f,
             background: Resources.Load<GameObject>("Background/Boss")
