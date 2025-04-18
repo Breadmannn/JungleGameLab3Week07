@@ -2,15 +2,5 @@ using UnityEngine;
 
 public class UI_FindStageClearCanvas : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // Stage Clear Canvas를 FindObjectByType<>으로 찾기 위한 더미 스크립트
 }
