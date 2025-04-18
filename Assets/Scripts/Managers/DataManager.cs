@@ -23,7 +23,7 @@ public class DataManager
     Dictionary<int, Dictionary<int, List<(Enemy enemy, float weight)>>> _stageWaveInfoDict = new Dictionary<int, Dictionary<int, List<(Enemy enemy, float weight)>>>();
 
     // 스테이지별 메타데이터
-    Dictionary<int, (AudioClip music, float bpm, Sprite background)> _stageDataDict = new Dictionary<int, (AudioClip, float, Sprite)>();
+    Dictionary<int, (AudioClip music, float bpm, GameObject background)> _stageDataDict = new Dictionary<int, (AudioClip, float, GameObject)>();
 
     //float[][] _waveWeights =
     //{
@@ -137,6 +137,9 @@ public class DataManager
 
         // 스킬 정보 로드
         LoadSkillInfo();
+
+        // BGM, BPM, backgorund Image 로드
+        LoadStageData();
     }
 
     // 웨이브 정보 설정
@@ -188,11 +191,11 @@ public class DataManager
         return _stageWaveInfoDict.ContainsKey(stage) ? _stageWaveInfoDict[stage] : new Dictionary<int, List<(Enemy, float)>>();
     }
 
-    public (AudioClip music, float bpm, Sprite background) GetStageData(int stage)
+    public (AudioClip music, float bpm, GameObject background) GetStageData(int stage)
     {
-        //return _stageDataDict.ContainsKey(stage) ? _stageDataDict[stage] : (null, 120f, null);
+        return _stageDataDict.ContainsKey(stage) ? _stageDataDict[stage] : _stageDataDict[0];
 
-        return (null, 60f, null);
+        //return (null, 60f, null);
     }
 
     public void LoadSkillInfo()
@@ -205,6 +208,37 @@ public class DataManager
             _skillInfoDict[info.SkillName] = info;
         }
     }
+
+    private void LoadStageData()
+    {
+        _stageDataDict[0] = (
+            music: Resources.Load<AudioClip>("Sounds/BGM/Title"),
+            bpm: 70f,
+            background: Resources.Load<GameObject>("Background/Boss")
+        );
+        _stageDataDict[1] = (
+            music: Resources.Load<AudioClip>("Sounds/BGM/Main"),
+            bpm: 70f,
+            background: Resources.Load<GameObject>("Background/Boss")
+        );
+        _stageDataDict[2] = (
+            music: Resources.Load<AudioClip>("Sounds/BGM/Main"),
+            bpm: 74f,
+            background: Resources.Load<GameObject>("Background/Boss")
+        );
+        _stageDataDict[3] = (
+            music: Resources.Load<AudioClip>("Sounds/BGM/Boss"),
+            bpm: 78f,
+            background: Resources.Load<GameObject>("Background/Boss")
+        );
+        _stageDataDict[4] = (
+            music: Resources.Load<AudioClip>("Sounds/BGM/Boss"),
+            bpm: 82f,
+            background: Resources.Load<GameObject>("Background/Boss")
+        );
+    }
+
+
     [Serializable]
     public class SkillInfo
     {

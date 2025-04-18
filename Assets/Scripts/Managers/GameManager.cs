@@ -82,7 +82,18 @@ public class GameManager : MonoBehaviour
             _ => BGM.Title
         };
         Manager.Sound.PlayBGM(bgm);
-        RhythmManager.Instance.SetBpm(); // 240417 인덱스 있는 함수도 설정해야함
+        RhythmManager.Instance.SetBpm(stageIndex switch
+        {
+            0 => 66,
+            1 => 66,
+            2 => 70,
+            3 => 74,
+            4 => 78,
+            _ => 66
+        }); // 240417 인덱스 있는 함수도 설정해야함
+
+        Debug.Log($"Current BPM: {RhythmManager.Instance.BPM}");
+
         StartWave();
     }
 
