@@ -67,8 +67,9 @@ public class Friend : MonoBehaviour
     }
     public void TutorialElemental(Elemental elemental)
     {
-        Elemental tutoElemental = elemental;
-        _friendCastVisualCanvas.SetElementalImage(tutoElemental);
+        
+        _realElemental = elemental;
+        _friendCastVisualCanvas.SetElementalImage(_realElemental);
 
     }
 }
