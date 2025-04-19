@@ -15,6 +15,7 @@ public class Grass : Skill
 
     public override void Execute()
     {
+        LogManager.Instance.LogAttack();
         if (GameManager.Instance.CurrentEnemyList == null || GameManager.Instance.CurrentEnemyList.Count == 0)
         {
             Debug.Log("적 리스트가 비어 있습니다!");

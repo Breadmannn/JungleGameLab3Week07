@@ -92,7 +92,7 @@ public class LogManager : MonoBehaviour
         }
     }
 
-    public void LogMax(int stageNum)
+    public void LogMaxStage(int stageNum)
     {
         if (stageNum > logData.MaxStage)
         {

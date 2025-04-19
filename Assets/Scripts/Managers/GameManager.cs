@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
         {
             InitializeTutorial();
         }
-        
+
         _friend.PrepareElemental(Elemental.Fire);
         if (sceneName == "InGameScene")
         {
@@ -253,7 +253,7 @@ public class GameManager : MonoBehaviour
     public List<Enemy> GetFrontEnemies()
     {
         float minX = float.MaxValue;
-        for(int i=0; i<_currentEnemyList.Count; i++)
+        for (int i = 0; i < _currentEnemyList.Count; i++)
         {
             if (_currentEnemyList[i] == null)
                 continue;
@@ -263,13 +263,13 @@ public class GameManager : MonoBehaviour
 
         return _currentEnemyList.Where(enemy => Mathf.Approximately(enemy.transform.position.x, minX)).ToList();
     }
-    
+
     // 적 중 가장 앞에 있는 적 반환 (1명만)
     public List<Enemy> GetFrontEnemy()
     {
         float minX = float.MaxValue;
         int minIndex = -1;
-        for(int i=0; i<_currentEnemyList.Count; i++)
+        for (int i = 0; i < _currentEnemyList.Count; i++)
         {
             if (_currentEnemyList[i] == null)
                 continue;
@@ -297,11 +297,11 @@ public class GameManager : MonoBehaviour
             if (Mathf.Approximately(enemy.transform.position.x, spawnX))
                 spawnPointEnemies.Add(enemy);
         }
-        if(spawnPointEnemies.Count == 0)
+        if (spawnPointEnemies.Count == 0)
             return true;
         else if (spawnPointEnemies.Count == 1)
         {
-            if(spawnPointEnemies[0].transform.position == _enemySpawnPoint.position)
+            if (spawnPointEnemies[0].transform.position == _enemySpawnPoint.position)
                 spawnPoint = _enemySpawnPoint.position + new Vector3(0, -4f, 0);
             return true;
         }
@@ -316,6 +316,8 @@ public class GameManager : MonoBehaviour
 
     IEnumerator ShowClearCanvasAndProceed()
     {
+        LogManager.Instance.LogMaxStage(_currentStage);
+        LogManager.Instance.LogRest(true); //휴식 시간 체크 시작
         // 스테이지 정지
         Manager.UI.FadeOut();
         yield return new WaitForSeconds(1.2f);
@@ -328,6 +330,8 @@ public class GameManager : MonoBehaviour
         {
             yield return null;
         }
+        LogManager.Instance.LogRest(false); //휴식 시간 체크 종료
+
 
         // 스테이지 재시작
         Time.timeScale = 1f;
@@ -338,6 +342,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            LogManager.Instance.LogClear(true);
             Manager.Scene.LoadScene(SceneType.GameClearScene);
         }
 
