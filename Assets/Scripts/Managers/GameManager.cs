@@ -336,7 +336,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator ShowClearCanvasAndProceed()
     {
-        LogManager.Instance.LogMaxStage(_currentStage);
+        LogManager.Instance.LogMaxStage(_currentStage+1);
         LogManager.Instance.LogRest(true); //휴식 시간 체크 시작
         // 스테이지 정지
         Manager.UI.FadeOut();
