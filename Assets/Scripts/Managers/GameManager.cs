@@ -129,91 +129,92 @@ public class GameManager : MonoBehaviour
 
             RhythmManager.Instance.IncreaseBPM();
 
-            switch (_currentStage)
-            {
-                case 0:
-                    //_noneMonsterCount = 15;
-                    switch (_currentWave)
-                    {
-                        case 0:
-                            _noneMonsterCount = 15;
-                            break;
-                        case 1:
-                            _noneMonsterCount = 10;
-                            break;
-                        case 2:
-                            _noneMonsterCount = 5;
-                            break;
-                        case 3:
-                            _noneMonsterCount = 5;
-                            break;
-                        default:
-                            break;
-                    }
-                    break;
-                case 1:
-                    //_noneMonsterCount = 10;
-                    switch (_currentWave)
-                    {
-                        case 0:
-                            _noneMonsterCount = 10;
-                            break;
-                        case 1:
-                            _noneMonsterCount = 5;
-                            break;
-                        case 2:
-                            _noneMonsterCount = 3;
-                            break;
-                        case 3:
-                            _noneMonsterCount = 3;
-                            break;
-                        default:
-                            break;
-                    }
-                    break;
-                case 2:
-                    //_noneMonsterCount = 6;
-                    switch (_currentWave)
-                    {
-                        case 0:
-                            _noneMonsterCount = 6;
-                            break;
-                        case 1:
-                            _noneMonsterCount = 3;
-                            break;
-                        case 2:
-                            _noneMonsterCount = 1;
-                            break;
-                        case 3:
-                            _noneMonsterCount = 1;
-                            break;
-                        default:
-                            break;
-                    }
-                    break;
-                case 3:
-                    //_noneMonsterCount = 3;
-                    switch (_currentWave)
-                    {
-                        case 0:
-                            _noneMonsterCount = 3;
-                            break;
-                        case 1:
-                            _noneMonsterCount = 2;
-                            break;
-                        case 2:
-                            _noneMonsterCount = 0;
-                            break;
-                        case 3:
-                            _noneMonsterCount = 0;
-                            break;
-                        default:
-                            break;
-                    }
-                    break;
-                default:
-                    break;
-            }
+            _noneMonsterCount = 15;
+            //switch (_currentStage)
+            //{
+            //    case 0:
+            //        //_noneMonsterCount = 15;
+            //        switch (_currentWave)
+            //        {
+            //            case 0:
+            //                _noneMonsterCount = 15;
+            //                break;
+            //            case 1:
+            //                _noneMonsterCount = 10;
+            //                break;
+            //            case 2:
+            //                _noneMonsterCount = 5;
+            //                break;
+            //            case 3:
+            //                _noneMonsterCount = 5;
+            //                break;
+            //            default:
+            //                break;
+            //        }
+            //        break;
+            //    case 1:
+            //        //_noneMonsterCount = 10;
+            //        switch (_currentWave)
+            //        {
+            //            case 0:
+            //                _noneMonsterCount = 10;
+            //                break;
+            //            case 1:
+            //                _noneMonsterCount = 5;
+            //                break;
+            //            case 2:
+            //                _noneMonsterCount = 3;
+            //                break;
+            //            case 3:
+            //                _noneMonsterCount = 3;
+            //                break;
+            //            default:
+            //                break;
+            //        }
+            //        break;
+            //    case 2:
+            //        //_noneMonsterCount = 6;
+            //        switch (_currentWave)
+            //        {
+            //            case 0:
+            //                _noneMonsterCount = 6;
+            //                break;
+            //            case 1:
+            //                _noneMonsterCount = 3;
+            //                break;
+            //            case 2:
+            //                _noneMonsterCount = 1;
+            //                break;
+            //            case 3:
+            //                _noneMonsterCount = 1;
+            //                break;
+            //            default:
+            //                break;
+            //        }
+            //        break;
+            //    case 3:
+            //        //_noneMonsterCount = 3;
+            //        switch (_currentWave)
+            //        {
+            //            case 0:
+            //                _noneMonsterCount = 3;
+            //                break;
+            //            case 1:
+            //                _noneMonsterCount = 2;
+            //                break;
+            //            case 2:
+            //                _noneMonsterCount = 0;
+            //                break;
+            //            case 3:
+            //                _noneMonsterCount = 0;
+            //                break;
+            //            default:
+            //                break;
+            //        }
+            //        break;
+            //    default:
+            //        break;
+            //}
 
             //if (_currentWave < 6)
             //{
