@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour, IStatus
     public int SteelHealth => _steelHp;
     [SerializeField] int _steelHp = 0; // 강철 HP
     float _moveSpeed = 2f;                      // 비트당 이동 거리
-    [SerializeField] Elemental weak;
+    [SerializeField] Elemental resistance;
 
     [SerializeField] int _stunCoolCount = 0;   // 기절 쿨 카운트
     Animator _animator;                         // 적 애니메이터
@@ -138,9 +138,9 @@ public class Enemy : MonoBehaviour, IStatus
     {
         if (Friend.Instance.isTutorial) return;
 
-        if (weak != Elemental.None)
+        if (resistance != Elemental.None)
         {
-            if(weak != skillElement) return;
+            if(resistance == skillElement) return;
         }
         _animator.SetTrigger("HitTrigger");
         int steelDamage = amount - _hp; // 강철 HP에 입힐 데미지;
