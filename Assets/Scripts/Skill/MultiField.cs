@@ -13,6 +13,7 @@ public class MultiField : Skill
 
     public override void Execute()
     {
+        LogManager.Instance.LogBuff();
         FindAnyObjectByType<UI_ElementIcon>().SetBackColorMulti();
         
         PlayerController.Instance.PlayerSkill.ExcuteEffect(ElementalEffect.MultiField, Vector3.down * 5);

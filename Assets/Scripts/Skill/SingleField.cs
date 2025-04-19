@@ -11,6 +11,7 @@ public class SingleField : Skill
 
     public override void Execute()
     {
+        LogManager.Instance.LogBuff();
         FindAnyObjectByType<UI_ElementIcon>().SetBackColorSingle();
         PlayerSkill playerSkill = PlayerController.Instance.PlayerSkill;
         Friend.Instance.SetSingleField(true);
