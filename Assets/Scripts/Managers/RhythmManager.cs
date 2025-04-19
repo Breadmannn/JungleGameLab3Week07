@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using System.Collections.Generic;
+using static Define;
 
 public struct BeatJudgementWindow
 {
@@ -112,17 +113,18 @@ public class RhythmManager : MonoBehaviour
     // 정박자
     void RegularBeat()
     {
+        float Animspeed = (float)_bpm/60;
         _beatSource.PlayOneShot(_beatClip);         // 비트 소리 재생
         colorFloorAction?.Invoke();                 // 바닥 색상 변경
 
-        Friend.Instance.Wriggle();           // 동료 꿈틀거리기
-        PlayerController.Instance.Wriggle(); // 플레이어 꿈틀거리기
+        Friend.Instance.Wriggle(Animspeed);           // 동료 꿈틀거리기
+        PlayerController.Instance.Wriggle(Animspeed); // 플레이어 꿈틀거리기
 
         /* 추후에 Action으로 빼기 */
         List<Enemy> enemies = GameManager.Instance.CurrentEnemyList; // 적 리스트
         foreach (Enemy enemy in enemies)
         {
-            enemy.Move();
+            enemy.Move(Animspeed);
         }
 
         if (GameManager.Instance.CheckSpawnPoint(out Vector3 spawnPoint)) // 소환 포인트 체크

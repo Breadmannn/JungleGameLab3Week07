@@ -66,9 +66,9 @@ public class Friend : MonoBehaviour
         Elemental randomElemental = (Elemental)Random.Range(0, Enum.GetValues(typeof(Elemental)).Length - 1);
         return randomElemental;
     }
-    public void Wriggle()
+    public void Wriggle(float speed)
     {
-        
+        _anim.speed = speed;
         _anim.SetTrigger("WriggleTrigger");
     }
 

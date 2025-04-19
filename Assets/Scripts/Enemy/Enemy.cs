@@ -29,7 +29,7 @@ public class Enemy : MonoBehaviour, IStatus
 
     [SerializeField] int _stunCoolCount = 0;   // 기절 쿨 카운트
     Animator _animator;                         // 적 애니메이터
-
+    float _speed;   // 적 속도                 //애니메이터 스피드
     void Awake()
     {
         _anim = GetComponent<Animator>();
@@ -40,9 +40,10 @@ public class Enemy : MonoBehaviour, IStatus
     }
 
     // 적 이동
-    public void Move()
+    public void Move(float speed)
     {
-        Wriggle();
+        _speed = speed;
+        Wriggle(speed);
         // 스턴 판정
         if (_enemyState == EnemyState.Stun && _stunCoolCount > 0) // 스턴 상태일 때는 이동하지 않음
         {
@@ -191,7 +192,7 @@ public class Enemy : MonoBehaviour, IStatus
     {
         yield return new WaitForSeconds((float)RhythmManager.Instance.BeatInterval / 2);
         _halfMove = true;
-        Move();
+        Move(1f);
     }
 
     // 이동 전 앞라인 체크(정지0, 윗길로 이동1, 아랫길로 이동2)
@@ -228,8 +229,9 @@ public class Enemy : MonoBehaviour, IStatus
     }
 
     //꿈틀거리기
-    public void Wriggle()
+    public void Wriggle(float speed)
     {
+        _anim.speed = speed;
         _anim.SetTrigger("WriggleTrigger");
     }
 }

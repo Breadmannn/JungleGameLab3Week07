@@ -116,8 +116,9 @@ public class PlayerController : MonoBehaviour, IStatus
     }
 
     //꿈틀거리기
-    public void Wriggle()
+    public void Wriggle(float speed)
     {
+        _anim.speed = speed;
         _anim.SetTrigger("WriggleTrigger");
     }
 
