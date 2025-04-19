@@ -68,6 +68,7 @@ public class Friend : MonoBehaviour
     }
     public void Wriggle()
     {
+        
         _anim.SetTrigger("WriggleTrigger");
     }
 
