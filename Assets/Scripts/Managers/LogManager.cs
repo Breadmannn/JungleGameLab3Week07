@@ -45,7 +45,7 @@ public class LogManager : MonoBehaviour
         logData = new LogData();
         logData.Clear = false;
         logData.TotalPlayTime = 0;
-        logData.MinRestTime = 100;
+        logData.MinRestTime = float.PositiveInfinity;
         logData.MaxRestTime = 0;
         logData.AvgRestTime = 0;
         logData.MaxStage = 0;

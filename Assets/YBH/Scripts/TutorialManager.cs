@@ -227,7 +227,7 @@ public class TutorialManager : MonoBehaviour
     }
     IEnumerator NextStepAfterDelay(float delaySeconds) // 튜토리얼 다음단계로 넘어가기
     {
-       
+        Debug.Log("Coroutine 들어옴");
             yield return new WaitForSeconds(delaySeconds);
             Debug.LogError("튜토리얼 다음 단계로 넘어감");
             // 현재 단계 + 1 → 다음 단계로 전환
