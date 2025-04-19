@@ -84,7 +84,7 @@ public class PlayerSkill : MonoBehaviour
 
             if(effect == ElementalEffect.MultiField)
             {
-                delayTime = 5f;
+                delayTime = 10f;
             }
             // 애니메이터 존재하는 경우
             if (effectInstance.TryGetComponent<Animator>(out Animator anim) && effect != ElementalEffect.Stun)
