@@ -170,13 +170,13 @@ public class TutorialManager : MonoBehaviour
         Tutorial("이번에는 풀 마법을 준비할래!\n"+" 거기에 불 마법을 더해보자!", Elemental.Grass);
         if (fire)
         {
-            Proceed("마력이 흐르는게 느껴져?\n" + "이상태로 속성마법을 써보자!");
+            Proceed("마력이 흐르는게 느껴져?\n");
         }
 
     }
     void SingleCast()
     {
-        Tutorial("여기서 속성마법을 사용하면..", Elemental.Grass);
+        Tutorial("이상태로 속성마법을 써보자!\n"+"여기서 속성마법을 사용하면..", Elemental.Grass);
         if (grass)
         {
             Proceed("속성 마법이 강화되서 더 큰 피해를 줘!");
@@ -216,7 +216,7 @@ public class TutorialManager : MonoBehaviour
         _isGoingNext = true;
         _tutorialText.text = successText;
         Debug.LogError($"튜토리얼 성공: {_currentStep}");
-        StartCoroutine(NextStepAfterDelay(3f));
+        StartCoroutine(NextStepAfterDelay(2f));
     }
     void Boolreset()
     {
