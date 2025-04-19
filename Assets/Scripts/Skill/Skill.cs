@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using static Define;
 
@@ -32,14 +33,12 @@ public class Skill : MonoBehaviour
         if (enemyList == null)
             Debug.LogError("적 리스트가 null~");
 
-        for (int i = 0; i < enemyList.Count; i++)
+        List<Enemy> copy = enemyList.ToList();
+        foreach(Enemy enemy in copy)
         {
-            if(enemyList[i] == null)
-                continue;
-
-            if (enemyList[i] != null)
+            if(enemy != null)
             {
-                Vector3 position = (isSpawnTarget) ? enemyList[i].transform.position : Vector3.down * 5f;
+                Vector3 position = (isSpawnTarget) ? enemy.transform.position : Vector3.down * 5f;
 
                 if (playerSkill == null)
                 {
@@ -47,10 +46,31 @@ public class Skill : MonoBehaviour
                 }
 
                 playerSkill.ExcuteEffect(elementalEffect, position);
-                enemyList[i].TakeDamage(damage, elemental);
+                enemy.TakeDamage(damage, elemental);
                 CameraController.Instance.ShakeCamera(2f);
+                Debug.Log($"{enemy.gameObject.name}  {damage} 데미지!");
             }
         }
-        Debug.Log($"모든 적에게 {damage} 데미지!");
+        //for (int i = 0; i < enemyList.Count; i++)
+        //{
+        //    if(enemyList[i] == null)
+        //        continue;
+
+        //    if (enemyList[i] != null)
+        //    {
+        //        Vector3 position = (isSpawnTarget) ? enemyList[i].transform.position : Vector3.down * 5f;
+
+        //        if (playerSkill == null)
+        //        {
+        //            playerSkill = PlayerController.Instance.PlayerSkill;
+        //        }
+
+        //        playerSkill.ExcuteEffect(elementalEffect, position);
+        //        enemyList[i].TakeDamage(damage, elemental);
+        //        CameraController.Instance.ShakeCamera(2f);
+        //        Debug.Log($"{enemyList[i].gameObject.name}  {damage} 데미지!");
+        //    }
+        //}
+        
     }
 }

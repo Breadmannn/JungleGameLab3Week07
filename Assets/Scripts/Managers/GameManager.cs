@@ -133,11 +133,14 @@ public class GameManager : MonoBehaviour
                     //_noneMonsterCount = 15;
                     switch (_currentWave)
                     {
-                        case 1:
+                        case 0:
                             _noneMonsterCount = 15;
                             break;
-                        case 2:
+                        case 1:
                             _noneMonsterCount = 10;
+                            break;
+                        case 2:
+                            _noneMonsterCount = 5;
                             break;
                         case 3:
                             _noneMonsterCount = 5;
@@ -150,11 +153,14 @@ public class GameManager : MonoBehaviour
                     //_noneMonsterCount = 10;
                     switch (_currentWave)
                     {
-                        case 1:
+                        case 0:
                             _noneMonsterCount = 10;
                             break;
-                        case 2:
+                        case 1:
                             _noneMonsterCount = 5;
+                            break;
+                        case 2:
+                            _noneMonsterCount = 3;
                             break;
                         case 3:
                             _noneMonsterCount = 3;
@@ -167,11 +173,14 @@ public class GameManager : MonoBehaviour
                     //_noneMonsterCount = 6;
                     switch (_currentWave)
                     {
-                        case 1:
+                        case 0:
                             _noneMonsterCount = 6;
                             break;
-                        case 2:
+                        case 1:
                             _noneMonsterCount = 3;
+                            break;
+                        case 2:
+                            _noneMonsterCount = 1;
                             break;
                         case 3:
                             _noneMonsterCount = 1;
@@ -184,11 +193,14 @@ public class GameManager : MonoBehaviour
                     //_noneMonsterCount = 3;
                     switch (_currentWave)
                     {
-                        case 1:
+                        case 0:
                             _noneMonsterCount = 3;
                             break;
-                        case 2:
+                        case 1:
                             _noneMonsterCount = 2;
+                            break;
+                        case 2:
+                            _noneMonsterCount = 0;
                             break;
                         case 3:
                             _noneMonsterCount = 0;
@@ -198,7 +210,6 @@ public class GameManager : MonoBehaviour
                     }
                     break;
                 default:
-                    
                     break;
             }
 

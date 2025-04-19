@@ -119,7 +119,7 @@ MonoBehaviour:
   _positionY2: 0
   _hp: 3
   _steelHp: 0
-  weak: 3
+  resistance: 3
   _stunCoolCount: 0
 --- !u!1 &3891161119513418810
 GameObject:
