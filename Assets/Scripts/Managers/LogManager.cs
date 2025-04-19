@@ -1,4 +1,5 @@
-using Unity.Hierarchy;
+using System.IO;
+using System.Text;
 using UnityEngine;
 
 public class LogManager : MonoBehaviour
@@ -28,6 +29,15 @@ public class LogManager : MonoBehaviour
 
     private void Awake()
     {
+        if (_instance == null)
+        {
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         logData = new LogData();
         logData.Clear = false;
         logData.TotalPlayTime = 0;
@@ -65,7 +75,8 @@ public class LogManager : MonoBehaviour
         {
             restTime = 0;
             isCheckingRestTime = true;
-        } else
+        }
+        else
         {
             numRest++;
             isCheckingRestTime = false;
@@ -97,5 +108,58 @@ public class LogManager : MonoBehaviour
     public void LogBuff()
     {
         logData.buffSkill += 1;
+    }
+
+    public void ExportToCSV(string fileName = "log.csv")
+    {
+        LogTotalTime();
+
+        if (numRest > 0)
+        {
+            logData.AvgRestTime = totalRestTime / numRest;
+        }
+
+        StringBuilder csv = new StringBuilder();
+
+        // 헤더
+        csv.AppendLine("Clear,TotalPlayTime,MinRestTime,MaxRestTime,AvgRestTime,MaxStage,AttackSkill,BuffSkill");
+
+        // 데이터 저장
+        csv.AppendLine($"{logData.Clear}," +
+                   $"{logData.TotalPlayTime}," +
+                   $"{logData.MinRestTime}," +
+                   $"{logData.MaxRestTime}," +
+                   $"{logData.AvgRestTime}," +
+                   $"{logData.MaxStage}," +
+                   $"{logData.AttackSkill}," +
+                   $"{logData.buffSkill}");
+
+        string buildFolderPath = GetBuildFolderPath();
+
+        string filePath = Path.Combine(buildFolderPath, fileName);
+
+        try
+        {
+            File.WriteAllText(filePath, csv.ToString());
+            Debug.Log($"Log exported to build folder: {filePath}");
+        }
+        catch (IOException e)
+        {
+            Debug.LogError($"Failed to write CSV file: {e.Message}");
+        }
+    }
+
+    private string GetBuildFolderPath()
+    {
+#if UNITY_EDITOR
+        return Directory.GetParent(Application.dataPath).FullName;
+#else
+    return Application.dataPath; // This points to the build folder in standalone builds
+#endif
+    }
+
+    private void OnApplicationQuit()
+    {
+        ExportToCSV();
     }
 }
