@@ -12,7 +12,7 @@ public class Stun : Skill
     }
     public override void Execute()
     {
-        LogManager.Instance.LogBuff();
+        LogManager.Instance.LogBuff(2);
         if (GameManager.Instance.CurrentEnemyList == null || GameManager.Instance.CurrentEnemyList.Count == 0)
         {
             Debug.Log("적 리스트가 비어 있습니다!");

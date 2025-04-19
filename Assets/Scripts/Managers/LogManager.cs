@@ -1,3 +1,4 @@
+using Mono.Cecil.Cil;
 using System.IO;
 using System.Text;
 using UnityEngine;
@@ -16,8 +17,12 @@ public class LogManager : MonoBehaviour
         public float MaxRestTime;       // 최대 휴식 시간 (스테이지 클리어 상태)
         public float AvgRestTime;       // 평균 휴식 시간 (스테이지 클리어 상태)
         public int MaxStage;            // 최고 도달 스테이지
-        public int AttackSkill;          // 공격 스킬 사용 횟수
-        public int buffSkill;           // 버프 스킬 사용 횟수
+        public int GrassAttack;          // 풀 공격 스킬 사용 횟수
+        public int FireAttack;          //  불 공격 스킬 사용 횟수
+        public int WaterAttack;          // 물 공격 스킬 사용 횟수
+        public int MultiField;           // 범위 스킬 사용 횟수
+        public int SingleField;          // 강화 스킬 사용 횟수
+        public int Stun;                 // 속박 스킬 사용 횟수
     }
 
     float totalTime = 0;
@@ -41,13 +46,16 @@ public class LogManager : MonoBehaviour
         logData = new LogData();
         logData.Clear = false;
         logData.TotalPlayTime = 0;
-        logData.MinRestTime = 0;
+        logData.MinRestTime = 100;
         logData.MaxRestTime = 0;
         logData.AvgRestTime = 0;
         logData.MaxStage = 0;
-        logData.AttackSkill = 0;
-        logData.buffSkill = 0;
-
+        logData.GrassAttack = 0;
+        logData.FireAttack = 0;
+        logData.WaterAttack = 0;
+        logData.MultiField = 0;
+        logData.SingleField = 0;
+        logData.Stun = 0;
 
     }
 
@@ -100,14 +108,45 @@ public class LogManager : MonoBehaviour
         }
     }
 
-    public void LogAttack()
+    /// <summary>
+    /// 공격 스킬 로그
+    /// </summary>
+    /// <param name="code">0:풀 1:불 2: 물</param>
+
+    public void LogAttack(int code)
     {
-        logData.AttackSkill += 1;
+        switch (code)
+        {
+            case 0:
+                logData.GrassAttack += 1;
+                break;
+            case 1:
+                logData.FireAttack += 1;
+                break;
+            case 2:
+                logData.WaterAttack += 1;
+                break;
+        }
     }
 
-    public void LogBuff()
+    /// <summary>
+    /// 버프 스킬 로그
+    /// </summary>
+    /// <param name="code">0:범위 1:강화 2:속박</param>
+    public void LogBuff(int code)
     {
-        logData.buffSkill += 1;
+        switch (code)
+        {
+            case 0:
+                logData.MultiField += 1;
+                break;
+            case 1:
+                logData.SingleField += 1;
+                break;
+            case 2:
+                logData.Stun += 1;
+                break;
+        }
     }
 
     public void ExportToCSV(string fileName = "log.csv")
@@ -122,7 +161,7 @@ public class LogManager : MonoBehaviour
         StringBuilder csv = new StringBuilder();
 
         // 헤더
-        csv.AppendLine("Clear,TotalPlayTime,MinRestTime,MaxRestTime,AvgRestTime,MaxStage,AttackSkill,BuffSkill");
+        csv.AppendLine("Clear,TotalPlayTime,MinRestTime,MaxRestTime,AvgRestTime,MaxStage,GrassAttack,FireAttack,WaterAttack,Multifield,SingleField,Stun");
 
         // 데이터 저장
         csv.AppendLine($"{logData.Clear}," +
@@ -131,8 +170,12 @@ public class LogManager : MonoBehaviour
                    $"{logData.MaxRestTime}," +
                    $"{logData.AvgRestTime}," +
                    $"{logData.MaxStage}," +
-                   $"{logData.AttackSkill}," +
-                   $"{logData.buffSkill}");
+                   $"{logData.GrassAttack}," +
+                   $"{logData.FireAttack}," +
+                   $"{logData.WaterAttack}," +
+                   $"{logData.MultiField}," +
+                   $"{logData.SingleField}," +
+                   $"{logData.Stun}");
 
         string buildFolderPath = GetBuildFolderPath();
 
