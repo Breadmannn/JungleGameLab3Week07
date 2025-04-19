@@ -56,6 +56,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        _currentStage = Manager.Instance.CurrentStage;
         string sceneName = Manager.Scene.GetActiveScene().name;
         _friend.PrepareElemental(Elemental.None);
         //if (sceneName == "InGameScene")
@@ -369,8 +370,14 @@ public class GameManager : MonoBehaviour
                 minIndex = i;
             }
         }
-
-        return new List<Enemy> { _currentEnemyList[minIndex] };
+        if(minIndex < 0)
+        {
+            return null;
+        } else
+        {
+            return new List<Enemy> { _currentEnemyList[minIndex] };
+        }
+            
     }
 
     // 소환 지점 검사
@@ -402,6 +409,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.LogWarning($"NextStage:{_currentStage}");
         LoadStage(++_currentStage);
+        Manager.Instance.CurrentStage = _currentStage;
     }
 
     IEnumerator ShowClearCanvasAndProceed()

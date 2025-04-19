@@ -6,7 +6,7 @@ public class Grass : Skill
 {
     int _fieldDamage = 1;
     int _baseDamage = 2;
-    int _strongDamage = 3;
+    int _strongDamage = 4;
 
     void Start()
     {

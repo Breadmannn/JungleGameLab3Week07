@@ -13,7 +13,7 @@ public class UI_BackBtnCanvas : MonoBehaviour
         _backBtnCanvas = GetComponent<Canvas>();
         _backBtn = GetComponentInChildren<Button>();
         _backBtn.onClick.AddListener(() => {
-            //StopAllCoroutines();
+            Manager.Instance.CurrentStage = 0;
             LogManager.Instance.LogRest(false);
             Manager.Sound.PlayEffect(Effect.BtnClick);
             Manager.Scene.LoadScene(SceneType.TitleScene);

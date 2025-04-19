@@ -1,2 +1,2 @@
 Clear,TotalPlayTime,MinRestTime,MaxRestTime,AvgRestTime,MaxStage,GrassAttack,FireAttack,WaterAttack,Multifield,SingleField,Stun
-True,297.7952,1.200582,1.202334,1.20137,4,60,66,53,28,7,18
+False,16.27143,Infinity,0,0,0,1,0,1,2,2,0

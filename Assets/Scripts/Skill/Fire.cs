@@ -6,7 +6,7 @@ public class Fire : Skill
 {
     int _fieldDamage = 1;
     int _baseDamage = 2;
-    int _strongDamage = 3;
+    int _strongDamage = 4;
 
     void Start()
     {
@@ -28,7 +28,7 @@ public class Fire : Skill
         
         // 단일, 범위 둘 다
         if (playerSkill.IsSingleField && playerSkill.IsMultiField) 
-        {
+        { //puzzle
             WideAttack(enemies, ElementalEffect.MultiFire, _fieldDamage, false);
             enemies = GameManager.Instance.GetFrontEnemy();
             WideAttack(enemies, ElementalEffect.SingleFire, _strongDamage);

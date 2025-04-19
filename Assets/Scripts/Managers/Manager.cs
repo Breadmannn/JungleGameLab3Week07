@@ -18,6 +18,8 @@ public class Manager : MonoBehaviour
     public static UIManager UI => Instance._ui;
     public static DataManager Data => Instance._data;
 
+    public int CurrentStage = 0; 
+
     void Awake()
     {
         if(_instance == null)

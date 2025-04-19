@@ -12,6 +12,7 @@ public class UI_MainMenuBtnCanvas : MonoBehaviour
         _mainMenuBtnCanvas = GetComponent<Canvas>();
         _mainMenuBtn = GetComponentInChildren<Button>();
         _mainMenuBtn.onClick.AddListener(() => {
+            Manager.Instance.CurrentStage = 0;
             Manager.Sound.PlayEffect(Effect.BtnClick);
             Manager.Scene.LoadScene(SceneType.TitleScene);
         });

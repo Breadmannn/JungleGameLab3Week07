@@ -31,7 +31,11 @@ public class Skill : MonoBehaviour
     public void WideAttack(List<Enemy> enemyList, ElementalEffect elementalEffect, int damage, bool isSpawnTarget = true)
     {
         if (enemyList == null)
+        {
             Debug.LogError("적 리스트가 null~");
+            return;
+        }
+            
 
         List<Enemy> copy = enemyList.ToList();
         foreach(Enemy enemy in copy)
