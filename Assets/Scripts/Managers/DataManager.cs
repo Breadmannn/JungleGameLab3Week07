@@ -57,9 +57,10 @@ public class DataManager
         {
             0, new float[][]
             {
-                new float[]{0.9f, 0.1f, 0.0f, 0.0f, 0.0f, 0.0f },
-                new float[]{0.8f, 0.2f, 0.0f, 0.0f, 0.0f, 0.0f },
-                new float[]{0.7f, 0.3f, 0.0f, 0.0f, 0.0f, 0.0f }
+                new float[]{ 1.00f, 0.00f, 0.00f, 0.00f, 0.00f, 0.00f },
+                new float[]{ 0.90f, 0.10f, 0.00f, 0.00f, 0.00f, 0.00f },
+                new float[]{ 0.80f, 0.20f, 0.00f, 0.00f, 0.00f, 0.00f },
+                new float[]{ 0.70f, 0.25f, 0.00f, 0.00f, 0.00f, 0.05f }
             }
         },
 
@@ -67,9 +68,10 @@ public class DataManager
         {
             1, new float[][]
             {
-                new float[]{0.5f, 0.3f, 0.2f, 0.0f, 0.0f, 0.0f },
-                new float[]{0.5f, 0.3f, 0.0f, 0.2f, 0.0f, 0.0f },
-                new float[]{0.5f, 0.3f, 0.0f, 0.0f, 0.2f, 0.0f }
+                new float[]{ 0.50f, 0.25f, 0.20f, 0.00f, 0.00f, 0.05f },
+                new float[]{ 0.50f, 0.25f, 0.00f, 0.20f, 0.00f, 0.05f },
+                new float[]{ 0.50f, 0.25f, 0.00f, 0.00f, 0.20f, 0.05f },
+                new float[]{ 0.40f, 0.25f, 0.10f, 0.10f, 0.10f, 0.05f }
             }
         },
 
@@ -77,9 +79,10 @@ public class DataManager
         {
             2, new float[][]
             {
-                new float[]{0.4f, 0.3f, 0.15f, 0.0f, 0.15f, 0.0f },
-                new float[]{0.3f, 0.3f, 0.0f, 0.15f, 0.15f, 0.1f },
-                new float[]{0.1f, 0.3f, 0.1f, 0.1f, 0.1f, 0.3f }
+                new float[]{ 0.30f, 0.30f, 0.15f, 0.15f, 0.00f, 0.10f },
+                new float[]{ 0.30f, 0.30f, 0.00f, 0.15f, 0.15f, 0.10f },
+                new float[]{ 0.30f, 0.30f, 0.15f, 0.00f, 0.15f, 0.10f },
+                new float[]{ 0.30f, 0.30f, 0.10f, 0.10f, 0.10f, 0.10f }
             }
         },
 
@@ -87,9 +90,10 @@ public class DataManager
         {
             3, new float[][]
             {
-                new float[]{0.1f, 0.4f, 0.1f, 0.1f, 0.1f, 0.2f },
-                new float[]{0.2f, 0.2f, 0.1f, 0.1f, 0.1f, 0.3f },
-                new float[]{0.1f, 0.2f, 0.1f, 0.1f, 0.1f, 0.4f }
+                new float[]{ 0.10f, 0.40f, 0.10f, 0.10f, 0.10f, 0.20f },
+                new float[]{ 0.10f, 0.30f, 0.10f, 0.10f, 0.10f, 0.30f },
+                new float[]{ 0.10f, 0.20f, 0.10f, 0.10f, 0.10f, 0.40f },
+                new float[]{ 0.00f, 0.15f, 0.15f, 0.15f, 0.15f, 0.40f }
             }
         }
     };

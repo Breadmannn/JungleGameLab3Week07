@@ -126,21 +126,41 @@ public class GameManager : MonoBehaviour
             Manager.UI.updateWaveAction?.Invoke(_currentWave); // UI 업데이트
 
             RhythmManager.Instance.IncreaseBPM();
-            if (_currentWave < 6)
+
+            switch (_currentStage)
             {
-                if (_currentWave <= 3)
-                {
+                case 0:
+                    _noneMonsterCount = 15;
+                    break;
+                case 1:
                     _noneMonsterCount = 10;
-                }
-                else
-                {
-                    _noneMonsterCount = 5;
-                }
+                    break;
+                case 2:
+                    _noneMonsterCount = 6;
+                    break;
+                case 3:
+                    _noneMonsterCount = 3;
+                    break;
+                default:
+                    
+                    break;
             }
-            else
-            {
-                _noneMonsterCount = 0;
-            }
+
+            //if (_currentWave < 6)
+            //{
+            //    if (_currentWave <= 3)
+            //    {
+            //        _noneMonsterCount = 10;
+            //    }
+            //    else
+            //    {
+            //        _noneMonsterCount = 5;
+            //    }
+            //}
+            //else
+            //{
+            //    _noneMonsterCount = 0;
+            //}
             //Debug.Log($"웨이브 {_currentWave} 시작! 가중치: Normal={currentWaveInfoList.First(e => _normalEnemyPrefabList.Contains(e.prefab)).weight}, Special={waveConfig.First(e => _specialEnemyPrefabList.Contains(e.prefab)).weight}, Confuse={waveConfig.First(e => _confuseEnemyPrefabList.Contains(e.prefab)).weight}");
         }
         else
