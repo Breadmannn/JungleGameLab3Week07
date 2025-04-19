@@ -555,8 +555,10 @@ MonoBehaviour:
     \uAC19\uC740 \uC18D\uC131\uC73C\uB85C \uC870\uD569 \uC2DC, \uC18D\uC131 \uB9C8\uBC95\uC744
     \uC0AC\uC6A9\uD569\uB2C8\uB2E4.\n\n- \uB2E4\uB978 \uC18D\uC131\uC73C\uB85C \uC870\uD569
     \uC2DC, \uBC94\uC704, \uAC15\uD654, \uB610\uB294 \uC18D\uBC15\uC744 \uC0AC\uC6A9\uD569\uB2C8\uB2E4.\n\n-
-    \uB2E4\uC591\uD55C \uC870\uD569\uB4E4\uC744 \uC0AC\uC6A9\uD574 \uB2E4\uAC00\uC624\uB294
-    \uBAAC\uC2A4\uD130\uB4E4\uC5D0\uAC8C\uC11C \uC0B4\uC544\uB0A8\uC73C\uC138\uC694!"
+    \uC5B4\uB5A4 \uC801\uB4E4\uC740 \uD2B9\uC815 \uC18D\uC131\uC5D0 \uB300\uD55C
+    \uC800\uD56D\uB825\uC744 \uAC00\uC9C0\uACE0 \uC788\uC2B5\uB2C8\uB2E4.\n\n- \uD68C\uC0C9
+    \uCCB4\uB825\uC744 \uAC00\uC9C4 \uC801\uB4E4\uC740 \uBC94\uC704 \uD53C\uD574\uC5D0
+    \uBA74\uC5ED\uC744 \uAC00\uC9C0\uACE0 \uC788\uC2B5\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ed19b17703c97d04c8a6d658df4f966b, type: 2}
   m_sharedMaterial: {fileID: 8602872573438281453, guid: ed19b17703c97d04c8a6d658df4f966b, type: 2}
@@ -2237,6 +2239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46f54aae03ef46441b8ce3aaddb0e261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentStage: 0
 --- !u!4 &1451966057
 Transform:
   m_ObjectHideFlags: 0
